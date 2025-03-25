@@ -29,13 +29,17 @@ export default function HomePage() {
             {/* sezione prodotti  in evidenza*/}
 
             <nav>
-                <div className="evidenza"></div>
+                <div className="evidenza">
+                    <h2>In evidenza</h2>
+                </div>
             </nav>
 
             {/* sezione prodotti  in promozione*/}
 
             <nav>
-                <div></div>
+                <div className="promozioni">
+                    <h2>Ultime novità</h2>
+                </div>
             </nav>
 
             {/* sezione img */}

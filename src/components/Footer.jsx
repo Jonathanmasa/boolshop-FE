@@ -3,27 +3,32 @@
 // Import functions from React
 import { Link } from "react-router-dom"
 
+// lucide icons
+import { Instagram, Facebook, Youtube } from "lucide-react";
+
 const Footer = () => {
 
     let index = 1
 
-    const infoLinks = ["Chi siamo", "Contatti", "Partners", "Eventi", "Lavora con noi"];
-    const assistenzaLinks = ["Spedizioni", "Metodi di pagamento", "Codici sconto", "Domande frequenti", "Resi e rimborsi"];
-    const contactsLinks = ["Orari servizio clienti", "Lun - Ven  08:00 - 16:00", "info@eggrocket.it"]
+    const infoLinks = [{ text: "Chi siamo", url: "/footer/about_us" }, { text: "Contatti", url: "/footer/contacts" }];
+
+    const assistenzaLinks = ["Spedizioni", "Metodi di pagamento", "Codici sconto", "Domande frequenti"];
+    const contacts = ["Orari servizio clienti", "Lun - Ven  08:00 - 16:00", "info@eggrocket.it"]
 
     return (
         <footer>
             <div className="container">
                 <div>
-                    <img src="/eggrocket-logo.png" alt="Logo" />
+                    <img src="/eggrocket-logo-white.png" alt="Logo" />
                     <p>
                         Egg Rocket Collector Roma, Italy
                     </p>
                 </div>
+
                 <nav>
                     <div>
                         <h3>INFORMAZIONI</h3>
-                        {infoLinks.map(link => <Link key={index += 1} to={"/"}>{link}</Link>)}
+                        {infoLinks.map(link => <Link key={index += 1} to={link.url}>{link.text}</Link>)}
                     </div>
 
                     <div>
@@ -33,12 +38,19 @@ const Footer = () => {
 
                     <div>
                         <h3>CONTATTI</h3>
-                        {contactsLinks.map(link => <Link key={index += 1} to={"/"}>{link}</Link>)}
+                        {contacts.map(text => <div key={index += 1} to={"/"}>{text}</div>)}
+
+                        {/* socials  */}
+                        <div className="socials">
+                            <a href="http://www.instagram.com" target="_blank"> <Instagram /></a>
+                            <a href="http://www.youtube.com" target="_blank"> <Youtube /></a>
+                            <a href="http://www.facebook.com" target="_blank"> <Facebook /></a>
+                        </div>
                     </div>
                 </nav>
             </div>
 
-            <Link to={"/"} className="center">Privacy Policy - Cookie Policy</Link>
+            <Link to={"/footer/privacy"} className="center">Privacy Policy - Cookie Policy</Link>
         </footer>
     )
 }
