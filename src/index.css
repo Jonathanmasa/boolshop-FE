@@ -48,6 +48,7 @@
     text-decoration: none;
     font-weight: 500;
     font-size: 14px;
+    padding-bottom: 40px 0;
 }
 
 
@@ -79,15 +80,8 @@
 
 
 /* FOOTER */
-.bg-cyan {
-    background-color: cyan;
-    min-height: 100px;
-    min-width: 100px;
-    border: 1px solid black;
-}
-
 footer {
-    height: 388px;
+    /* height: 388px; */
     background-color: black;
     color: white;
     text-decoration: none;
@@ -99,21 +93,23 @@ footer {
 footer .container {
     max-width: 92.5%;
     margin: 0 auto;
+    padding-bottom: 40px;
     display: flex;
     justify-content: space-between;
     border-bottom: 0.5px solid #00FFA8;
 }
 
 footer .container div {
-    flex-basis: 25%;
+    flex-basis: 40%;
 }
 
 footer .container nav {
-    flex-basis: 75%;
+    flex-basis: 60%;
 }
 
 footer img {
     max-width: 50%;
+    margin-bottom: 10px;
 }
 
 footer nav {
@@ -133,6 +129,17 @@ footer nav div * {
     margin-bottom: 10px;
 }
 
+footer nav h3 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
 footer .center {
+    margin-top: 40px;
     text-align: center;
+}
+
+footer nav .socials {
+    display: flex; 
+    gap: 20px;
 }
