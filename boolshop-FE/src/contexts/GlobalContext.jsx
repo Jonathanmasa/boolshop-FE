@@ -1,5 +1,5 @@
 import { createContext } from "react";
 
-const TravelsContext = createContext();
+const GlobalContext = createContext();
 
-export default TravelsContext;
+export default GlobalContext;
