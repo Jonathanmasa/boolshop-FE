@@ -57,6 +57,9 @@
 .containerbanner {
     height: 400px;
     background-image: url(../public/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -140,6 +143,6 @@ footer .center {
 }
 
 footer nav .socials {
-    display: flex; 
+    display: flex;
     gap: 20px;
 }
