@@ -23,7 +23,7 @@ export default function HomePage() {
             .then(
                 res => {
                     // console.log(res.data)
-                    setProduct(res.data)
+                    setProduct(res.data.slice(0, 6)); // Prende solo i primi 10 elementi
                 }
             )
             .catch(err => console.log(err))
@@ -61,9 +61,9 @@ export default function HomePage() {
 
             {/* sezione prodotti  in evidenza*/}
 
-            <nav>
+            <nav className="containerevidenza">
+                <h2>In evidenza</h2>
                 <div className="evidenza">
-                    <h2>In evidenza</h2>
                     {/* Listato */}
                     {renderProducts()}
                 </div>
@@ -71,9 +71,9 @@ export default function HomePage() {
 
             {/* sezione prodotti  in promozione*/}
 
-            <nav>
+            <nav className="containerpromozioni">
+                <h2>Ultime novità</h2>
                 <div className="promozioni">
-                    <h2>Ultime novità</h2>
                     {renderProducts()}
                 </div>
             </nav>
