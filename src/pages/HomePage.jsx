@@ -10,7 +10,40 @@ import GlobalContext from "../contexts/GlobalContext";
 // Import components
 import ProductCard from "../components/ProductCard";
 
+// USO USESTATE USEEFFECT
+import { useState, useEffect } from "react"
+
 export default function HomePage() {
+    // SETTIAMO STATO COMPONENTE
+    const [products, setProduct] = useState([]);
+
+    // FUNZIONE DI FEtCHING DATI LISTA PRODOTTI
+    const fectProduct = () => {
+        axios.get("http://localhost:3000/api/products/")
+            .then(
+                res => {
+                    // console.log(res.data)
+                    setProduct(res.data)
+                }
+            )
+            .catch(err => console.log(err))
+    }
+
+    // fectProduct();
+    useEffect(fectProduct, [])
+
+    // FUNZIONE RENDERING MOVIES
+    const renderProducts = () => {
+        return products.map(
+            product => {
+                return (
+                    <div key={product.id}>
+                        <ProductCard productProp={product} />
+                    </div>
+                )
+            }
+        )
+    }
 
 
     // RENDER
@@ -31,6 +64,8 @@ export default function HomePage() {
             <nav>
                 <div className="evidenza">
                     <h2>In evidenza</h2>
+                    {/* Listato */}
+                    {renderProducts()}
                 </div>
             </nav>
 
@@ -39,6 +74,7 @@ export default function HomePage() {
             <nav>
                 <div className="promozioni">
                     <h2>Ultime novità</h2>
+                    {renderProducts()}
                 </div>
             </nav>
 
