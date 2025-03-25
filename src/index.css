@@ -79,6 +79,15 @@
 
 
 /* PRODOTTI IN EVIDENZA */
+.containerevidenza {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+
 .evidenza {
     display: flex;
     flex-direction: row;
@@ -88,12 +97,25 @@
     padding: 20px;
 }
 
+
+
 .evidenza img {
-    width: 50px;
+    width: 200px;
 }
 
 
 /* PRODOTTI IN PROMOZIONE */
+
+.containerpromozioni {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #ECF6FB;
+}
+
+
 .promozioni {
     display: flex;
     flex-direction: row;
@@ -101,11 +123,10 @@
     justify-content: center;
     gap: 20px;
     padding: 20px;
-    background-color: #ECF6FB;
 }
 
 .promozioni img {
-    width: 50px;
+    width: 200px;
 }
 
 /* IMG SOPRA IL FOOTER */
