@@ -95,7 +95,13 @@
     padding: 20px;
 }
 
-
+/* IMG SOPRA IL FOOTER */
+.containerimg {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
 
 /* FOOTER */
 footer {
