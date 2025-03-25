@@ -3,6 +3,8 @@ import { Link } from "react-router-dom"
 
 import SearchBar from "./SearchBar";
 
+import NavBar from "./NavBar";
+
 import { Heart, ShoppingCart } from "lucide-react";
 
 const Header = () => {
@@ -37,9 +39,9 @@ const Header = () => {
             </nav>
 
             <nav>
-                <Link></Link>
+                <NavBar />
             </nav>
-        </header>
+        </header >
 
     )
 }

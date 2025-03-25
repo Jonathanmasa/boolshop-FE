@@ -2,7 +2,6 @@
 // - search: il valore attuale della barra di ricerca
 // - setSearch: funzione per aggiornare il valore della ricerca
 
-import { Search } from 'lucide-react'; // Assicurati di importare l'icona della lente di ingrandimento
 
 export default function SearchBar({ search, setSearch }) {
 

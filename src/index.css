@@ -4,6 +4,26 @@
     box-sizing: border-box;
 }
 
+/* HEADER */
+
+/* NAVBAR */
+.navpages {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: black;
+    gap: 30px;
+    height: 100px;
+}
+
+.navpages a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+/* FOOTER */
 .bg-cyan {
     background-color: cyan;
     min-height: 100px;
