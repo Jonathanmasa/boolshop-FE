@@ -2,6 +2,7 @@
 // - search: il valore attuale della barra di ricerca
 // - setSearch: funzione per aggiornare il valore della ricerca
 
+import { Search } from 'lucide-react';
 
 export default function SearchBar({ search, setSearch }) {
 
@@ -11,13 +12,15 @@ export default function SearchBar({ search, setSearch }) {
     };
 
     return (
-        <nav >
-            <div >
-                <form >
-                    <input type="search" placeholder="Cerca prodotti..."
-                        aria-label="Search" value={search} onChange={handleChange} />
-                </form>
-            </div>
-        </nav>
+        <div className="search-bar-container">
+            <input
+                type="text"
+                placeholder="Cerca prodotti..."
+                className="search-input"
+            />
+            <button className="search-button">
+                <Search size={28} strokeWidth={1} className="text-white hover:text-green-500 cursor-pointer" />
+            </button>
+        </div>
     );
 }

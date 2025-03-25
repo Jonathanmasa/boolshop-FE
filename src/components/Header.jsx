@@ -29,11 +29,11 @@ const Header = () => {
 
                 {/* Carrello e lista desideri */}
                 <div className="d-flex space-x-4">
-                    <Link to="/wishlist" className="me-3">
-                        <Heart size={28} strokeWidth={1} className="text-black hover:text-red-500 cursor-pointer" />
+                    <Link to="/wishlist" className="me-2">
+                        <Heart size={28} strokeWidth={1.2} className="text-black hover:text-red-500 cursor-pointer" />
                     </Link>
                     <Link to="/cart">
-                        <ShoppingCart size={28} strokeWidth={1} className=" text-black hover:text-blue-500 cursor-pointer" />
+                        <ShoppingCart size={28} strokeWidth={1.2} className=" text-black hover:text-blue-500 cursor-pointer" />
                     </Link>
                 </div>
             </nav>
