@@ -79,6 +79,21 @@
 
 
 /* PRODOTTI IN EVIDENZA */
+.evidenza {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+
+/* PRODOTTI IN PROMOZIONE */
+.promozioni {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
 
 
 
