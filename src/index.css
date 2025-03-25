@@ -81,19 +81,31 @@
 /* PRODOTTI IN EVIDENZA */
 .evidenza {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
     padding: 20px;
+}
+
+.evidenza img {
+    width: 50px;
 }
 
 
 /* PRODOTTI IN PROMOZIONE */
 .promozioni {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
     padding: 20px;
     background-color: #ECF6FB;
+}
+
+.promozioni img {
+    width: 50px;
 }
 
 /* IMG SOPRA IL FOOTER */
