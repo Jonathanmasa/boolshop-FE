@@ -44,8 +44,8 @@ export default function HomePage() {
 
             {/* sezione img */}
 
-            <nav>
-                <div></div>
+            <nav className="containerimg">
+                <div><img src="/Group-56.png" alt="" /></div>
             </nav>
 
         </main >
