@@ -1,19 +1,20 @@
 // Import functions from React
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 // Import context
-import GlobalContext from "./contexts/GlobalContext"
+import GlobalContext from "./contexts/GlobalContext";
 
 // Import layouts
 import DefaultLayout from "./layouts/DefaultLayout";
 // Import pages
-import HomePage from "./pages/HomePage"
-import ProductDetailPage from "./pages/ProductDetailPage"
+import HomePage from "./pages/HomePage";
+import ProductCard from "./components/ProductCard";
+import ProductDetailPage from "./pages/ProductDetailPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import AboutUs from "./pages/AboutUs";
 import Contacts from "./pages/Contacts";
 import Privacy from "./pages/Privacy";
 
-
+// import bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
