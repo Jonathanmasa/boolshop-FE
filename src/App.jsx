@@ -10,6 +10,9 @@ import HomePage from "./pages/HomePage"
 import ProductDetailPage from "./pages/ProductDetailPage"
 import NotFoundPage from "./pages/NotFoundPage";
 
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 function App() {
 
   // RENDER
