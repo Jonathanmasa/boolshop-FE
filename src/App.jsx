@@ -18,11 +18,12 @@ import DefaultLayout from "./layouts/DefaultLayout";
 
 // Import pages
 import HomePage from "./pages/HomePage";
-import Card from "./pages/Card";
-import Figure from "./pages/Figure";
-import Manga from "./pages/Manga";
-import OnSale from "./pages/OnSale";
-import NewArrival from "./pages/NewArrival";
+import CartPage from "./pages/CartPage";
+import CardPage from "./pages/navbar-pages/CardPage";
+import FigurePage from "./pages/navbar-pages/FigurePage";
+import MangaPage from "./pages/navbar-pages/MangaPage";
+import OnSalePage from "./pages/navbar-pages/OnSalePage";
+import NewArrivalPage from "./pages/navbar-pages/NewArrivalsPage";
 import SearchPage from './pages/SearchPage';
 import ProductDetailPage from "./pages/ProductDetailPage";
 import NotFoundPage from "./pages/NotFoundPage";
@@ -48,13 +49,14 @@ function App() {
           <BrowserRouter>
             <Routes>
               <Route element={<DefaultLayout />}>
+                <Route path="/cart" element={<CartPage />} />
                 <Route index path="/" element={<HomePage />} />
                 {/* navbar-pages */}
-                <Route path="/card" element={<Card />} />
-                <Route path="/figure" element={<Figure />} />
-                <Route path="/manga" element={<Manga />} />
-                <Route path="/on-sale" element={<OnSale />} />
-                <Route path="/new-arrival" element={<NewArrival />} />
+                <Route path="/card" element={<CardPage />} />
+                <Route path="/figure" element={<FigurePage />} />
+                <Route path="/manga" element={<MangaPage />} />
+                <Route path="/on-sale" element={<OnSalePage />} />
+                <Route path="/new-arrival" element={<NewArrivalPage />} />
 
                 <Route path="/product/:id" element={<ProductDetailPage />} />
                 <Route path="/search" element={<SearchPage />} />
