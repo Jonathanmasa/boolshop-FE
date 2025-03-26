@@ -10,11 +10,6 @@ const ProductCard = ({ product, addToCart, removeFromCart }) => {
   const { id, image_url, name, price } = product;
 
 
-
-
-
-
-
   return (
     <div className="product-card">
       <div className="card border-0 shadow-sm">

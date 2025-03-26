@@ -2,7 +2,7 @@ import { useCartContext } from '../contexts/CartContext';
 import { Link } from 'react-router-dom';
 
 const CartPage = () => {
-    const { cart, removerFromCart, updateQuantity } = useCartContext();
+    const { cart, removeFromCart, updateQuantity } = useCartContext();
 
     const subtotal = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
     const shipping = subtotal >= 50 ? 0 : 10;

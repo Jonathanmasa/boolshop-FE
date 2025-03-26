@@ -7,6 +7,8 @@
 // Import functions from React
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React, { useState } from 'react';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 // Import context
 import { ProductProvider } from "./contexts/ProductContext";
