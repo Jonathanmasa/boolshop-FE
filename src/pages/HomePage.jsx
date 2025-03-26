@@ -19,7 +19,7 @@ export default function HomePage() {
 
     // FUNZIONE DI FEtCHING DATI LISTA PRODOTTI
     const fetchProduct = () => {
-        axios.get("http://localhost:3000/api/products/")
+        axios.get("/api/products/")
             .then(
                 res => {
                     // console.log(res.data)
