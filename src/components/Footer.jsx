@@ -10,9 +10,8 @@ const Footer = () => {
 
     let index = 1
 
-    const infoLinks = [{ text: "Chi siamo", url: "/footer/about_us" }, { text: "Contatti", url: "/footer/contacts" }];
-
-    const assistenzaLinks = ["Spedizioni", "Metodi di pagamento", "Codici sconto", "Domande frequenti"];
+    const infoLinks = [{ text: "Chi siamo", url: "/about_us" }, { text: "Contatti", url: "/contacts" }];
+    const assistenzaLinks = [{ text: "Spedizioni", url: "/shipments" }, { text: "Metodi di pagamento", url: "/payment_methods" }, { text: "Codici sconto", url: "/discount_codes" }, { text: "Domande frequenti", url: "/faq" },];
     const contacts = ["Orari servizio clienti", "Lun - Ven  08:00 - 16:00", "info@eggrocket.it"]
 
     return (
@@ -21,7 +20,7 @@ const Footer = () => {
                 <div>
                     <img src="/eggrocket-logo-white.png" alt="Logo" />
                     <p>
-                        Egg Rocket Collector Roma, Italy
+                        Egg Rocket Collector <br /> Roma, Italy
                     </p>
                 </div>
 
@@ -33,7 +32,7 @@ const Footer = () => {
 
                     <div>
                         <h3>ASSISTENZA</h3>
-                        {assistenzaLinks.map(link => <Link key={index += 1} to={"/"}>{link}</Link>)}
+                        {assistenzaLinks.map(link => <Link key={index += 1} to={link.url}>{link.text}</Link>)}
                     </div>
 
                     <div>
@@ -50,7 +49,7 @@ const Footer = () => {
                 </nav>
             </div>
 
-            <Link to={"/footer/privacy"} className="center">Privacy Policy - Cookie Policy</Link>
+            <Link to={"/privacy"} className="center">Privacy Policy - Cookie Policy</Link>
         </footer>
     )
 }
