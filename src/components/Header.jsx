@@ -14,13 +14,13 @@ const Header = () => {
         <header>
             <nav className="d-flex justify-content-between align-items-center p-3">
                 {/* Logo del sito */}
-                <div>
+                <Link to={"/"}>
                     <img
                         src="/eggrocket-logo.png"
                         alt="Eggrocket Logo"
                         style={{ height: "50px" }}
                     />
-                </div>
+                </Link>
 
                 {/* Search Bar */}
                 <div className="d-flex justify-content-center">
