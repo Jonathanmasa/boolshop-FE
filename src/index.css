@@ -72,7 +72,7 @@ body {
 
 /* MAIN */
 .containerbanner {
-    height: 400px;
+    height: 80vh;
     background-image: url(../public/banner.jpg);
     background-size: cover;
     background-position: center;
@@ -108,54 +108,52 @@ body {
 
 
 /* PRODOTTI IN EVIDENZA */
-.containerevidenza {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    padding: 20px;
+
+/* REGOLE GENARALI H2 */
+
+main h2 {
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 
 .evidenza {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
+    justify-content: space-around;
 }
-
-
 
 .evidenza img {
-    width: 200px;
+    width: 100%;
+    height: 250px;
+    margin-bottom: 5px;
 }
+
+/* INFO SOTTO LA IMG NELL HOME PAGE */
+
+
+
 
 
 /* PRODOTTI IN PROMOZIONE */
-
-.containerpromozioni {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    padding: 20px;
-    background-color: #ECF6FB;
-}
 
 
 .promozioni {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
+    justify-content: space-around;
+}
+
+.containerpromozioni {
+    background-color: #ECF6FB;
 }
 
 .promozioni img {
-    width: 200px;
+    width: 100%;
+    height: 250px;
+    margin-bottom: 5px;
 }
 
 /* product grid */
@@ -168,7 +166,8 @@ body {
     gap: 40px;
 
 }
-.product-grid img{
+
+.product-grid img {
     max-width: 200px;
 }
 
