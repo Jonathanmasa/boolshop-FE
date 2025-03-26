@@ -16,11 +16,12 @@ const CartPage = () => {
             ) : (
                 <>
                     <ul className="list-group">
+
                         {cart.map(product => (
                             <li key={product.id} className="list-group-item d-flex justify-content-between align-items-center">
                                 <div>
                                     <strong>{product.name}</strong><br />
-                                    €{product.price.toFixed(2)} x
+                                    €{Number(product.price).toFixed(2)} x
                                     <input
                                         type="number"
                                         value={product.quantity}
@@ -33,6 +34,8 @@ const CartPage = () => {
                                 <button className="btn btn-danger btn-sm" onClick={() => removeFromCart(product.id)}>Rimuovi</button>
                             </li>
                         ))}
+
+
                     </ul>
                     <div className="mt-3">
                         <p>💰 Subtotale: €{subtotal.toFixed(2)}</p>
