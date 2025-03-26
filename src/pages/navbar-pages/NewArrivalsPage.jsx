@@ -13,10 +13,7 @@ const NewArrivalsPage = () => {
             // Aggiorna il termine di ricerca
             setSearchTerm(query);
             // Chiamata per ottenere i prodotti
-            fetchProducts('/api/products/category/new-arrivals', {
-                query,
-                sort
-            });
+            fetchProducts('/api/products/category/new-arrivals',);
 
 
         }

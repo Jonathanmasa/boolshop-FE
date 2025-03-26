@@ -13,10 +13,7 @@ const OnSalePage = () => {
             // Aggiorna il termine di ricerca
             setSearchTerm(query);
             // Chiamata per ottenere i prodotti
-            fetchProducts('/api/products/category/on-sale', {
-                query,
-                sort
-            });
+            fetchProducts('/api/products/category/on-sale',);
 
 
         }

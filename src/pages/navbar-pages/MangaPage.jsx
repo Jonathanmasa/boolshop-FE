@@ -13,10 +13,7 @@ const MangaPage = () => {
             // Aggiorna il termine di ricerca
             setSearchTerm(query);
             // Chiamata per ottenere i prodotti
-            fetchProducts('/api/products/category/manga', {
-                query,
-                sort
-            });
+            fetchProducts('/api/products/category/manga',);
 
 
         }

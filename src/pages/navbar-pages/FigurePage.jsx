@@ -13,10 +13,7 @@ const FigurePage = () => {
             // Aggiorna il termine di ricerca
             setSearchTerm(query);
             // Chiamata per ottenere i prodotti
-            fetchProducts('/api/products/category/figure', {
-                query,
-                sort
-            });
+            fetchProducts('/api/products/category/figure',);
 
 
         }

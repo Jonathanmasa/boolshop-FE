@@ -13,10 +13,7 @@ const CardPage = () => {
             // Aggiorna il termine di ricerca
             setSearchTerm(query);
             // Chiamata per ottenere i prodotti
-            fetchProducts('/api/products/category/card', {
-                query,
-                sort
-            });
+            fetchProducts('/api/products/category/card',);
 
 
         }
