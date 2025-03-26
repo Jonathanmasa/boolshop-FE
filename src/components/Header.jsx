@@ -7,24 +7,24 @@ import NavBar from "./NavBar";
 
 import { Heart, ShoppingCart } from "lucide-react";
 
-const Header = () => {
+const Header = ({ search, setSearch }) => {
 
 
     return (
         <header>
             <nav className="d-flex justify-content-between align-items-center p-3">
                 {/* Logo del sito */}
-                <div>
+                <Link to={"/"}>
                     <img
                         src="/eggrocket-logo.png"
                         alt="Eggrocket Logo"
                         style={{ height: "50px" }}
                     />
-                </div>
+                </Link>
 
                 {/* Search Bar */}
                 <div className="d-flex justify-content-center">
-                    <SearchBar />
+                    <SearchBar search={search} setSearch={setSearch} />
                 </div>
 
                 {/* Carrello e lista desideri */}

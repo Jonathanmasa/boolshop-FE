@@ -1,8 +1,20 @@
 import { Link } from "react-router-dom";
 
-const ProductCard = ({ productProp }) => {
+const ProductCard = ({ product }) => {
+
+  if (!product) {
+    return <div className="text-danger">Errore: prodotto non valido</div>;
+  }
+
   //DESTRUTTURIAMO OGGETTO PROPS
-  const { id, image_url, name, price } = productProp;
+  const { id, image_url, name, price } = product;
+
+
+
+
+
+
+
   return (
     <div className="product-card">
       <div className="card border-0 shadow-sm">

@@ -18,6 +18,7 @@ export const ProductProvider = ({ children }) => {
         setError(null);
         try {
             const response = await axios.get(endpoint, { params });
+            console.log("📦 Risposta da BE:", response.data);
             setProducts(response.data);
         } catch (error) {
             setError(error);
