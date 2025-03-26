@@ -158,6 +158,20 @@ body {
     width: 200px;
 }
 
+/* product grid */
+.product-grid {
+    padding: 40px 0;
+    width: 92.5%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+
+}
+.product-grid img{
+    max-width: 200px;
+}
+
 /* IMG SOPRA IL FOOTER */
 .containerimg {
     display: flex;

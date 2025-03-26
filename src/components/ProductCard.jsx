@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product, addToCart, removeFromCart }) => {
 
   if (!product) {
     return <div className="text-danger">Errore: prodotto non valido</div>;
@@ -38,6 +38,17 @@ const ProductCard = ({ product }) => {
           <Link to={`/product/${id}`} className="btn btn-sm btn-outline-primary">
             Vedi dettagli
           </Link>
+
+          {/* Bottoni carrello */}
+          <div className="d-flex justify-content-center gap-2">
+            <button onClick={() => addToCart(product)} className="btn btn-sm btn-success">
+              Aggiungi al carrello
+            </button>
+            <button onClick={() => removeFromCart(id)} className="btn btn-sm btn-outline-danger">
+              Rimuovi
+            </button>
+          </div>
+
         </div>
       </div>
     </div>

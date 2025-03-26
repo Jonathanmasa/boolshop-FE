@@ -1,7 +1,10 @@
 import React from 'react';
 import ProductCard from './ProductCard';
-const ProductGrid = ({ products }) => {
+
+const ProductGrid = ({ products, addToCart, removeFromCart }) => {
     console.log("🧪 Products ricevuti in ProductGrid:", products);
+
+
 
     return (
         <div className="product-grid">
@@ -12,7 +15,10 @@ const ProductGrid = ({ products }) => {
             ) : (
                 products.map((product, index) => {
                     console.log(`🔹 Product [${index}]`, product);
-                    return <ProductCard key={product?.id || index} product={product} />;
+                    return <ProductCard key={product?.id || index}
+                        product={product}
+                        addToCart={addToCart}
+                        removeFromCart={removeFromCart} />;
                 })
             )}
         </div>
