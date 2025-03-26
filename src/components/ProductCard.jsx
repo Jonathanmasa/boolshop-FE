@@ -1,15 +1,15 @@
 import { Link } from "react-router-dom";
 
-const ProductCard = ({ productProp }) => {
+const ProductCard = ({ product }) => {
   //DESTRUTTURIAMO OGGETTO PROPS
-  const { id, image_url, name, price } = productProp;
+  const { id, image, name, price } = product;
   return (
     <div className="product-card">
       <div className="card border-0 shadow-sm">
         {/* Placeholder immagine se non disponibile */}
         <div className="card-img-wrapper">
           <img
-            src={image_url}
+            src={image}
             className="card-img-top"
             alt={name}
           />
