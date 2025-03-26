@@ -33,7 +33,7 @@ function App() {
             <Routes>
               <Route element={<DefaultLayout />}>
                 <Route index path="/" element={<HomePage />} />
-                <Route path="/product/:id" element={<ProductDetailPage />} />
+                <Route path="/product/:category/:id" element={<ProductDetailPage />} />
                 {/* route 404 not found */}
                 <Route path="/footer/about_us" element={<AboutUs />} />
                 <Route path="/footer/contacts" element={<Contacts />} />
