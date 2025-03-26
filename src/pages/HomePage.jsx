@@ -18,7 +18,7 @@ export default function HomePage() {
     const [products, setProduct] = useState([]);
 
     // FUNZIONE DI FEtCHING DATI LISTA PRODOTTI
-    const fectProduct = () => {
+    const fetchProduct = () => {
         axios.get("http://localhost:3000/api/products/")
             .then(
                 res => {
@@ -30,7 +30,7 @@ export default function HomePage() {
     }
 
     // fectProduct();
-    useEffect(fectProduct, [])
+    useEffect(fetchProduct, [])
 
     // FUNZIONE RENDERING MOVIES
     const renderProducts = () => {
@@ -38,7 +38,7 @@ export default function HomePage() {
             product => {
                 return (
                     <div key={product.id}>
-                        <ProductCard productProp={product} />
+                        <ProductCard product={product} />
                     </div>
                 )
             }

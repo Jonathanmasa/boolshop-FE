@@ -1,15 +1,27 @@
 import { Link } from "react-router-dom";
 
 const ProductCard = ({ product }) => {
+
+  if (!product) {
+    return <div className="text-danger">Errore: prodotto non valido</div>;
+  }
+
   //DESTRUTTURIAMO OGGETTO PROPS
-  const { id, image, name, price } = product;
+  const { id, image_url, name, price } = product;
+
+
+
+
+
+
+
   return (
     <div className="product-card">
       <div className="card border-0 shadow-sm">
         {/* Placeholder immagine se non disponibile */}
         <div className="card-img-wrapper">
           <img
-            src={image}
+            src={image_url}
             className="card-img-top"
             alt={name}
           />

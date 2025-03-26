@@ -13,6 +13,7 @@ const SearchPage = () => {
     const sort = queryParams.get('sort') || 'name_asc';
 
     useEffect(() => {
+        console.log("🔎 Nuova ricerca con query:", query);
         if (query) {
             // Aggiorna il termine di ricerca
             setSearchTerm(query);
@@ -24,7 +25,7 @@ const SearchPage = () => {
 
 
         }
-    }, [query, fetchProducts]);
+    }, [query, sort]);
 
     return (
         <div>

@@ -10,9 +10,10 @@ const ProductGrid = ({ products }) => {
             ) : products.length === 0 ? (
                 <p>Nessun prodotto trovato.</p>
             ) : (
-                products.map((product) => (
-                    <ProductCard key={product.id} product={product} />
-                ))
+                products.map((product, index) => {
+                    console.log(`🔹 Product [${index}]`, product);
+                    return <ProductCard key={product?.id || index} product={product} />;
+                })
             )}
         </div>
     );
