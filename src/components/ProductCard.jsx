@@ -1,48 +1,49 @@
 import { Link } from "react-router-dom";
 
-const ProductCard = ({ product, addToCart, removeFromCart }) => {
+import { Heart, ShoppingCart } from "lucide-react";
+
+const ProductCard = ({ product, addToCart }) => {
 
   if (!product) {
     return <div className="text-danger">Errore: prodotto non valido</div>;
   }
 
   //DESTRUTTURIAMO OGGETTO PROPS
-  const { id, image_url, name, price } = product;
+  const { id, image_url, name, price, category } = product;
 
 
   return (
-    <div className="product-card">
-      <div className="card border-0 shadow-sm">
-        {/* Placeholder immagine se non disponibile */}
-        <div className="card-img-wrapper">
-          <img
-            src={image_url}
-            className="card-img-top"
-            alt={name}
-          />
-        </div>
+    <div className="">
+      <div className="">
 
-        <div className="card-body text-center">
+        {/* Placeholder immagine se non disponibile */}
+        <img
+          src={image_url}
+          className=""
+          alt={name}
+        />
+
+
+        <div className="">
           {/* Nome del prodotto */}
-          <h6 className="card-title">{name}</h6>
+          <h6 className="">{name}</h6>
+
+          {/* desacrizione del prodotto */}
+          <p className="">{category}</p>
 
           {/* Prezzo del prodotto */}
-          <p className="card-text fw-bold">€{price}</p>
+          <p>€{price}</p>
 
           {/* Link alla pagina dettagli */}
-          <Link to={`/product/${id}`} className="btn btn-sm btn-outline-primary">
+          <Link to={`/product/${id}`} className="">
             Vedi dettagli
           </Link>
 
           {/* Bottoni carrello */}
-          <div className="d-flex justify-content-center gap-2">
-            <button onClick={() => addToCart(product)} className="btn btn-sm btn-success">
-              Aggiungi al carrello
-            </button>
-            <button onClick={() => removeFromCart(id)} className="btn btn-sm btn-outline-danger">
-              Rimuovi
-            </button>
-          </div>
+          <span className="">
+            <ShoppingCart onClick={() => addToCart(product)} size={28} strokeWidth={1.5} className=" text-black hover:text-blue-500 cursor-pointer" />
+            <Heart size={28} strokeWidth={1.5} className="text-black hover:text-red-500 cursor-pointer" />
+          </span>
 
         </div>
       </div>
