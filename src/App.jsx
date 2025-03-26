@@ -18,8 +18,12 @@ import DefaultLayout from "./layouts/DefaultLayout";
 
 // Import pages
 import HomePage from "./pages/HomePage";
+import Card from "./pages/Card";
+import Figure from "./pages/Figure";
+import Manga from "./pages/Manga";
+import OnSale from "./pages/OnSale";
+import NewArrival from "./pages/NewArrival";
 import SearchPage from './pages/SearchPage';
-import ProductCard from "./components/ProductCard";
 import ProductDetailPage from "./pages/ProductDetailPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import AboutUs from "./pages/AboutUs";
@@ -45,6 +49,13 @@ function App() {
             <Routes>
               <Route element={<DefaultLayout />}>
                 <Route index path="/" element={<HomePage />} />
+                {/* navbar-pages */}
+                <Route path="/card" element={<Card />} />
+                <Route path="/figure" element={<Figure />} />
+                <Route path="/manga" element={<Manga />} />
+                <Route path="/on-sale" element={<OnSale />} />
+                <Route path="/new-arrival" element={<NewArrival />} />
+
                 <Route path="/product/:id" element={<ProductDetailPage />} />
                 <Route path="/search" element={<SearchPage />} />
 
