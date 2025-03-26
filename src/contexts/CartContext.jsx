@@ -35,9 +35,17 @@ export const CartProvider = ({ children }) => {
 
     // Funzione per rimuovere un prodotto dal carrello
     const removeFromCart = (productId) => {
+
+        // Troviamo il prodotto che vogliamo rimuovere
+        const removedProduct = cart.find((product) => product.id === productId);
+        // Rimuoviamo il prodotto dal carrello
         const newCart = cart.filter((product) => product.id !== productId);
+
+
         setCart(newCart);
-        localStorage.setItem('cart', JSON.stringify(newCart)); // Salva nel localStorage
+        localStorage.setItem('cart', JSON.stringify(newCart)); // 
+
+        // Mostra la notifica solo se il prodotto è stato trovato
         if (removedProduct) {
             toast.warn(`${removedProduct.name} rimosso dal carrello`);
         }
