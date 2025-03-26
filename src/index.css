@@ -12,6 +12,13 @@ body {
 
 /* HEADER */
 
+.egg {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 64px;
+}
+
 /* SEARCHBAR */
 .search-bar-container {
     display: flex;
@@ -43,7 +50,7 @@ body {
 .navpages {
     display: flex;
     align-items: center;
-    padding: 10px 20px;
+    padding: 29px 68px;
     background-color: black;
     gap: 30px;
     height: 100px;
@@ -57,6 +64,10 @@ body {
     padding-bottom: 40px 0;
 }
 
+
+.heart {
+    padding-right: 32px;
+}
 
 
 /* MAIN */
