@@ -1,7 +1,7 @@
 // Import functions from React
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 // Import context
-import GlobalContext from "./contexts/GlobalContext";
+import GlobalContext from "./contexts/ProductContext";
 
 // Import layouts
 import DefaultLayout from "./layouts/DefaultLayout";
@@ -21,7 +21,7 @@ function App() {
 
   // RENDER
   return (
-    <GlobalContext.Provider>
+    <ProductProvider>
 
       <BrowserRouter>
         <Routes>
@@ -37,7 +37,7 @@ function App() {
         </Routes>
       </BrowserRouter>
 
-    </GlobalContext.Provider>
+    </ProductProvider>
   );
 
 }

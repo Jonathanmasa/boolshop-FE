@@ -5,7 +5,7 @@ import { useContext } from "react";
 import axios from "axios";
 
 // Import context
-import GlobalContext from "../contexts/GlobalContext";
+import GlobalContext from "../contexts/ProductContext";
 
 // Import components
 import ProductCard from "../components/ProductCard";
