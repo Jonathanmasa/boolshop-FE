@@ -22,7 +22,10 @@ const CardPage = () => {
             ) : error ? (
                 <p>{error}</p>
             ) : (
-                <ProductGrid products={products} addToCart={addToCart} removeFromCart={removeFromCart} />
+                <ProductGrid products={products}
+                    addToCart={addToCart}
+                    removeFromCart={removeFromCart}
+                />
             )}
         </div>
     );
