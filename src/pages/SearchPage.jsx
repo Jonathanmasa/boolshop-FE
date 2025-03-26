@@ -10,11 +10,19 @@ const SearchPage = () => {
     // Ottieni i parametri della query dalla URL
     const queryParams = new URLSearchParams(useLocation().search);
     const query = queryParams.get('query') || '';
+    const sort = queryParams.get('sort') || 'name_asc';
 
     useEffect(() => {
         if (query) {
-            setSearchTerm(query);  // Aggiorna il termine di ricerca
-            fetchProducts('/api/products/search', { query });  // Chiamata per ottenere i prodotti
+            // Aggiorna il termine di ricerca
+            setSearchTerm(query);
+            // Chiamata per ottenere i prodotti
+            fetchProducts('/api/products/search', {
+                query,
+                sort
+            });
+
+
         }
     }, [query, fetchProducts]);
 

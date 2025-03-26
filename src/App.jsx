@@ -1,17 +1,18 @@
 // Import functions from React
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React, { useState } from 'react';
+
 // Import context
-import ProductProvider from "./contexts/ProductContext";
-import { WishlistProvider } from './WishlistContext';
-import { CartProvider } from './CartContext';
+import { ProductProvider } from "./contexts/ProductContext";
+import { WishlistProvider } from './contexts/WishlistContext';
+import { CartProvider } from './contexts/CartContext';
 
 // Import layouts
 import DefaultLayout from "./layouts/DefaultLayout";
 
-
-
 // Import pages
 import HomePage from "./pages/HomePage";
+import SearchPage from './pages/SearchPage';
 import ProductCard from "./components/ProductCard";
 import ProductDetailPage from "./pages/ProductDetailPage";
 import NotFoundPage from "./pages/NotFoundPage";
@@ -24,6 +25,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
 
+
   // RENDER
   return (
     <ProductProvider>
@@ -34,7 +36,8 @@ function App() {
               <Route element={<DefaultLayout />}>
                 <Route index path="/" element={<HomePage />} />
                 <Route path="/product/:id" element={<ProductDetailPage />} />
-                {/* route 404 not found */}
+                <Route path="/search" element={<SearchPage />} />
+
                 <Route path="/footer/about_us" element={<AboutUs />} />
                 <Route path="/footer/contacts" element={<Contacts />} />
                 <Route path="/footer/privacy" element={<Privacy />} />
