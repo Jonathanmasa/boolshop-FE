@@ -49,6 +49,7 @@ function App() {
       <WishlistProvider>
         <CartProvider>
           <BrowserRouter>
+            <ToastContainer />
             <Routes>
               <Route element={<DefaultLayout />}>
                 <Route path="/cart" element={<CartPage />} />
