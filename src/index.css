@@ -84,6 +84,17 @@ body {
     color: white;
 }
 
+.containerbanner h1 {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.containerbanner h5 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
 .find {
     background-color: #6666FF;
     border: none;
@@ -92,6 +103,7 @@ body {
     padding: 7px 20px;
     cursor: pointer;
     margin-top: 20px;
+    font-weight: 500;
 }
 
 
