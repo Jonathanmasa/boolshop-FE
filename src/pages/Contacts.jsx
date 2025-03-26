@@ -1,7 +1,7 @@
 export default function Contacts() {
     return (
         <>
-            <h2>Conatatti</h2>
+            <h2>Contatti</h2>
         </>
     )
 }

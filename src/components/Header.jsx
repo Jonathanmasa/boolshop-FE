@@ -7,7 +7,7 @@ import NavBar from "./NavBar";
 
 import { Heart, ShoppingCart } from "lucide-react";
 
-const Header = () => {
+const Header = ({ search, setSearch }) => {
 
 
     return (
@@ -24,7 +24,7 @@ const Header = () => {
 
                 {/* Search Bar */}
                 <div className="d-flex justify-content-center">
-                    <SearchBar />
+                    <SearchBar search={search} setSearch={setSearch} />
                 </div>
 
                 {/* Carrello e lista desideri */}

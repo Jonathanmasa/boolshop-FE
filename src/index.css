@@ -63,6 +63,9 @@ body {
 .containerbanner {
     height: 400px;
     background-image: url(../public/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -82,8 +85,63 @@ body {
 
 
 /* PRODOTTI IN EVIDENZA */
+.containerevidenza {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
 
 
+.evidenza {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+
+
+.evidenza img {
+    width: 200px;
+}
+
+
+/* PRODOTTI IN PROMOZIONE */
+
+.containerpromozioni {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #ECF6FB;
+}
+
+
+.promozioni {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.promozioni img {
+    width: 200px;
+}
+
+/* IMG SOPRA IL FOOTER */
+.containerimg {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
 
 /* FOOTER */
 footer {

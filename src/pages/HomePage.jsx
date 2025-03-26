@@ -5,12 +5,45 @@ import { useContext } from "react";
 import axios from "axios";
 
 // Import context
-import GlobalContext from "../contexts/GlobalContext";
+import GlobalContext from "../contexts/ProductContext";
 
 // Import components
 import ProductCard from "../components/ProductCard";
 
+// USO USESTATE USEEFFECT
+import { useState, useEffect } from "react"
+
 export default function HomePage() {
+    // SETTIAMO STATO COMPONENTE
+    const [products, setProduct] = useState([]);
+
+    // FUNZIONE DI FEtCHING DATI LISTA PRODOTTI
+    const fetchProduct = () => {
+        axios.get("/api/products/")
+            .then(
+                res => {
+                    // console.log(res.data)
+                    setProduct(res.data.slice(0, 6)); // Prende solo i primi 10 elementi
+                }
+            )
+            .catch(err => console.log(err))
+    }
+
+    // fectProduct();
+    useEffect(fetchProduct, [])
+
+    // FUNZIONE RENDERING MOVIES
+    const renderProducts = () => {
+        return products.map(
+            product => {
+                return (
+                    <div key={product.id}>
+                        <ProductCard product={product} />
+                    </div>
+                )
+            }
+        )
+    }
 
 
     // RENDER
@@ -28,20 +61,27 @@ export default function HomePage() {
 
             {/* sezione prodotti  in evidenza*/}
 
-            <nav>
-                <div className="evidenza"></div>
+            <nav className="containerevidenza">
+                <h2>In evidenza</h2>
+                <div className="evidenza">
+                    {/* Listato */}
+                    {renderProducts()}
+                </div>
             </nav>
 
             {/* sezione prodotti  in promozione*/}
 
-            <nav>
-                <div></div>
+            <nav className="containerpromozioni">
+                <h2>Ultime novità</h2>
+                <div className="promozioni">
+                    {renderProducts()}
+                </div>
             </nav>
 
             {/* sezione img */}
 
-            <nav>
-                <div></div>
+            <nav className="containerimg">
+                <div><img src="/Group-56.png" alt="" /></div>
             </nav>
 
         </main >
