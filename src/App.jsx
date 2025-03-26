@@ -13,6 +13,10 @@ import NotFoundPage from "./pages/NotFoundPage";
 import AboutUs from "./pages/AboutUs";
 import Contacts from "./pages/Contacts";
 import Privacy from "./pages/Privacy";
+import Shipments from "./pages/Shipments";
+import PaymentMethods from "./pages/paymentMethods";
+import DiscountCodes from "./pages/DiscountCodes";
+import Faq from "./pages/Faq";
 
 // import bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -28,10 +32,16 @@ function App() {
           <Route element={<DefaultLayout />}>
             <Route index path="/" element={<HomePage />} />
             <Route path="/product/:id" element={<ProductDetailPage />} />
+            {/* footer */}
+            <Route path="/about_us" element={<AboutUs />} />
+            <Route path="/contacts" element={<Contacts />} />
+            <Route path="/privacy" element={<Privacy />} />
+
+            <Route path="/shipments" element={<Shipments />} />
+            <Route path="/payment_methods" element={<PaymentMethods />} />
+            <Route path="/discount_codes" element={<DiscountCodes />} />
+            <Route path="/faq" element={<Faq />} />
             {/* route 404 not found */}
-            <Route path="/footer/about_us" element={<AboutUs />} />
-            <Route path="/footer/contacts" element={<Contacts />} />
-            <Route path="/footer/privacy" element={<Privacy />} />
             <Route path="*" element={<NotFoundPage />} />
           </Route>
         </Routes>
