@@ -66,12 +66,12 @@ body {
 }
 
 .navpages a:hover {
-    color: #9797ff; 
-    transform: scale(1.1); 
+    color: #9797ff;
+    transform: scale(1.1);
 }
 
 .navpages a:active {
-    color: #00dc91; 
+    color: #00dc91;
 }
 
 .heart {
@@ -81,7 +81,7 @@ body {
 
 /* MAIN */
 .containerbanner {
-    height: 80vh;
+    height: calc(100vh - 173px);
     background-image: url(../public/banner.jpg);
     background-size: cover;
     background-position: center;
