@@ -78,8 +78,10 @@ export default function ProductList() {
                 </div>
             </nav>
 
+
+            {/* Sezione divisore */}
             <div className="divisore">
-                <img src="/divisore.png" alt="" />
+                <img src="/divisore2.png" alt="" />
             </div>
 
 
