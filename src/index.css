@@ -109,6 +109,10 @@ body {
 
 /* PRODOTTI IN EVIDENZA */
 
+.title {
+    margin-right: 10px;
+}
+
 /* REGOLE GENARALI H2 */
 
 main h2 {
@@ -116,6 +120,8 @@ main h2 {
     font-weight: 600;
     margin-bottom: 20px;
     text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 
@@ -123,6 +129,7 @@ main h2 {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    padding-bottom: 100px;
 }
 
 .evidenza img {
@@ -144,6 +151,7 @@ main h2 {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    padding-bottom: 100px;
 }
 
 .containerpromozioni {
