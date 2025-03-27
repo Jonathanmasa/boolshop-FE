@@ -18,7 +18,7 @@ const Header = ({ search, setSearch }) => {
                     <img
                         src="/eggrocket-logo.png"
                         alt="Eggrocket Logo"
-                        style={{ height: "50px" }}
+                        style={{ height: "70px" }}
                     />
                 </Link>
 
