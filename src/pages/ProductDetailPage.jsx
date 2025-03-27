@@ -12,9 +12,8 @@ export default function ProductDetailPage() {
   useEffect(() => {
     const fetchProduct = async () => {
       setLoading(true);
-      try {
 
-        /////////
+      try {
         const response = await axios.get(`/api/products/${category}/${id}`);
         if (response.status === 200) {
           setProduct(response.data);
@@ -28,6 +27,7 @@ export default function ProductDetailPage() {
         setLoading(false);
       }
     };
+
 
     fetchProduct();
   }, [id, category]);
