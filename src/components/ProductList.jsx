@@ -24,8 +24,8 @@ export default function ProductList() {
             axios.get("/api/products/new-arrivals")  // Chiamata per le ultime novità
         ])
             .then(([featuredRes, newRes]) => {
-                setFeaturedProducts(featuredRes.data.slice(1, 6));
-                setNewProducts(newRes.data.slice(6, 12));
+                setFeaturedProducts(featuredRes.data.slice(0, 5));
+                setNewProducts(newRes.data.slice(5, 10));
             })
             .catch(err => console.log(err));
     };
