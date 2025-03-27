@@ -122,13 +122,21 @@ body {
     display: flex;
     flex-direction: column;
     width: 285px;
-    height: 500px;
-    border: 1px solid #E5E5E5;
+    height: 460px;
+    /* border: 1px solid #E5E5E5; */
+    background-color: #F8F8FF;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.containerpromozioni .cardcontainer {
+    /* border: 1px solid #E5E5E5; */
+    background-color: none !important;
 }
 
 .imgcontainer {
     width: 100%;
-    height: 400px;
+    height: 360px;
 }
 
 .imgcontainer img {
@@ -140,6 +148,7 @@ body {
 }
 
 .textcontainer {
+    margin: 20px 0 10px 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -165,7 +174,6 @@ main h2 {
     margin-bottom: 20px;
     text-align: center;
     padding-top: 50px;
-    padding-bottom: 50px;
 }
 
 /* PRODOTTI IN EVIDENZA DALLA PAGINA PRODCUT LIST */
@@ -178,10 +186,10 @@ main h2 {
 }
 
 /* PRODOTTI IN PROMOZIONE DALLA PAGINA PRODCUT LIST */
-
+/* 
 .containerpromozioni {
     background-color: #ECF6FB;
-}
+} */
 
 .promozioni {
     display: flex;
@@ -203,10 +211,6 @@ main h2 {
     flex-wrap: wrap;
     gap: 40px;
 
-}
-
-.product-grid img {
-    max-width: 200px;
 }
 
 /* IMG SOPRA IL FOOTER */
