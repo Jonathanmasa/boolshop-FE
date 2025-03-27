@@ -16,7 +16,7 @@ const ProductCard = ({ product, addToCart }) => {
     <>
       <div className="cardcontainer">
         <div className="imgcontainer">
-          <Link to={`/product/${category}/${id}`}>
+          <Link to={`/products/${category}/${id}`}>
             <img src={image_url} alt={name} />
           </Link>
           <div className="iconcontainer">
