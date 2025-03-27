@@ -82,7 +82,7 @@ body {
 /* MAIN */
 .containerbanner {
     height: calc(100vh - 173px);
-    background-image: url(../public/banner.jpg);
+    background-image: url(../banner.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -199,7 +199,7 @@ main h2 {
 
 /* PAGINA NOT FOUND */
 .notfound {
-    background-image: url(../public/banner.jpg);
+    background-image: url(../banner.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
