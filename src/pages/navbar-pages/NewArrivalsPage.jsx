@@ -1,30 +1,31 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useProductContext } from '../../contexts/ProductContext';;
 import ProductGrid from '../../components/ProductGrid';
-import { useLocation } from 'react-router-dom';
+import { useCartContext } from '../../contexts/CartContext';
 
 
 const NewArrivalsPage = () => {
     const { fetchProducts, products, loading, error } = useProductContext();
-    const [searchTerm, setSearchTerm] = useState('');
+    const { addToCart, removeFromCart } = useCartContext();
+    
     useEffect(() => {
 
         // Chiamata per ottenere i prodotti
         fetchProducts('/api/products/new-arrivals',);
-
-
-
     }, []);
 
     return (
         <div>
-            <h1>Risultati della ricerca per "{searchTerm}"</h1>
+            <h1>Risultati Nuovi Arrivi</h1>
             {loading ? (
                 <p>Caricamento...</p>
             ) : error ? (
                 <p>{error}</p>
             ) : (
-                <ProductGrid products={products} />
+                <ProductGrid products={products}
+                            addToCart={addToCart}
+                            removeFromCart={removeFromCart}
+                />
             )}
         </div>
     );

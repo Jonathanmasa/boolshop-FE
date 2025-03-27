@@ -50,20 +50,29 @@ body {
 .navpages {
     display: flex;
     align-items: center;
+    /* justify-content: center; */
     padding: 29px 68px;
     background-color: black;
-    gap: 30px;
-    height: 100px;
+    gap: 40px;
+    height: 75px;
 }
 
 .navpages a {
     color: white;
     text-decoration: none;
     font-weight: 500;
-    font-size: 14px;
-    padding-bottom: 40px 0;
+    font-size: 16px;
+    transition: transform 0.2s ease, color 0.2s ease;
 }
 
+.navpages a:hover {
+    color: #9797ff; 
+    transform: scale(1.1); 
+}
+
+.navpages a:active {
+    color: #00dc91; 
+}
 
 .heart {
     padding-right: 32px;

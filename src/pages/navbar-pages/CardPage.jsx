@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { useProductContext } from '../../contexts/ProductContext';
 import ProductGrid from '../../components/ProductGrid';
-
 import { useCartContext } from '../../contexts/CartContext';
 
 const CardPage = () => {
@@ -23,8 +22,8 @@ const CardPage = () => {
                 <p>{error}</p>
             ) : (
                 <ProductGrid products={products}
-                    addToCart={addToCart}
-                    removeFromCart={removeFromCart}
+                            addToCart={addToCart}
+                            removeFromCart={removeFromCart}
                 />
             )}
         </div>
