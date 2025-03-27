@@ -7,7 +7,7 @@ import { useCartContext } from '../../contexts/CartContext';
 const NewArrivalsPage = () => {
     const { fetchProducts, products, loading, error } = useProductContext();
     const { addToCart, removeFromCart } = useCartContext();
-    
+
     useEffect(() => {
 
         // Chiamata per ottenere i prodotti
@@ -16,15 +16,15 @@ const NewArrivalsPage = () => {
 
     return (
         <div>
-            <h1>Risultati Nuovi Arrivi</h1>
+            <h1 className='titlepage'>Eggrocket Novità</h1>
             {loading ? (
                 <p>Caricamento...</p>
             ) : error ? (
                 <p>{error}</p>
             ) : (
                 <ProductGrid products={products}
-                            addToCart={addToCart}
-                            removeFromCart={removeFromCart}
+                    addToCart={addToCart}
+                    removeFromCart={removeFromCart}
                 />
             )}
         </div>

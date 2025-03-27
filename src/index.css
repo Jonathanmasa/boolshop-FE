@@ -232,6 +232,12 @@ main h2 {
     padding: 60px;
 }
 
+/* IMPOSTAZIONI PAGINE */
+.titlepage {
+    text-align: center;
+    padding-top: 20px;
+}
+
 /* FOOTER */
 footer {
     /* height: 388px; */
