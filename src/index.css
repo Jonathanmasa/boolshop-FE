@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Gochi Hand", cursive;
 }
 
 body {
@@ -120,7 +121,7 @@ body {
 
 .cardcontainer {
     width: 285px;
-    height: 460px;
+    height: 470px;
     background-color: #F8F8FF;
     border-radius: 10px;
     padding: 10px;
@@ -175,6 +176,7 @@ main h2 {
     text-align: center;
     padding-top: 50px;
 }
+
 
 /* PRODOTTI IN EVIDENZA DALLA PAGINA PRODCUT LIST */
 .evidenza {
