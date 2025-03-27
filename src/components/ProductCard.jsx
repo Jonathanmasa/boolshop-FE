@@ -19,15 +19,13 @@ const ProductCard = ({ product, addToCart }) => {
           <Link to={`/product/${id}`}>
             <img src={image_url} alt={name} />
           </Link>
+          <div className="iconcontainer">
+            <ShoppingCart onClick={() => addToCart(product)} size={20} strokeWidth={1.5} className=" text-black hover:text-blue-500 cursor-pointer" />
+            <Heart id="wish" size={20} strokeWidth={1.5} className="text-black hover:text-red-500 cursor-pointer" />
+          </div>
         </div>
         <div className="textcontainer">
           <h5>{name}</h5>
-          <div className="iconcontainer">
-            <ShoppingCart onClick={() => addToCart(product)} size={20} strokeWidth={1.5} className=" text-black hover:text-blue-500 cursor-pointer" />
-            <Heart size={20} strokeWidth={1.5} className="text-black hover:text-red-500 cursor-pointer" />
-          </div>
-        </div>
-        <div className="pricecontainer">
           <p className="category">{category}</p>
           <p>{price} €</p>
         </div>
