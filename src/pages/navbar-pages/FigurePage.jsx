@@ -1,4 +1,4 @@
-import React, {useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useProductContext } from '../../contexts/ProductContext';;
 import ProductGrid from '../../components/ProductGrid';
 import { useCartContext } from '../../contexts/CartContext';
@@ -16,7 +16,7 @@ const FigurePage = () => {
 
     return (
         <div>
-            <h1>Risultati Figure</h1>
+            <h1 className='titlepage'>Eggrocket Figure</h1>
             {loading ? (
                 <p>Caricamento...</p>
             ) : error ? (

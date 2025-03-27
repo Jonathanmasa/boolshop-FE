@@ -15,15 +15,15 @@ const OnSalePage = () => {
 
     return (
         <div>
-            <h1>Risultati Promozioni</h1>
+            <h1 className='titlepage'>Eggrocket Promozioni</h1>
             {loading ? (
                 <p>Caricamento...</p>
             ) : error ? (
                 <p>{error}</p>
             ) : (
                 <ProductGrid products={products}
-                            addToCart={addToCart}
-                            removeFromCart={removeFromCart}
+                    addToCart={addToCart}
+                    removeFromCart={removeFromCart}
                 />
             )}
         </div>

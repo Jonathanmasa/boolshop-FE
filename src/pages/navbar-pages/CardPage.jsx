@@ -15,15 +15,15 @@ const CardPage = () => {
 
     return (
         <div>
-            <h1>Risultati cards </h1>
+            <h1 className='titlepage'>Eggrocket cards </h1>
             {loading ? (
                 <p>Caricamento...</p>
             ) : error ? (
                 <p>{error}</p>
             ) : (
                 <ProductGrid products={products}
-                            addToCart={addToCart}
-                            removeFromCart={removeFromCart}
+                    addToCart={addToCart}
+                    removeFromCart={removeFromCart}
                 />
             )}
         </div>
