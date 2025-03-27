@@ -14,20 +14,25 @@ const ProductCard = ({ product, addToCart }) => {
 
   return (
     <>
-      <div>
-        <Link to={`/product/${id}`}>
-          <img src={image_url} alt={name} />
-        </Link>
-        <div>
-          <h5>
-            <span className="title">{name}</span>
-            <ShoppingCart onClick={() => addToCart(product)} size={28} strokeWidth={1.5} className=" text-black hover:text-blue-500 cursor-pointer" />
-            <Heart size={28} strokeWidth={1.5} className="text-black hover:text-red-500 cursor-pointer" />
-          </h5>
-          <span className="title">{category}</span>
-          <span>{price} €</span>
+      <div className="cardcontainer">
+        <div className="imgcontainer">
+          <Link to={`/product/${id}`}>
+            <img src={image_url} alt={name} />
+          </Link>
+        </div>
+        <div className="textcontainer">
+          <h5>{name}</h5>
+          <div className="iconcontainer">
+            <ShoppingCart onClick={() => addToCart(product)} size={20} strokeWidth={1.5} className=" text-black hover:text-blue-500 cursor-pointer" />
+            <Heart size={20} strokeWidth={1.5} className="text-black hover:text-red-500 cursor-pointer" />
+          </div>
+        </div>
+        <div className="pricecontainer">
+          <p className="category">{category}</p>
+          <p>{price} €</p>
         </div>
       </div >
+
     </>
   );
 };

@@ -50,20 +50,29 @@ body {
 .navpages {
     display: flex;
     align-items: center;
+    /* justify-content: center; */
     padding: 29px 68px;
     background-color: black;
-    gap: 30px;
-    height: 100px;
+    gap: 40px;
+    height: 75px;
 }
 
 .navpages a {
     color: white;
     text-decoration: none;
     font-weight: 500;
-    font-size: 14px;
-    padding-bottom: 40px 0;
+    font-size: 16px;
+    transition: transform 0.2s ease, color 0.2s ease;
 }
 
+.navpages a:hover {
+    color: #9797ff; 
+    transform: scale(1.1); 
+}
+
+.navpages a:active {
+    color: #00dc91; 
+}
 
 .heart {
     padding-right: 32px;
@@ -107,10 +116,45 @@ body {
 }
 
 
-/* PRODOTTI IN EVIDENZA */
+/* PRODOTTI IN EVIDENZA DALLA PRODUCT CARD*/
 
-.title {
-    margin-right: 10px;
+.cardcontainer {
+    display: flex;
+    flex-direction: column;
+    width: 285px;
+    height: 500px;
+    border: 1px solid #E5E5E5;
+}
+
+.imgcontainer {
+    width: 100%;
+    height: 400px;
+}
+
+.imgcontainer img {
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.textcontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.pricecontainer {
+    line-height: 0.5;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
 }
 
 /* REGOLE GENARALI H2 */
@@ -124,45 +168,31 @@ main h2 {
     padding-bottom: 50px;
 }
 
-
+/* PRODOTTI IN EVIDENZA DALLA PAGINA PRODCUT LIST */
 .evidenza {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    padding-bottom: 100px;
+    align-items: center;
+    padding: 40px 0;
 }
 
-.evidenza img {
-    width: 100%;
-    height: 250px;
-    margin-bottom: 5px;
-}
-
-/* INFO SOTTO LA IMG NELL HOME PAGE */
-
-
-
-
-
-/* PRODOTTI IN PROMOZIONE */
-
-
-.promozioni {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding-bottom: 100px;
-}
+/* PRODOTTI IN PROMOZIONE DALLA PAGINA PRODCUT LIST */
 
 .containerpromozioni {
     background-color: #ECF6FB;
 }
 
-.promozioni img {
-    width: 100%;
-    height: 250px;
-    margin-bottom: 5px;
+.promozioni {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px 0;
 }
+
+
+
 
 /* product grid */
 .product-grid {
@@ -180,11 +210,10 @@ main h2 {
 }
 
 /* IMG SOPRA IL FOOTER */
-.containerimg {
+.container-img-sopra-footer {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    padding: 20px;
+    padding: 60px;
 }
 
 /* FOOTER */
