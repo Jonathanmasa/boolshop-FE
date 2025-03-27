@@ -118,31 +118,17 @@ body {
 
 /* PRODOTTI IN EVIDENZA DALLA PRODUCT CARD*/
 
-/* divisore test  */
-.divisore {
-    width: 90%;
-    margin: auto;
-    margin-top: 30px;
-}
-
-.divisore img {
-    max-width: 100%;
-}
-
-
 .cardcontainer {
     display: flex;
     flex-direction: column;
     width: 285px;
     height: 460px;
-    /* border: 1px solid #E5E5E5; */
     background-color: #F8F8FF;
     border-radius: 10px;
     padding: 10px;
 }
 
 .containerpromozioni .cardcontainer {
-    /* border: 1px solid #E5E5E5; */
     background-color: none !important;
 }
 
@@ -198,10 +184,7 @@ main h2 {
 }
 
 /* PRODOTTI IN PROMOZIONE DALLA PAGINA PRODCUT LIST */
-/* 
-.containerpromozioni {
-    background-color: #ECF6FB;
-} */
+
 
 .promozioni {
     display: flex;
@@ -224,6 +207,20 @@ main h2 {
     gap: 40px;
 
 }
+
+/* DIVISORE*/
+
+/* divisore test  */
+.divisore {
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.divisore img {
+    max-width: 100%;
+}
+
 
 /* IMG SOPRA IL FOOTER */
 .container-img-sopra-footer {
