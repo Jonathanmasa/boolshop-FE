@@ -24,8 +24,8 @@ export default function ProductList() {
             axios.get("/api/products/new-arrivals")  // Chiamata per le ultime novità
         ])
             .then(([featuredRes, newRes]) => {
-                setFeaturedProducts(featuredRes.data.slice(0, 5));
-                setNewProducts(newRes.data.slice(5, 10));
+                setFeaturedProducts(featuredRes.data.slice(1, 6));
+                setNewProducts(newRes.data.slice(6, 11));
             })
             .catch(err => console.log(err));
     };
@@ -89,7 +89,7 @@ export default function ProductList() {
             </nav>
 
             {/* Sezione immagine */}
-            <nav className="containerimg">
+            <nav className="container-img-sopra-footer">
                 <div><img src="/Group-56.png" alt="" /></div>
             </nav>
         </main >
