@@ -1,4 +1,7 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
+import { toast } from 'react-toastify';
+
+
 
 // Creiamo il contesto per il carrello
 const CartContext = createContext();
@@ -20,9 +23,11 @@ export const CartProvider = ({ children }) => {
             // Se il prodotto è già nel carrello, incrementiamo la quantità
             newCart = [...cart];
             newCart[existingProductIndex].quantity += 1;
+            toast.info(`Quantità aggiornata per ${product.name}`);
         } else {
             // Altrimenti aggiungiamo il prodotto con quantità 1
             newCart = [...cart, { ...product, quantity: 1 }];
+            toast.success(`${product.name} aggiunto al carrello`);
         }
         setCart(newCart);
         localStorage.setItem('cart', JSON.stringify(newCart)); // Salva nel localStorage
@@ -30,9 +35,20 @@ export const CartProvider = ({ children }) => {
 
     // Funzione per rimuovere un prodotto dal carrello
     const removeFromCart = (productId) => {
+
+        // Troviamo il prodotto che vogliamo rimuovere
+        const removedProduct = cart.find((product) => product.id === productId);
+        // Rimuoviamo il prodotto dal carrello
         const newCart = cart.filter((product) => product.id !== productId);
+
+
         setCart(newCart);
-        localStorage.setItem('cart', JSON.stringify(newCart)); // Salva nel localStorage
+        localStorage.setItem('cart', JSON.stringify(newCart)); // 
+
+        // Mostra la notifica solo se il prodotto è stato trovato
+        if (removedProduct) {
+            toast.warn(`${removedProduct.name} rimosso dal carrello`);
+        }
     };
 
     // Funzione per aggiornare la quantità di un prodotto nel carrello
@@ -49,7 +65,7 @@ export const CartProvider = ({ children }) => {
     }, []);
 
     return (
-        <CartContext.Provider value={{ cart, addToCart, removeFromCart, updateQuantity }}>
+        <CartContext.Provider value={{ cart, addToCart, removeFromCart, updateQuantity, toast }}>
             {children}
         </CartContext.Provider>
     );

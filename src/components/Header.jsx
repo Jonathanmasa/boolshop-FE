@@ -12,7 +12,7 @@ const Header = ({ search, setSearch }) => {
 
     return (
         <header>
-            <nav className="d-flex justify-content-between align-items-center p-3">
+            <nav className="egg">
                 {/* Logo del sito */}
                 <Link to={"/"}>
                     <img
@@ -23,17 +23,17 @@ const Header = ({ search, setSearch }) => {
                 </Link>
 
                 {/* Search Bar */}
-                <div className="d-flex justify-content-center">
+                <div className="">
                     <SearchBar search={search} setSearch={setSearch} />
                 </div>
 
                 {/* Carrello e lista desideri */}
-                <div className="d-flex space-x-4">
-                    <Link to="/wishlist" className="me-2">
-                        <Heart size={28} strokeWidth={1.2} className="text-black hover:text-red-500 cursor-pointer" />
+                <div className="">
+                    <Link to="/wishlist" className="heart">
+                        <Heart size={28} strokeWidth={1.5} className="text-black hover:text-red-500 cursor-pointer" />
                     </Link>
                     <Link to="/cart">
-                        <ShoppingCart size={28} strokeWidth={1.2} className=" text-black hover:text-blue-500 cursor-pointer" />
+                        <ShoppingCart size={28} strokeWidth={1.5} className=" text-black hover:text-blue-500 cursor-pointer" />
                     </Link>
                 </div>
             </nav>

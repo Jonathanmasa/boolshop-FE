@@ -1,46 +1,34 @@
 import { Link } from "react-router-dom";
 
-const ProductCard = ({ product }) => {
+import { Heart, ShoppingCart } from "lucide-react";
+
+const ProductCard = ({ product, addToCart }) => {
 
   if (!product) {
     return <div className="text-danger">Errore: prodotto non valido</div>;
   }
 
   //DESTRUTTURIAMO OGGETTO PROPS
-  const { id, image_url, name, price } = product;
-
-
-
-
-
+  const { id, image_url, name, price, category } = product;
 
 
   return (
-    <div className="product-card">
-      <div className="card border-0 shadow-sm">
-        {/* Placeholder immagine se non disponibile */}
-        <div className="card-img-wrapper">
-          <img
-            src={image_url}
-            className="card-img-top"
-            alt={name}
-          />
+    <>
+      <div>
+        <Link to={`/product/${id}`}>
+          <img src={image_url} alt={name} />
+        </Link>
+        <div>
+          <h5>
+            <span className="title">{name}</span>
+            <ShoppingCart onClick={() => addToCart(product)} size={28} strokeWidth={1.5} className=" text-black hover:text-blue-500 cursor-pointer" />
+            <Heart size={28} strokeWidth={1.5} className="text-black hover:text-red-500 cursor-pointer" />
+          </h5>
+          <span className="title">{category}</span>
+          <span>{price} €</span>
         </div>
-
-        <div className="card-body text-center">
-          {/* Nome del prodotto */}
-          <h6 className="card-title">{name}</h6>
-
-          {/* Prezzo del prodotto */}
-          <p className="card-text fw-bold">€{price}</p>
-
-          {/* Link alla pagina dettagli */}
-          <Link to={`/product/${id}`} className="btn btn-sm btn-outline-primary">
-            Vedi dettagli
-          </Link>
-        </div>
-      </div>
-    </div>
+      </div >
+    </>
   );
 };
 

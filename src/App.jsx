@@ -7,6 +7,8 @@
 // Import functions from React
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React, { useState } from 'react';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 // Import context
 import { ProductProvider } from "./contexts/ProductContext";
@@ -18,8 +20,13 @@ import DefaultLayout from "./layouts/DefaultLayout";
 
 // Import pages
 import HomePage from "./pages/HomePage";
+import CartPage from "./pages/CartPage";
+import CardPage from "./pages/navbar-pages/CardPage";
+import FigurePage from "./pages/navbar-pages/FigurePage";
+import MangaPage from "./pages/navbar-pages/MangaPage";
+import OnSalePage from "./pages/navbar-pages/OnSalePage";
+import NewArrivalPage from "./pages/navbar-pages/NewArrivalsPage";
 import SearchPage from './pages/SearchPage';
-import ProductCard from "./components/ProductCard";
 import ProductDetailPage from "./pages/ProductDetailPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import AboutUs from "./pages/AboutUs";
@@ -42,9 +49,18 @@ function App() {
       <WishlistProvider>
         <CartProvider>
           <BrowserRouter>
+            <ToastContainer />
             <Routes>
               <Route element={<DefaultLayout />}>
+                <Route path="/cart" element={<CartPage />} />
                 <Route index path="/" element={<HomePage />} />
+                {/* navbar-pages */}
+                <Route path="/card" element={<CardPage />} />
+                <Route path="/figure" element={<FigurePage />} />
+                <Route path="/manga" element={<MangaPage />} />
+                <Route path="/on-sale" element={<OnSalePage />} />
+                <Route path="/new-arrival" element={<NewArrivalPage />} />
+
                 <Route path="/product/:id" element={<ProductDetailPage />} />
                 <Route path="/search" element={<SearchPage />} />
 

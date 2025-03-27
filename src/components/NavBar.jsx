@@ -4,11 +4,11 @@ import { Link } from "react-router-dom"
 export default function NavBar() {
     return (
         <nav className="navpages" >
-            <Link>Carte</Link>
-            <Link>Figure</Link>
-            <Link>Manga</Link>
-            <Link>Nuovi arrivi</Link>
-            <Link>Promozioni</Link>
+            <Link to="/card" >Carte</Link>
+            <Link to="/figure" >Figure</Link>
+            <Link to="/manga" >Manga</Link>
+            <Link to="/new-arrival" >Nuovi arrivi</Link>
+            <Link to="/on-sale" >Promozioni</Link>
         </nav>
     );
 }

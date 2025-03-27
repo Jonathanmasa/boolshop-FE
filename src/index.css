@@ -12,6 +12,13 @@ body {
 
 /* HEADER */
 
+.egg {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 64px;
+}
+
 /* SEARCHBAR */
 .search-bar-container {
     display: flex;
@@ -43,7 +50,7 @@ body {
 .navpages {
     display: flex;
     align-items: center;
-    padding: 10px 20px;
+    padding: 29px 68px;
     background-color: black;
     gap: 30px;
     height: 100px;
@@ -58,10 +65,14 @@ body {
 }
 
 
+.heart {
+    padding-right: 32px;
+}
+
 
 /* MAIN */
 .containerbanner {
-    height: 400px;
+    height: 80vh;
     background-image: url(../public/banner.jpg);
     background-size: cover;
     background-position: center;
@@ -73,6 +84,17 @@ body {
     color: white;
 }
 
+.containerbanner h1 {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.containerbanner h5 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
 .find {
     background-color: #6666FF;
     border: none;
@@ -81,66 +103,87 @@ body {
     padding: 7px 20px;
     cursor: pointer;
     margin-top: 20px;
+    font-weight: 500;
 }
 
 
 /* PRODOTTI IN EVIDENZA */
-.containerevidenza {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    padding: 20px;
+
+.title {
+    margin-right: 10px;
+}
+
+/* REGOLE GENARALI H2 */
+
+main h2 {
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 
 .evidenza {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
+    justify-content: space-around;
+    padding-bottom: 100px;
 }
-
-
 
 .evidenza img {
-    width: 200px;
+    width: 100%;
+    height: 250px;
+    margin-bottom: 5px;
 }
+
+/* INFO SOTTO LA IMG NELL HOME PAGE */
+
+
+
 
 
 /* PRODOTTI IN PROMOZIONE */
-
-.containerpromozioni {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    padding: 20px;
-    background-color: #ECF6FB;
-}
 
 
 .promozioni {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
+    justify-content: space-around;
+    padding-bottom: 100px;
+}
+
+.containerpromozioni {
+    background-color: #ECF6FB;
 }
 
 .promozioni img {
-    width: 200px;
+    width: 100%;
+    height: 250px;
+    margin-bottom: 5px;
+}
+
+/* product grid */
+.product-grid {
+    padding: 40px 0;
+    width: 92.5%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+
+}
+
+.product-grid img {
+    max-width: 200px;
 }
 
 /* IMG SOPRA IL FOOTER */
 .containerimg {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    padding: 20px;
+    padding: 60px;
 }
 
 /* FOOTER */
