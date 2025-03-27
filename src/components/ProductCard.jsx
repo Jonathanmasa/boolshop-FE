@@ -13,41 +13,22 @@ const ProductCard = ({ product, addToCart }) => {
 
 
   return (
-    <div className="">
-      <div className="">
-
-        {/* Placeholder immagine se non disponibile */}
-        <img
-          src={image_url}
-          className=""
-          alt={name}
-        />
-
-
-        <div className="">
-          {/* Nome del prodotto */}
-          <h6 className="">{name}</h6>
-
-          {/* desacrizione del prodotto */}
-          <p className="">{category}</p>
-
-          {/* Prezzo del prodotto */}
-          <p>€{price}</p>
-
-          {/* Link alla pagina dettagli */}
-          <Link to={`/product/${id}`} className="">
-            Vedi dettagli
-          </Link>
-
-          {/* Bottoni carrello */}
-          <span className="">
+    <>
+      <div>
+        <Link to={`/product/${id}`}>
+          <img src={image_url} alt={name} />
+        </Link>
+        <div>
+          <h5>
+            <span className="title">{name}</span>
             <ShoppingCart onClick={() => addToCart(product)} size={28} strokeWidth={1.5} className=" text-black hover:text-blue-500 cursor-pointer" />
             <Heart size={28} strokeWidth={1.5} className="text-black hover:text-red-500 cursor-pointer" />
-          </span>
-
+          </h5>
+          <span className="title">{category}</span>
+          <span>{price} €</span>
         </div>
-      </div>
-    </div>
+      </div >
+    </>
   );
 };
 

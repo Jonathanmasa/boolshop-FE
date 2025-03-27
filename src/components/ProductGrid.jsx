@@ -2,7 +2,7 @@ import React from 'react';
 import ProductCard from './ProductCard';
 
 const ProductGrid = ({ products, addToCart, removeFromCart }) => {
-    console.log("🧪 Products ricevuti in ProductGrid:", products);
+    console.log("Products ricevuti in ProductGrid:", products);
 
 
 

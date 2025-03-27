@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 import axios from 'axios';
 
 // crea contesto globale per i prodotti
@@ -18,7 +18,7 @@ export const ProductProvider = ({ children }) => {
         setError(null);
         try {
             const response = await axios.get(endpoint, { params });
-            console.log("📦 Risposta da BE:", response.data);
+            console.log("Risposta da BE:", response.data);
             setProducts(response.data);
         } catch (error) {
             setError(error);
