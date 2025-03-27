@@ -61,7 +61,7 @@ function App() {
                 <Route path="/on-sale" element={<OnSalePage />} />
                 <Route path="/new-arrival" element={<NewArrivalPage />} />
 
-                <Route path="/product/:id" element={<ProductDetailPage />} />
+                <Route path="/product/category/:id" element={<ProductDetailPage />} />
                 <Route path="/search" element={<SearchPage />} />
 
                 {/* footer */}
