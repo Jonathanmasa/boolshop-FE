@@ -78,6 +78,11 @@ export default function ProductList() {
                 </div>
             </nav>
 
+            <div className="divisore">
+                <img src="/divisore.png" alt="" />
+            </div>
+
+
             {/* Sezione prodotti in promozione */}
             <nav className="containerpromozioni">
                 <h2>Ultime novità</h2>

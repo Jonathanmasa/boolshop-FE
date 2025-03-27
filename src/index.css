@@ -118,6 +118,18 @@ body {
 
 /* PRODOTTI IN EVIDENZA DALLA PRODUCT CARD*/
 
+/* divisore test  */
+.divisore {
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.divisore img {
+    max-width: 100%;
+}
+
+
 .cardcontainer {
     display: flex;
     flex-direction: column;
