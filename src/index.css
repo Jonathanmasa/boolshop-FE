@@ -334,6 +334,28 @@ main h2 {
 }
 
 
+/* PAGINA wishlist */
+
+/* .wishlist-banner {
+    background-image: url(../banner6.png);
+    color: white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 85vh;
+
+    background-position: 50% 50%;
+    background-size: cover;
+} */
+
+
+.wishlist-banner {
+    background-image: url(../banner6.png);
+    background-size: cover;
+    min-width: 100%;
+    background-position: 50% 0%;
+}
 
 
 
@@ -381,16 +403,24 @@ main h2 {
 .cart-cover {
     background-image: url(../cart-image.png);
     background-size: cover;
-
-
 }
 
 .card-cart {
     background-color: rgba(255, 255, 255, 0.5) !important;
 
-
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* SEARCH PAGE */
 .search-page {
@@ -462,6 +492,10 @@ main h2 {
     margin-bottom: 50px;
 
 }
+
+
+
+
 
 
 
