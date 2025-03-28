@@ -314,7 +314,11 @@ main h2 {
     display: flex;
     align-items: center;
     justify-content: center;
+<<<<<<< HEAD
     height: 100vh;
+=======
+    height: 90vh;
+>>>>>>> 05919ede21fc169026423208e06e3420774e9323
 
     background-position: 50% 75%;
     background-size: cover;
@@ -328,7 +332,7 @@ main h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 90vh;
 
     background-position: 50% 75%;
     background-size: cover;
@@ -345,9 +349,26 @@ main h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 90vh;
 
     background-position: 50% 60%;
+
+}
+
+
+/* PAGINA ON SALE */
+
+.onsale-banner {
+    background-image: url(../banner8.png);
+    color: white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+
+    background-position: 50% 60%;
+    background-size: cover;
 
 }
 
@@ -363,7 +384,7 @@ main h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 90vh;
 
     background-position: 50% 50%;
     background-size: cover;
