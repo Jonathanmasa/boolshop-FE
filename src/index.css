@@ -19,6 +19,41 @@ body {
     padding: 24px 64px;
 }
 
+/* ICONE */
+
+.heart {
+    padding-right: 32px;
+    color: black;
+    font-size: 25px;
+}
+
+/* HEART HOVER */
+.heart:hover {
+    color: #dc0000;
+}
+
+/* ACTIVE */
+.heart:active {
+    color: #00dc91;
+}
+
+/* CART */
+.cart {
+    padding-right: 32px;
+    color: black;
+    font-size: 25px;
+}
+
+/* HEART HOVER */
+.cart:hover {
+    color: #6666FF;
+}
+
+/* ACTIVE */
+.cart:active {
+    color: #00dc91;
+}
+
 /* SEARCHBAR */
 .search-bar-container {
     display: flex;
@@ -65,6 +100,7 @@ body {
     transition: transform 0.2s ease, color 0.2s ease;
 }
 
+/* HOVER NAVBAR */
 .navpages a:hover {
     color: #9797ff;
     transform: scale(1.1);
@@ -72,10 +108,6 @@ body {
 
 .navpages a:active {
     color: #00dc91;
-}
-
-.heart {
-    padding-right: 32px;
 }
 
 
@@ -160,12 +192,46 @@ body {
 
 }
 
+
+/* ICONE */
 .iconcontainer {
-    padding-left: 210px;
+    margin-left: 235px;
     padding-top: 20px;
     cursor: pointer;
 }
 
+
+#hearthome {
+    padding-bottom: 17px;
+    color: black;
+    font-size: 28px;
+}
+
+/* HEART HOVER */
+#hearthome:hover {
+    color: #dc0000;
+}
+
+/* ACTIVE */
+#hearthome:active {
+    color: #00dc91;
+}
+
+/* CART */
+#carthome {
+    color: black;
+    font-size: 25px;
+}
+
+/* HEART HOVER */
+#carthome:hover {
+    color: #6666FF;
+}
+
+/* ACTIVE */
+#carthome:active {
+    color: #00dc91;
+}
 
 
 
@@ -215,6 +281,16 @@ main h2 {
     background-size: cover;
 }
 
+/* CARD PAGE */
+.titlepage:hover {
+    color: #9797ff;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.titlepage:active {
+    color: #00dc91;
+}
 
 /* MANGA PAGE */
 
@@ -306,6 +382,79 @@ main h2 {
     padding-top: 20px;
 }
 
+/* CART PAGE */
+.cart-cover {
+    background-image: url(../public/cart-image.png);
+    background-size: cover;
+    
+
+}
+
+.card-cart {
+        background-color: rgba(255, 255, 255, 0.5) !important ; 
+        
+    
+    
+}
+
+/* SEARCH PAGE */
+.search-page {
+    padding: 20px;
+    
+}
+
+/* Titolo della pagina */
+.search-page .titlepage {
+    font-size: 2rem;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Sezione del form di ricerca senza background */
+.search-page form {
+    padding: 20px;
+    border-radius: 8px;
+    background-color: transparent; /* Rimosso il background */
+}
+
+/* Form group */
+.search-page .form-group {
+    width: 100%;
+}
+
+.search-page .form-group label {
+    font-weight: 600;
+    color: #444;
+}
+
+/* Input e select del form di ricerca */
+.search-page .form-group input,
+.search-page .form-group select {
+    margin-top: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Bottone per la ricerca */
+.search-page .btn {
+    margin-top: 15px;
+}
+
+/* Contenitore dei prodotti (qui mettiamo il background) */
+.search-page .product-grid {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Messaggi di caricamento o errore */
+.search-page .loading,
+.search-page .error {
+    margin-top: 20px;
+}
+
+
 /* FOOTER */
 footer {
     /* height: 388px; */
@@ -370,3 +519,18 @@ footer nav .socials {
     display: flex;
     gap: 20px;
 }
+
+footer nav .socials a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+footer nav .socials a:hover {
+    color: #6666FF;
+}
+
+footer nav .socials a:active {
+    color: #00FFA8;
+}
+

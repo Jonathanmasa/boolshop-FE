@@ -3,8 +3,6 @@
 // Import functions from React
 import { Link } from "react-router-dom"
 
-// lucide icons
-import { Instagram, Facebook, Youtube } from "lucide-react";
 
 const Footer = () => {
 
@@ -41,9 +39,9 @@ const Footer = () => {
 
                         {/* socials  */}
                         <div className="socials">
-                            <a href="http://www.instagram.com" target="_blank"> <Instagram /></a>
-                            <a href="http://www.youtube.com" target="_blank"> <Youtube /></a>
-                            <a href="http://www.facebook.com" target="_blank"> <Facebook /></a>
+                            <a href="http://www.instagram.com" target="_blank"> <i class="fa-brands fa-instagram"></i></a>
+                            <a href="http://www.youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                            <a href="http://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i> </a>
                         </div>
                     </div>
                 </nav>
