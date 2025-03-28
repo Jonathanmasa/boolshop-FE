@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 
-import { Heart, ShoppingCart } from "lucide-react";
 
-const ProductCard = ({ product, addToCart, addToWishlist}) => {
+const ProductCard = ({ product, addToCart, addToWishlist }) => {
 
   if (!product) {
     return <div className="text-danger">Errore: prodotto non valido</div>;
@@ -20,10 +19,10 @@ const ProductCard = ({ product, addToCart, addToWishlist}) => {
             <img src={image_url} alt={name} />
           </Link>
           <div className="iconcontainer">
-            <ShoppingCart onClick={() => addToCart(product)} size={20} strokeWidth={1.5} className=" text-black hover:text-blue-500 cursor-pointer m-1" />
-            <Heart onClick={() => addToWishlist(product)} id="wish" size={20} strokeWidth={1.5} className="text-black hover:text-red-500 cursor-pointer" />
-          </div>
-        </div>
+            <i onClick={() => addToCart(product)} id="hearthome" class="fa-regular fa-heart"></i>{/* Icona cuore */}
+            <i onClick={() => addToWishlist(product)} id="carthome" class="fa-solid fa-cart-shopping"></i>{/* Icona carrello */}
+          </div >
+        </div >
         <div className="textcontainer">
           <h5>{name}</h5>
           <p className="category">{category}</p>
