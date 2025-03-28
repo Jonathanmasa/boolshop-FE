@@ -1,9 +1,11 @@
+import { useCartContext } from "../contexts/CartContext";
 import { useWishlistContext } from "../contexts/WishlistContext";
 import { Link } from "react-router-dom";
 
 const WishlistPage = () => {
 
     const { wishlist, removeFromWishlist } = useWishlistContext();
+    const {addToCart} = useCartContext();
 
     return (
         <div className="container d-flex justify-content-center align-items-center min-vh-100 bg-light">
@@ -30,6 +32,7 @@ const WishlistPage = () => {
                                             onChange={(e) => updateQuantity(product.id, parseInt(e.target.value))}
                                         />
                                     </div>
+                                    <button className="btn btn-success btn-sm" onClick={() => addToCart(product.id)}>Aggiungi al carello</button>
                                     <button className="btn btn-danger btn-sm" onClick={() => removeFromWishlist(product.id)}>Rimuovi</button>
                                 </li>
                             ))}
