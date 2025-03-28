@@ -19,8 +19,8 @@ const ProductCard = ({ product, addToCart, addToWishlist }) => {
             <img src={image_url} alt={name} />
           </Link>
           <div className="iconcontainer">
-            <i onClick={() => addToCart(product)} id="hearthome" class="fa-regular fa-heart"></i>{/* Icona cuore */}
-            <i onClick={() => addToWishlist(product)} id="carthome" class="fa-solid fa-cart-shopping"></i>{/* Icona carrello */}
+            <i onClick={() => addToCart(product)} id="hearthome" className="fa-regular fa-heart"></i>{/* Icona cuore */}
+            <i onClick={() => addToWishlist(product)} id="carthome" className="fa-solid fa-cart-shopping"></i>{/* Icona carrello */}
           </div >
         </div >
         <div className="textcontainer">

@@ -17,6 +17,8 @@ export default function ProductDetailPage() {
         const response = await axios.get(`/api/products/${category}/${id}`);
         if (response.status === 200) {
           setProduct(response.data);
+          console.log(response.data);
+
         } else {
           setError("Prodotto non trovato.");
         }
