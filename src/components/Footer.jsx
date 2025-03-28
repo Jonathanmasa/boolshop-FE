@@ -16,7 +16,9 @@ const Footer = () => {
         <footer>
             <div className="container">
                 <div>
-                    <img src="/eggrocket-logo-white.png" alt="Logo" />
+                    <Link to={"/"}>
+                        <img src="/eggrocket-logo-white.png" alt="Logo" />
+                    </Link>
                     <p>
                         Egg Rocket Collector <br /> Roma, Italy
                     </p>
