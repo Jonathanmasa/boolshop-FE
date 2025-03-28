@@ -290,7 +290,7 @@ main h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 80vh;
+    height: 100vh;
 
     background-position: 50% 75%;
     background-size: cover;
@@ -328,7 +328,7 @@ main h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 80vh;
+    height: 100vh;
 
     background-position: 50% 75%;
     background-size: cover;
@@ -345,7 +345,7 @@ main h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 85vh;
+    height: 100vh;
 
     background-position: 50% 60%;
 
@@ -363,7 +363,7 @@ main h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 85vh;
+    height: 100vh;
 
     background-position: 50% 50%;
     background-size: cover;
