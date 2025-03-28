@@ -176,6 +176,11 @@ body {
     object-fit: contain;
 }
 
+.imgcontainer img:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+
 .textcontainer {
     margin: 20px 0 10px 0;
     line-height: 0.6;
@@ -386,21 +391,21 @@ main h2 {
 .cart-cover {
     background-image: url(../public/cart-image.png);
     background-size: cover;
-    
+
 
 }
 
 .card-cart {
-        background-color: rgba(255, 255, 255, 0.5) !important ; 
-        
-    
-    
+    background-color: rgba(255, 255, 255, 0.5) !important;
+
+
+
 }
 
 /* SEARCH PAGE */
 .search-page {
     padding: 20px;
-    
+
 }
 
 /* Titolo della pagina */
@@ -414,7 +419,8 @@ main h2 {
 .search-page form {
     padding: 20px;
     border-radius: 8px;
-    background-color: transparent; /* Rimosso il background */
+    background-color: transparent;
+    /* Rimosso il background */
 }
 
 /* Form group */
@@ -533,4 +539,3 @@ footer nav .socials a:hover {
 footer nav .socials a:active {
     color: #00FFA8;
 }
-
