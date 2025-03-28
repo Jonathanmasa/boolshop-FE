@@ -262,6 +262,25 @@ main h2 {
 }
 
 
+/* BOTTONI PRODUCT LIST */
+.scroll-button {
+    background: rgba(108, 99, 255, 0.7);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-weight: 800;
+    font-size: 19px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: all 0.25s ease-in-out;
+}
+
+.scroll-button:hover {
+    transform: scale(1.05);
+}
+
+
 /* CARD PAGE */
 
 .card-banner {
