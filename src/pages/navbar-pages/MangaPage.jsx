@@ -14,19 +14,25 @@ const MangaPage = () => {
     }, []);
 
     return (
-        <div>
-            <h1 className='titlepage'>Eggrocket Manga </h1>
-            {loading ? (
-                <p>Caricamento...</p>
-            ) : error ? (
-                <p>{error}</p>
-            ) : (
-                <ProductGrid products={products}
-                    addToCart={addToCart}
-                    removeFromCart={removeFromCart}
-                />
-            )}
-        </div>
+        <>
+
+            <div className="manga-banner">
+                <h1 className='titlepage'>Eggrocket Manga </h1>
+            </div >
+            <div>
+
+                {loading ? (
+                    <p>Caricamento...</p>
+                ) : error ? (
+                    <p>{error}</p>
+                ) : (
+                    <ProductGrid products={products}
+                        addToCart={addToCart}
+                        removeFromCart={removeFromCart}
+                    />
+                )}
+            </div>
+        </>
     );
 };
 

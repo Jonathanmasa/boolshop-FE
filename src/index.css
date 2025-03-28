@@ -189,9 +189,8 @@ main h2 {
     padding: 40px 0;
 }
 
+
 /* PRODOTTI IN PROMOZIONE DALLA PAGINA PRODCUT LIST */
-
-
 .promozioni {
     display: flex;
     flex-direction: row;
@@ -199,6 +198,55 @@ main h2 {
     align-items: center;
     padding: 40px 0;
 }
+
+
+/* CARD PAGE */
+
+.card-banner {
+    background-image: url(../banner4.png);
+    color: white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+
+    background-position: 50% 75%;
+    background-size: cover;
+}
+
+
+/* MANGA PAGE */
+
+.manga-banner {
+    background-image: url(../banner2.png);
+    color: white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+
+    background-position: 50% 75%;
+    background-size: cover;
+}
+
+/* FIGURE PAGE */
+.figure-banner {
+    background-image: url(../banner3.png);
+    color: white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+
+    background-position: 50% 75%;
+    background-size: cover;
+}
+
+
+
 
 /* PAGINA NOT FOUND */
 .notfound {
