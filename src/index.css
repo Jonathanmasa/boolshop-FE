@@ -336,6 +336,23 @@ main h2 {
 
 
 
+/* PAGINA NEW ARRIVALS */
+
+.newarrivals-banner {
+    background-image: url(../banner7.png);
+    color: white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 85vh;
+
+    background-position: 50% 60%;
+
+}
+
+
+
 
 /* PAGINA NOT FOUND */
 

@@ -34,13 +34,18 @@ const NewArrivalsPage = () => {
 
     return (
         <div>
+
+
             {/* Banner della pagina con il titolo cliccabile */}
-            <div className="bannernewarrivals">
+            <div className="newarrivals-banner">
                 <h1
                     className='titlepage' onClick={scrollToProducts} // Al clic, esegui lo scroll alla sezione dei prodotti
                     style={{ cursor: 'pointer' }} // Cambia il cursore per indicare che è cliccabile
                 >Eggrocket Novità</h1>
             </div >
+
+
+
 
 
             {/* Sezione dei prodotti */}
