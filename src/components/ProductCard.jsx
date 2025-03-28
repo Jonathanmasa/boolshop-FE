@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 
-import { Heart, ShoppingCart } from "lucide-react";
 
 const ProductCard = ({ product, addToCart }) => {
 
@@ -20,8 +19,8 @@ const ProductCard = ({ product, addToCart }) => {
             <img src={image_url} alt={name} />
           </Link>
           <div className="iconcontainer">
-            <ShoppingCart onClick={() => addToCart(product)} size={20} strokeWidth={1.5} className=" text-black hover:text-blue-500 cursor-pointer m-1" />
-            <Heart id="wish" size={20} strokeWidth={1.5} className="text-black hover:text-red-500 cursor-pointer" />
+            <i id="hearthome" class="fa-regular fa-heart"></i>{/* Icona cuore */}
+            <i id="carthome" class="fa-solid fa-cart-shopping"></i>{/* Icona carrello */}
           </div>
         </div>
         <div className="textcontainer">
