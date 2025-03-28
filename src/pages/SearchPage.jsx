@@ -53,11 +53,13 @@ import axios from 'axios';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import ProductGrid from '../components/ProductGrid';
 import { useCartContext } from '../contexts/CartContext';
+import { useWishlistContext } from '../contexts/WishlistContext';
 
 
 
 export default function SearchPage() {
     const { addToCart, removeFromCart } = useCartContext();
+    const { addToWishlist, removeToWishlist } = useWishlistContext();
     const [searchParams] = useSearchParams();
 
     const navigate = useNavigate();
@@ -200,6 +202,8 @@ export default function SearchPage() {
                 products={products}
                 addToCart={addToCart}
                 removeFromCart={removeFromCart}
+                addToWishlist={addToWishlist}
+                removeToWishlist={removeToWishlist}
             />
         </div>
     );

@@ -21,6 +21,7 @@ import DefaultLayout from "./layouts/DefaultLayout";
 // Import pages
 import HomePage from "./pages/HomePage";
 import CartPage from "./pages/CartPage";
+import WishlistPage from "./pages/WishlistPage";
 import CardPage from "./pages/navbar-pages/CardPage";
 import FigurePage from "./pages/navbar-pages/FigurePage";
 import MangaPage from "./pages/navbar-pages/MangaPage";
@@ -56,6 +57,7 @@ function App() {
                 <Route index path="/" element={<HomePage />} />
                 {/* navbar-pages */}
                 <Route path="/card" element={<CardPage />} />
+                <Route path="/wishlist" element={<WishlistPage />} />
                 <Route path="/figure" element={<FigurePage />} />
                 <Route path="/manga" element={<MangaPage />} />
                 <Route path="/on-sale" element={<OnSalePage />} />
