@@ -379,6 +379,64 @@ main h2 {
     padding-top: 20px;
 }
 
+/* SEARCH PAGE */
+.search-page {
+    padding: 20px;
+    
+}
+
+/* Titolo della pagina */
+.search-page .titlepage {
+    font-size: 2rem;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Sezione del form di ricerca senza background */
+.search-page form {
+    padding: 20px;
+    border-radius: 8px;
+    background-color: transparent; /* Rimosso il background */
+}
+
+/* Form group */
+.search-page .form-group {
+    width: 100%;
+}
+
+.search-page .form-group label {
+    font-weight: 600;
+    color: #444;
+}
+
+/* Input e select del form di ricerca */
+.search-page .form-group input,
+.search-page .form-group select {
+    margin-top: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Bottone per la ricerca */
+.search-page .btn {
+    margin-top: 15px;
+}
+
+/* Contenitore dei prodotti (qui mettiamo il background) */
+.search-page .product-grid {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Messaggi di caricamento o errore */
+.search-page .loading,
+.search-page .error {
+    margin-top: 20px;
+}
+
+
 /* FOOTER */
 footer {
     /* height: 388px; */
@@ -457,3 +515,4 @@ footer nav .socials a:hover {
 footer nav .socials a:active {
     color: #00FFA8;
 }
+
