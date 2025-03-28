@@ -32,17 +32,6 @@ export default function AboutUs() {
                     </div>
                 </div>
             </section>
-
-
-            {/* Contact Section */}
-            <section className="contact-section">
-                <h2>Contattaci</h2>
-                <div className="contact-info">
-                    <p>Email: info@boolshop.com</p>
-                    <p>Tel: +39 XXX XXX XXXX</p>
-                    <p>Indirizzo: Via Example, 123 - Milano</p>
-                </div>
-            </section>
         </div>
     );
 }
