@@ -32,10 +32,6 @@ body {
     color: #dc0000;
 }
 
-/* ACTIVE */
-.heart:active {
-    color: #00dc91;
-}
 
 /* CART */
 .cart {
@@ -49,10 +45,6 @@ body {
     color: #6666FF;
 }
 
-/* ACTIVE */
-.cart:active {
-    color: #00dc91;
-}
 
 /* SEARCHBAR */
 .search-bar-container {
@@ -106,9 +98,7 @@ body {
     transform: scale(1.1);
 }
 
-.navpages a:active {
-    color: #00dc91;
-}
+
 
 .navpages a.active {
     color: #9797ff;
@@ -224,10 +214,6 @@ body {
     color: #dc0000;
 }
 
-/* ACTIVE */
-#hearthome:active {
-    color: #00dc91;
-}
 
 /* CART */
 #carthome {
@@ -240,10 +226,7 @@ body {
     color: #6666FF;
 }
 
-/* ACTIVE */
-#carthome:active {
-    color: #00dc91;
-}
+
 
 
 
@@ -300,9 +283,7 @@ main h2 {
     cursor: pointer;
 }
 
-.titlepage:active {
-    color: #00dc91;
-}
+
 
 /* MANGA PAGE */
 
