@@ -36,12 +36,15 @@ const OnSalePage = () => {
     return (
         <div>
             {/* Banner della pagina con il titolo cliccabile */}
-            <div className="banneronsale">
+            <div className="onsale-banner">
                 <h1
                     className='titlepage' onClick={scrollToProducts} // Al clic, esegui lo scroll alla sezione dei prodotti
                     style={{ cursor: 'pointer' }} // Cambia il cursore per indicare che è cliccabile
                 >Eggrocket Promozioni</h1>
             </div >
+
+
+
 
 
             {/* Sezione dei prodotti */}
