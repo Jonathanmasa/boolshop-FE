@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import { Menu, X } from "lucide-react";
+
 // Import functions from React
 import { Link } from "react-router-dom"
 
@@ -23,6 +25,9 @@ const Header = ({ search, setSearch }) => {
 
 
                 {/* Logo del sito */}
+                
+                        
+                <div className="logo">
                 <Link to={"/"}>
                     <img
                         src="/Group 57.png"
@@ -30,7 +35,7 @@ const Header = ({ search, setSearch }) => {
                         style={{ height: "50px" }}
                     />
                 </Link>
-
+                </div>
                 
                 {/* Search Bar */}
                 <div className="search-bar">
@@ -64,7 +69,7 @@ const Header = ({ search, setSearch }) => {
 
                     {/* Logo in alto */}
                     <Link to={"/"} className="sidebar-logo">
-                        <img src="/eggrocket-logo.png" alt="Eggrocket Logo" />
+                        <img src="/Group 57.png" alt="Eggrocket Logo" />
                     </Link>
 
                     {/* Categorie della navbar */}

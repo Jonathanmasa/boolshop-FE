@@ -717,18 +717,28 @@ footer nav .socials {
         display: none;
     }
 
+    .egg {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 24px;
+        flex-wrap: wrap;
+    }
+
+    .menu-button { order: 1; }      
+    .logo { order: 2; }  
+    .search-bar { order: 4; }     
+    .wish-cart { order: 3;} 
+
+
     /* Mostra il pulsante hamburger menu */
     .menu-button {
         display: inline-block;
     }
 
-    .egg {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 16px 24px;
-        flex-wrap: wrap;
-    }
+    .logo{ 
+        padding: 0 10px;
+       }
 
     /* Rendi il contenitore della search bar un blocco intero */
     .search-bar{
@@ -743,9 +753,19 @@ footer nav .socials {
         display: inline-block;
     }
 
+    .heart{
+       padding-right: 3px;
+    }
+
+    .cart{
+        padding: 0px;
+     }
+
     .search-input{
         width: 100%;
     }
+
+
 }
 footer nav .socials a {
     color: white;
