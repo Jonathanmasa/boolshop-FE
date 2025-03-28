@@ -19,6 +19,13 @@ body {
     padding: 24px 64px;
 }
 
+.menu-button {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
 /* SEARCHBAR */
 .search-bar-container {
     display: flex;
@@ -366,4 +373,105 @@ footer .center {
 footer nav .socials {
     display: flex;
     gap: 20px;
+}
+
+
+            /* GENESTIONE RESPONSIVE */
+
+.menu-button {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 250px;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    transition: left 0.3s ease-in-out;
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+/* Bottone chiusura sidebar */
+.close-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    align-self: flex-end;
+}
+
+/* Sidebar logo */
+.sidebar-logo img {
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+/* Sidebar navbar */
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidebar-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    transition: color 0.2s ease;
+}
+
+.sidebar-nav a:hover {
+    color: #00CC86;
+}
+
+/* NASCONDERE NAVBAR SU MOBILE */
+@media (max-width: 768px) {
+    .navpages {
+        display: none;
+    }
+
+    /* Mostra il pulsante hamburger menu */
+    .menu-button {
+        display: inline-block;
+    }
+
+    .egg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 16px 24px;
+        flex-wrap: wrap;
+    }
+
+    /* Rendi il contenitore della search bar un blocco intero */
+    .search-bar{
+        width: 100%; 
+        display: flex;
+        justify-content: center;
+        margin-top: 10px; 
+        
+    }
+
+    .wish-cart{
+        display: inline-block;
+    }
+
+    .search-input{
+        width: 100%;
+    }
 }
