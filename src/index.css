@@ -314,11 +314,7 @@ main h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-<<<<<<< HEAD
     height: 100vh;
-=======
-    height: 90vh;
->>>>>>> 05919ede21fc169026423208e06e3420774e9323
 
     background-position: 50% 75%;
     background-size: cover;
