@@ -522,12 +522,6 @@ main h2 {
 
 /* DETAIL PAGE */
 
-.detail-img {
-
-    max-height: 550px;
-    margin-bottom: 50px;
-
-}
 
 .about-us-container {
     max-width: 1200px;
@@ -570,24 +564,6 @@ main h2 {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.team-member {
-    text-align: center;
-}
-
-.team-member img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 1rem;
-}
 
 .contact-section {
     text-align: center;
@@ -595,18 +571,6 @@ main h2 {
     padding: 3rem;
     border-radius: 8px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
