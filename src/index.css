@@ -174,18 +174,17 @@ body {
 }
 
 .imgcontainer img:hover {
-    transform: scale(1.1);
+    transform: scale(0.97);
     transition: all 0.3s ease-in-out;
 }
 
 .textcontainer {
     margin: 20px 0 10px 0;
-    line-height: 0.6;
+    line-height: 0.3;
     width: 100%;
 }
 
 .pricecontainer {
-    line-height: 0.5;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -197,16 +196,18 @@ body {
 
 /* ICONE */
 .iconcontainer {
-    margin-left: 235px;
+    margin-left: 240px;
     padding-top: 20px;
     cursor: pointer;
 }
 
 
 #hearthome {
+    padding-top: 5px;
+    margin-left: 2px;
     padding-bottom: 17px;
     color: black;
-    font-size: 28px;
+    font-size: 22px;
 }
 
 /* HEART HOVER */
@@ -218,7 +219,7 @@ body {
 /* CART */
 #carthome {
     color: black;
-    font-size: 25px;
+    font-size: 22px;
 }
 
 /* HEART HOVER */
@@ -523,8 +524,4 @@ footer nav .socials a {
 
 footer nav .socials a:hover {
     color: #6666FF;
-}
-
-footer nav .socials a:active {
-    color: #00FFA8;
 }

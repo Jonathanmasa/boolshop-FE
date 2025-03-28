@@ -24,7 +24,7 @@ const ProductCard = ({ product, addToCart, addToWishlist }) => {
           </div >
         </div >
         <div className="textcontainer">
-          <h5>{name}</h5>
+          <h4>{name}</h4>
           <p className="category">{category}</p>
           <p>{price} €</p>
         </div>
