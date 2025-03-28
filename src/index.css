@@ -379,6 +379,21 @@ main h2 {
     padding-top: 20px;
 }
 
+/* CART PAGE */
+.cart-cover {
+    background-image: url(../public/cart-image.png);
+    background-size: cover;
+    
+
+}
+
+.card-cart {
+        background-color: rgba(255, 255, 255, 0.5) !important ; 
+        
+    
+    
+}
+
 /* SEARCH PAGE */
 .search-page {
     padding: 20px;
