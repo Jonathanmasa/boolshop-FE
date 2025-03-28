@@ -16,7 +16,11 @@ const FigurePage = () => {
 
     return (
         <div>
-            <h1 className='titlepage'>Eggrocket Figure</h1>
+            <div className="figure-banner">
+                <h1 className='titlepage'>Eggrocket Figure</h1>
+            </div >
+
+
             {loading ? (
                 <p>Caricamento...</p>
             ) : error ? (

@@ -9,6 +9,7 @@ export default function NavBar() {
             <Link to="/manga" >Manga</Link>
             <Link to="/new-arrival" >Nuovi arrivi</Link>
             <Link to="/on-sale" >Promozioni</Link>
+            <Link to="/search" >Cerca</Link>
         </nav>
     );
 }

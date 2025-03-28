@@ -15,7 +15,12 @@ const CardPage = () => {
 
     return (
         <div>
-            <h1 className='titlepage'>Eggrocket cards </h1>
+
+            <div className="card-banner">
+                <h1 className='titlepage'>Eggrocket cards </h1>
+            </div >
+
+
             {loading ? (
                 <p>Caricamento...</p>
             ) : error ? (
