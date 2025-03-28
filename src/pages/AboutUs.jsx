@@ -33,18 +33,6 @@ export default function AboutUs() {
                 </div>
             </section>
 
-            {/* Team Section */}
-            <section className="team-section">
-                <h2>Il Nostro Team</h2>
-                <div className="team-grid">
-                    <div className="team-member">
-                        <img src="/path-to-image/team1.jpg" alt="Team Member 1" />
-                        <h3>Nome Cognome</h3>
-                        <p>Founder & CEO</p>
-                    </div>
-                    {/* Aggiungi altri membri del team secondo necessità */}
-                </div>
-            </section>
 
             {/* Contact Section */}
             <section className="contact-section">
