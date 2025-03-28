@@ -1,7 +1,7 @@
 import React from 'react';
 import ProductCard from './ProductCard';
 
-const ProductGrid = ({ products, addToCart, removeFromCart }) => {
+const ProductGrid = ({ products, addToCart, removeFromCart, addToWishlist, removeToWishlist }) => {
     console.log("Products ricevuti in ProductGrid:", products);
 
 
@@ -18,7 +18,9 @@ const ProductGrid = ({ products, addToCart, removeFromCart }) => {
                     return <ProductCard key={product?.id || index}
                         product={product}
                         addToCart={addToCart}
-                        removeFromCart={removeFromCart} />;
+                        removeFromCart={removeFromCart}
+                        addToWishlist={addToWishlist}
+                        removeToWishlist={removeToWishlist} />;
                 })
             )}
         </div>

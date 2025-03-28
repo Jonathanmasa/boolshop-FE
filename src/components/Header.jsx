@@ -7,7 +7,6 @@ import SearchBar from "./SearchBar";
 
 import NavBar from "./NavBar";
 
-import { Heart, ShoppingCart, Menu, X  } from "lucide-react";
 
 const Header = ({ search, setSearch }) => {
 
@@ -26,9 +25,9 @@ const Header = ({ search, setSearch }) => {
                 {/* Logo del sito */}
                 <Link to={"/"}>
                     <img
-                        src="/eggrocket-logo.png"
+                        src="/Group 57.png"
                         alt="Eggrocket Logo"
-                        style={{ height: "70px" }}
+                        style={{ height: "50px" }}
                     />
                 </Link>
 
@@ -42,10 +41,10 @@ const Header = ({ search, setSearch }) => {
                      <div className="wish-cart">
                     
                     <Link to="/wishlist" className="heart">
-                        <Heart size={28} strokeWidth={1.5} className="text-black hover:text-red-500 cursor-pointer" />
+                        <i className="fa-regular fa-heart"></i>{/* Icona cuore */}
                     </Link>
-                    <Link to="/cart">
-                        <ShoppingCart size={28} strokeWidth={1.5} className=" text-black hover:text-blue-500 cursor-pointer" />
+                    <Link to="/cart" className="cart">
+                        <i className="fa-solid fa-cart-shopping"></i>{/* Icona carrello */}
                     </Link>
                 </div>
 

@@ -26,6 +26,33 @@ body {
     cursor: pointer;
 }
 
+/* ICONE */
+
+.heart {
+    padding-right: 32px;
+    color: black;
+    font-size: 25px;
+}
+
+/* HEART HOVER */
+.heart:hover {
+    color: #dc0000;
+}
+
+
+/* CART */
+.cart {
+    padding-right: 32px;
+    color: black;
+    font-size: 25px;
+}
+
+/* HEART HOVER */
+.cart:hover {
+    color: #6666FF;
+}
+
+
 /* SEARCHBAR */
 .search-bar-container {
     display: flex;
@@ -72,20 +99,22 @@ body {
     transition: transform 0.2s ease, color 0.2s ease;
 }
 
+/* HOVER NAVBAR */
 .navpages a:hover {
     color: #9797ff;
     transform: scale(1.1);
 }
 
-.navpages a:active {
-    color: #00dc91;
+
+
+.navpages a.active {
+    color: #9797ff;
+    /* Colore del link attivo */
+    transform: scale(1.1);
+    /* Effetto di trasformazione */
+    font-weight: bold;
+    /* Evidenzia il link attivo */
 }
-
-.heart {
-    padding-right: 32px;
-}
-
-
 
 /* MAIN */
 .containerbanner {
@@ -151,14 +180,18 @@ body {
     object-fit: contain;
 }
 
+.imgcontainer img:hover {
+    transform: scale(0.97);
+    transition: all 0.3s ease-in-out;
+}
+
 .textcontainer {
     margin: 20px 0 10px 0;
-    line-height: 0.6;
+    line-height: 0.3;
     width: 100%;
 }
 
 .pricecontainer {
-    line-height: 0.5;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -167,11 +200,40 @@ body {
 
 }
 
+
+/* ICONE */
 .iconcontainer {
-    padding-left: 210px;
+    margin-left: 240px;
     padding-top: 20px;
     cursor: pointer;
 }
+
+
+#hearthome {
+    padding-top: 5px;
+    margin-left: 2px;
+    padding-bottom: 17px;
+    color: black;
+    font-size: 22px;
+}
+
+/* HEART HOVER */
+#hearthome:hover {
+    color: #dc0000;
+}
+
+
+/* CART */
+#carthome {
+    color: black;
+    font-size: 22px;
+}
+
+/* HEART HOVER */
+#carthome:hover {
+    color: #6666FF;
+}
+
 
 
 
@@ -207,6 +269,25 @@ main h2 {
 }
 
 
+/* BOTTONI PRODUCT LIST */
+.scroll-button {
+    background: rgba(108, 99, 255, 0.7);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-weight: 800;
+    font-size: 19px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: all 0.25s ease-in-out;
+}
+
+.scroll-button:hover {
+    transform: scale(1.05);
+}
+
+
 /* CARD PAGE */
 
 .card-banner {
@@ -221,6 +302,14 @@ main h2 {
     background-position: 50% 75%;
     background-size: cover;
 }
+
+/* CARD PAGE */
+.titlepage:hover {
+    color: #9797ff;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
 
 
 /* MANGA PAGE */
@@ -256,20 +345,45 @@ main h2 {
 
 
 /* PAGINA NOT FOUND */
-.notfound {
-    background-image: url(../banner.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+
+.notfound-banner {
+    background-image: url(../banner5.png);
     color: white;
     width: 100%;
-    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 85vh;
 
+    background-position: 50% 50%;
+    background-size: cover;
 }
+
+
+/* PAGINA wishlist */
+
+/* .wishlist-banner {
+    background-image: url(../banner6.png);
+    color: white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 85vh;
+
+    background-position: 50% 50%;
+    background-size: cover;
+} */
+
+
+.wishlist-banner {
+    background-image: url(../banner6.png);
+    background-size: cover;
+    min-width: 100%;
+    background-position: 50% 0%;
+}
+
+
 
 
 /* product grid */
@@ -278,6 +392,7 @@ main h2 {
     width: 92.5%;
     margin: 0 auto;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 40px;
 
@@ -309,6 +424,163 @@ main h2 {
     text-align: center;
     padding-top: 20px;
 }
+
+/* CART PAGE */
+.cart-cover {
+    background-image: url(../cart-image.png);
+    background-size: cover;
+}
+
+.card-cart {
+    background-color: rgba(255, 255, 255, 0.5) !important;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SEARCH PAGE */
+.search-page {
+    padding: 20px;
+
+}
+
+/* Titolo della pagina */
+.search-page .titlepage {
+    font-size: 2rem;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Sezione del form di ricerca senza background */
+.search-page form {
+    padding: 20px;
+    border-radius: 8px;
+    background-color: transparent;
+    /* Rimosso il background */
+}
+
+/* Form group */
+.search-page .form-group {
+    width: 100%;
+}
+
+.search-page .form-group label {
+    font-weight: 600;
+    color: #444;
+}
+
+/* Input e select del form di ricerca */
+.search-page .form-group input,
+.search-page .form-group select {
+    margin-top: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Bottone per la ricerca */
+.search-page .btn {
+    margin-top: 15px;
+}
+
+/* Contenitore dei prodotti (qui mettiamo il background) */
+.search-page .product-grid {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Messaggi di caricamento o errore */
+.search-page .loading,
+.search-page .error {
+    margin-top: 20px;
+}
+
+
+
+
+
+/* DETAIL PAGE */
+
+.detail-img {
+
+    max-height: 550px;
+    margin-bottom: 50px;
+
+}
+
+.about-us-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.mission-section {
+    padding: 50px 0px;
+}
+
+.hero-section {
+    text-align: center;
+    padding: 4rem 0;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.value-card {
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.contact-section {
+    text-align: center;
+    background-color: #f5f5f5;
+    padding: 3rem;
+    border-radius: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* FOOTER */
 footer {
@@ -474,4 +746,13 @@ footer nav .socials {
     .search-input{
         width: 100%;
     }
+}
+footer nav .socials a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+footer nav .socials a:hover {
+    color: #6666FF;
 }
