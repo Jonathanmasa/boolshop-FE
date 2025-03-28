@@ -281,6 +281,16 @@ main h2 {
     background-size: cover;
 }
 
+/* CARD PAGE */
+.titlepage:hover {
+    color: #9797ff;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.titlepage:active {
+    color: #00dc91;
+}
 
 /* MANGA PAGE */
 
