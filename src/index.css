@@ -110,7 +110,14 @@ body {
     color: #00dc91;
 }
 
-
+.navpages a.active {
+    color: #9797ff;
+    /* Colore del link attivo */
+    transform: scale(1.1);
+    /* Effetto di trasformazione */
+    font-weight: bold;
+    /* Evidenzia il link attivo */
+}
 
 /* MAIN */
 .containerbanner {
