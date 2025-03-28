@@ -1,8 +1,14 @@
+// Importa React e il hook useEffect per gestire gli effetti collaterali
 import React, { useEffect } from 'react';
-import { useProductContext } from '../../contexts/ProductContext';;
-import ProductGrid from '../../components/ProductGrid';
-import { useCartContext } from '../../contexts/CartContext';
 
+// Importa il contesto dei prodotti per accedere ai dati e alle funzioni relative ai prodotti
+import { useProductContext } from '../../contexts/ProductContext';
+
+// Importa il componente ProductGrid per visualizzare i prodotti in una griglia
+import ProductGrid from '../../components/ProductGrid';
+
+// Importa il contesto del carrello per gestire l'aggiunta e la rimozione dei prodotti dal carrello
+import { useCartContext } from '../../contexts/CartContext';
 
 const NewArrivalsPage = () => {
     const { fetchProducts, products, loading, error } = useProductContext();
