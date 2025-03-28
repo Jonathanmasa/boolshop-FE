@@ -30,10 +30,10 @@ const Header = ({ search, setSearch }) => {
                 {/* Carrello e lista desideri */}
                 <div className="">
                     <Link to="/wishlist" className="heart">
-                        <i class="fa-regular fa-heart"></i>{/* Icona cuore */}
+                        <i className="fa-regular fa-heart"></i>{/* Icona cuore */}
                     </Link>
                     <Link to="/cart" className="cart">
-                        <i class="fa-solid fa-cart-shopping"></i>{/* Icona carrello */}
+                        <i className="fa-solid fa-cart-shopping"></i>{/* Icona carrello */}
                     </Link>
                 </div>
             </nav>

@@ -19,13 +19,13 @@ export default function NotFoundPage() {
 
 
 
-
+            {/* 
 
 
             <p>404 Not Found</p>
             <Link to={"/"}>
                 <button className="btn">Torna alla Home</button>
-            </Link>
+            </Link> */}
 
 
 
