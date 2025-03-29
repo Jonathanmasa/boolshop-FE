@@ -1,10 +1,24 @@
 // import style from "./Footer.module.css"
 
 // Import functions from React
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom"
 
 
+
 const Footer = () => {
+
+    const [isOpenInfo, setIsOpenInfo] = useState(false);
+    const [isOpenAssistance, setIsOpenAssistance] = useState(false);
+    const [isOpenContacts, setIsOpenContacts] = useState(false);
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+    // Funzione per aggiornare isMobile al resize della finestra
+    useEffect(() => {
+        const handleResize = () => setIsMobile(window.innerWidth <= 768);
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
 
     let index = 1
 
@@ -26,18 +40,30 @@ const Footer = () => {
 
                 <nav>
                     <div>
-                        <h3>INFORMAZIONI</h3>
-                        {infoLinks.map(link => <Link key={index += 1} to={link.url}>{link.text}</Link>)}
+                        <h3 onClick={() => setIsOpenInfo(!isOpenInfo)} className="accordion-title">
+                            INFORMAZIONI {isOpenInfo ? <i className="fa-solid fa-chevron-up"></i> : <i className="fa-solid fa-chevron-down"></i>}
+                        </h3>
+                        {(isOpenInfo || !isMobile) && (
+                            infoLinks.map(link => <Link key={index += 1} to={link.url}>{link.text}</Link>)
+                        )}
                     </div>
 
                     <div>
-                        <h3>ASSISTENZA</h3>
-                        {assistenzaLinks.map(link => <Link key={index += 1} to={link.url}>{link.text}</Link>)}
+                        <h3 onClick={() => setIsOpenAssistance(!isOpenAssistance)} className="accordion-title">
+                            ASSISTENZA {isOpenAssistance ? <i className="fa-solid fa-chevron-up"></i> : <i className="fa-solid fa-chevron-down"></i>}
+                        </h3>
+                        {(isOpenAssistance || !isMobile) && (
+                            assistenzaLinks.map(link => <Link key={index += 1} to={link.url}>{link.text}</Link>)
+                        )}
                     </div>
 
                     <div>
-                        <h3>CONTATTI</h3>
-                        {contacts.map(text => <div key={index += 1} to={"/"}>{text}</div>)}
+                        <h3 onClick={() => setIsOpenContacts(!isOpenContacts)} className="accordion-title">
+                            CONTATTI {isOpenContacts ? <i className="fa-solid fa-chevron-up"></i> : <i className="fa-solid fa-chevron-down"></i>}
+                        </h3>
+                        {(isOpenContacts || !isMobile) && (
+                            contacts.map(text => <div key={index += 1} to={"/"}>{text}</div>)
+                        )}
 
                         {/* socials  */}
                         <div className="socials">
