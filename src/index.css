@@ -583,6 +583,7 @@ footer .container {
     margin: 0 auto;
     padding-bottom: 40px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     border-bottom: 0.5px solid #00FFA8;
 }
@@ -622,6 +623,10 @@ footer nav h3 {
     font-weight: 600;
 }
 
+footer i{
+    display: none !important;
+}
+
 footer .center {
     margin-top: 40px;
     text-align: center;
@@ -638,6 +643,68 @@ footer nav .socials a {
     text-decoration: none;
 }
 
-footer nav .socials a:hover {
-    color: #6666FF;
+footer nav .socials i {
+    display: inline !important;
+}
+
+footer a:hover {
+    color: #6666FF !important;
+}
+
+@media screen and (max-width: 768px) {
+
+
+
+
+    /* footer */
+    footer .container {
+        flex-direction: column;
+        padding-bottom: 0;
+    }
+
+    footer .container div,
+    footer .container nav {
+        flex-basis: 100%;
+    }
+
+    footer .container div{
+        margin-bottom: 20px;
+    }
+
+
+    footer nav {
+        flex-direction: column;
+    }
+
+    footer nav i {
+        display: inline;
+    }
+
+    footer nav .accordion-title {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    footer nav .socials {
+        justify-content: center;
+    }
+
+    footer img {
+        max-width: 80%;
+    }
+
+    footer nav i {
+        display: inline !important;
+    }
+
+    footer nav .socials {
+        gap: 10px;
+        margin-top: 20px;
+
+    }
+
+    footer nav .socials a {
+        margin: 0 10px;
+        font-size: 35px;
+    }
 }
