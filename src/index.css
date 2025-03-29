@@ -569,19 +569,6 @@ main h2 {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* FOOTER */
 footer {
     /* height: 388px; */
@@ -647,6 +634,15 @@ footer nav .socials {
     gap: 20px;
 }
 
+footer nav .socials a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+footer nav .socials a:hover {
+    color: #6666FF;
+}
 
             /* GENESTIONE RESPONSIVE */
 
@@ -712,7 +708,7 @@ footer nav .socials {
 }
 
 /* NASCONDERE NAVBAR SU MOBILE */
-@media (max-width: 768px) {
+@media (max-width: 980px) {
     .navpages {
         display: none;
     }
@@ -765,8 +761,13 @@ footer nav .socials {
         width: 100%;
     }
 
+    .containerbanner h1,h5 {
+        text-align: center;
+    }
 
 }
+
+
 footer nav .socials a {
     color: white;
     font-size: 20px;
