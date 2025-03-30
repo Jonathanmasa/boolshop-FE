@@ -1,48 +1,33 @@
 export default function AboutUs() {
     return (
-        <div className="about-us-container">
-            {/* Hero Section */}
-            <section className="hero-section">
+        <div className="info-page-container">
+            <div className="info-header">
                 <h1>Chi Siamo</h1>
-                <p className="subtitle">La tua destinazione per il collezionismo di qualità dal 2024</p>
-            </section>
+            </div>
 
-            {/* Mission Section */}
-            <section className="mission-section">
-                <h2>La Nostra Mission</h2>
-                <p>Siamo un gruppo di appassionati collezionisti che ha deciso di creare uno spazio dove
-                    gli amanti del collezionismo possono trovare pezzi unici e rari in totale sicurezza.</p>
-            </section>
-
-            {/* Values Section */}
-            <section className="values-section">
-                <h2>I Nostri Valori</h2>
-                <div className="values-grid">
-                    <div className="value-card">
-                        <h3>Autenticità</h3>
-                        <p>Garantiamo l'autenticità di ogni pezzo nella nostra collezione</p>
-                    </div>
-                    <div className="value-card">
-                        <h3>Qualità</h3>
-                        <p>Selezioniamo solo i migliori prodotti per i nostri clienti</p>
-                    </div>
-                    <div className="value-card">
-                        <h3>Passione</h3>
-                        <p>Condividiamo il tuo amore per il collezionismo</p>
-                    </div>
+            <div className="info-content">
+                {/* Chi siamo */}
+                <div className="info-section">
+                    <h3>La Nostra Storia</h3>
+                    <p>BoolShop nasce dalla passione per il collezionismo e la cultura pop giapponese.
+                        Dal 2024 offriamo ai nostri clienti una selezione accurata di prodotti di alta qualità.</p>
                 </div>
-            </section>
 
-
-            {/* Contact Section */}
-            <section className="contact-section">
-                <h2>Contattaci</h2>
-                <div className="contact-info">
-                    <p>Email: info@boolshop.com</p>
-                    <p>Tel: +39 XXX XXX XXXX</p>
-                    <p>Indirizzo: Via Example, 123 - Milano</p>
+                {/* Mission */}
+                <div className="info-section">
+                    <h3>La Nostra Mission</h3>
+                    <p>Portare il meglio del collezionismo in Italia, garantendo autenticità
+                        e qualità per ogni prodotto nel nostro catalogo.</p>
                 </div>
-            </section>
+
+                {/* Valori */}
+                <div className="info-section">
+                    <h3>I Nostri Valori</h3>
+                    <p>• Autenticità garantita per ogni prodotto</p>
+                    <p>• Attenzione al cliente e supporto dedicato</p>
+                    <p>• Passione per il collezionismo</p>
+                </div>
+            </div>
         </div>
     );
 }
