@@ -41,7 +41,9 @@ const CartPage = () => {
                             <p className="fw-bold fs-5">💰 Subtotale: <span className="text-dark">€{subtotal.toFixed(2)}</span></p>
                             <p className="fw-bold fs-5">🚚 Spedizione: <span className="text-dark">€{shipping.toFixed(2)}</span></p>
                             <h4 className="fw-bold text-success">Totale: €{total.toFixed(2)}</h4>
-                            <button className="btn btn-success mt-3 w-100">Procedi al checkout</button>
+                            <Link to="/checkout" className="btn btn-success mt-3 w-100">
+                                Procedi al checkout
+                            </Link>
                         </div>
                     </>
                 )}
