@@ -454,7 +454,7 @@ main h2 {
 
 /* CART PAGE */
 .cart-cover {
-    background-image: url(../cart-image.png);
+    background-image: url(../cart-cover.png);
     background-size: cover;
 }
 
