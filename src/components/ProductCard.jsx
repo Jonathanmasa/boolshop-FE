@@ -19,12 +19,12 @@ const ProductCard = ({ product, addToCart, addToWishlist }) => {
             <img src={image_url} alt={name} />
           </Link>
           <div className="iconcontainer">
-            <i onClick={() => addToCart(product)} id="hearthome" class="fa-regular fa-heart"></i>{/* Icona cuore */}
-            <i onClick={() => addToWishlist(product)} id="carthome" class="fa-solid fa-cart-shopping"></i>{/* Icona carrello */}
+            <i onClick={() => addToWishlist(product)} id="hearthome" className="fa-regular fa-heart"></i>{/* Icona cuore */}
+            <i onClick={() => addToCart(product)} id="carthome" className="fa-solid fa-cart-shopping"></i>{/* Icona carrello */}
           </div >
         </div >
         <div className="textcontainer">
-          <h5>{name}</h5>
+          <h4>{name}</h4>
           <p className="category">{category}</p>
           <p>{price} €</p>
         </div>
@@ -33,7 +33,6 @@ const ProductCard = ({ product, addToCart, addToWishlist }) => {
     </>
   );
 };
-
 
 // Esporto il componente 
 export default ProductCard;

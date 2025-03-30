@@ -16,9 +16,9 @@ const Header = ({ search, setSearch }) => {
                 {/* Logo del sito */}
                 <Link to={"/"}>
                     <img
-                        src="/eggrocket-logo.png"
+                        src="/Group 57.png"
                         alt="Eggrocket Logo"
-                        style={{ height: "70px" }}
+                        style={{ height: "50px" }}
                     />
                 </Link>
 
@@ -30,10 +30,10 @@ const Header = ({ search, setSearch }) => {
                 {/* Carrello e lista desideri */}
                 <div className="">
                     <Link to="/wishlist" className="heart">
-                        <i class="fa-regular fa-heart"></i>{/* Icona cuore */}
+                        <i className="fa-regular fa-heart"></i>{/* Icona cuore */}
                     </Link>
                     <Link to="/cart" className="cart">
-                        <i class="fa-solid fa-cart-shopping"></i>{/* Icona carrello */}
+                        <i className="fa-solid fa-cart-shopping"></i>{/* Icona carrello */}
                     </Link>
                 </div>
             </nav>
