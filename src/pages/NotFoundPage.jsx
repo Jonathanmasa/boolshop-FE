@@ -11,14 +11,24 @@ export default function NotFoundPage() {
 
     // RENDER
     return (
-        <main>
-            <div className="notfound">
-                <h1>Pagina non trovata</h1>
-                <p>404 Not Found</p>
-                <Link to={"/"}>
-                    <button className="btn">Torna alla Home</button>
-                </Link>
-            </div>
-        </main>
+
+        <>
+            <div className="notfound-banner">
+
+            </div >
+
+
+
+            {/* 
+
+
+            <p>404 Not Found</p>
+            <Link to={"/"}>
+                <button className="btn">Torna alla Home</button>
+            </Link> */}
+
+
+
+        </>
     );
 }

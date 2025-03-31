@@ -9,8 +9,8 @@ const CartPage = () => {
     const total = subtotal + shipping;
 
     return (
-        <div className="container d-flex justify-content-center align-items-center min-vh-100 bg-light">
-            <div className="card p-5 shadow-lg text-center w-75 border-0">
+        <div className="container-fluid d-flex justify-content-center align-items-center min-vh-100 cart-cover">
+            <div className="card p-5  text-center w-75 border-0 card-cart ">
                 <h2 className="mb-4 text-primary">Il tuo carrello</h2>
                 {cart.length === 0 ? (
                     <>
@@ -19,9 +19,9 @@ const CartPage = () => {
                     </>
                 ) : (
                     <>
-                        <ul className="list-group list-group-flush text-start">
+                        <ul className="list-group list-group-flush text-start ">
                             {cart.map(product => (
-                                <li key={product.id} className="list-group-item d-flex justify-content-between align-items-center">
+                                <li key={product.id} className="list-group-item d-flex justify-content-between align-items-center card-cart">
                                     <div className="d-flex flex-column">
                                         <strong>{product.name}</strong>
                                         <span className="text-muted">€{Number(product.price).toFixed(2)} x</span>
@@ -37,11 +37,13 @@ const CartPage = () => {
                                 </li>
                             ))}
                         </ul>
-                        <div className="mt-4 border-top pt-3 text-start">
+                        <div className="mt-4 border-top pt-3 text-start ">
                             <p className="fw-bold fs-5">💰 Subtotale: <span className="text-dark">€{subtotal.toFixed(2)}</span></p>
                             <p className="fw-bold fs-5">🚚 Spedizione: <span className="text-dark">€{shipping.toFixed(2)}</span></p>
                             <h4 className="fw-bold text-success">Totale: €{total.toFixed(2)}</h4>
-                            <button className="btn btn-success mt-3 w-100">Procedi al checkout</button>
+                            <Link to="/checkout" className="btn btn-success mt-3 w-100">
+                                Procedi al checkout
+                            </Link>
                         </div>
                     </>
                 )}

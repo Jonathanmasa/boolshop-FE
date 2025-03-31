@@ -53,13 +53,12 @@ import axios from 'axios';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import ProductGrid from '../components/ProductGrid';
 import { useCartContext } from '../contexts/CartContext';
-
-
+import { useWishlistContext } from '../contexts/WishlistContext';
 
 export default function SearchPage() {
     const { addToCart, removeFromCart } = useCartContext();
+    const { addToWishlist, removeToWishlist } = useWishlistContext();
     const [searchParams] = useSearchParams();
-
     const navigate = useNavigate();
 
     // Recuperiamo eventuale query iniziale dalla URL
@@ -71,13 +70,6 @@ export default function SearchPage() {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
-
-    {
-        !loading && products.length === 0 && (
-            <p className="text-muted">Nessun prodotto trovato.</p>
-        )
-    }
-
 
     // Funzione per recuperare i prodotti filtrati dal server
     const fetchFilteredProducts = async (queryParam = query, typeParam = type, sortParam = sort) => {
@@ -92,22 +84,16 @@ export default function SearchPage() {
             });
 
             setProducts(response.data);
-
-            // ✅ Se l'array è vuoto, non è un errore: gestiamo dopo nel render
             setError(null);
-
         } catch (err) {
             console.error('Errore nella ricerca:', err);
             setError('Errore nel caricamento dei prodotti');
-            setProducts([]); // In caso di errore vero, svuota l'elenco
+            setProducts([]);
         } finally {
             setLoading(false);
         }
     };
 
-
-
-    // Esegui la ricerca automatica solo se la query è presente nella URL
     useEffect(() => {
         const q = searchParams.get('query') || '';
         const t = searchParams.get('type') || '';
@@ -122,27 +108,19 @@ export default function SearchPage() {
         }
     }, [searchParams]);
 
-
-
-
-
     // Ricerca manuale dal form UI
     const handleSearchSubmit = (e) => {
         e.preventDefault();
-
-        // aggiorna l'URL
         const newParams = new URLSearchParams();
         if (query) newParams.set('query', query);
         if (type) newParams.set('type', type);
         if (sort) newParams.set('sort', sort);
-
         navigate(`/search?${newParams.toString()}`);
-
         fetchFilteredProducts(query, type, sort);
     };
 
     return (
-        <div className="container mt-4">
+        <div className="container mt-4 search-page">
             <h1 className="titlepage">Cerca Prodotti</h1>
 
             {/* Form per UI di filtri */}
@@ -200,6 +178,8 @@ export default function SearchPage() {
                 products={products}
                 addToCart={addToCart}
                 removeFromCart={removeFromCart}
+                addToWishlist={addToWishlist}
+                removeToWishlist={removeToWishlist}
             />
         </div>
     );
