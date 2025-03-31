@@ -1,6 +1,6 @@
 import { useCartContext } from '../contexts/CartContext';
 import { Link } from 'react-router-dom';
-import { FaTrash } from 'react-icons/fa';
+// import { FaTrash } from 'react-icons/fa';
 
 const CartPage = () => {
     const { cart, removeFromCart, updateQuantity } = useCartContext();

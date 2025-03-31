@@ -604,6 +604,9 @@ main h2 {
     margin-top: 20px;
 }
 
+div#product-section button.btn.btn-primary {
+    display: none;
+}
 
 
 

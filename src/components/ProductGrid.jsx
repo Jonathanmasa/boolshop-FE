@@ -14,9 +14,9 @@ const ProductGrid = ({ products, addToCart, removeFromCart, addToWishlist, remov
     return (
         <>
             <button onClick={() => setList(!list)} className="btn btn-primary">
-                {list ? <List size={20} /> : <Grid3x3 size={20} />}
+                {list ? <Grid3x3 size={20} /> : <List size={20} />}
             </button>
-            <div className={list ? "product-grid" : "product-grid-list"}>
+            <div className={list ? "product-grid-list" : "product-grid"}>
 
 
                 {!Array.isArray(products) ? (
