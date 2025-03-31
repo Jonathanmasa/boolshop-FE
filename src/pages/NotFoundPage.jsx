@@ -1,11 +1,7 @@
 // Import functions from React
 import { useNavigate } from "react-router-dom";
 
-// Import functions from React
-import { Link } from "react-router-dom"
-
-
-// useNaviage to go back
+// useNavigate to go back
 export default function NotFoundPage() {
     const navigate = useNavigate();
 

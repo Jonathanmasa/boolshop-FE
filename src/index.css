@@ -394,6 +394,20 @@ main h2 {
 }
 
 
+.success-banner {
+    background-image: url(../banner9.png);
+    color: white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+
+    background-position: 50% 100%;
+    background-size: cover;
+}
+
+
 /* PAGINA wishlist */
 
 /* .wishlist-banner {
@@ -653,7 +667,7 @@ footer nav h3 {
     font-weight: 600;
 }
 
-footer i{
+footer i {
     display: none !important;
 }
 
@@ -697,7 +711,7 @@ footer a:hover {
         flex-basis: 100%;
     }
 
-    footer .container div{
+    footer .container div {
         margin-bottom: 20px;
     }
 
@@ -738,11 +752,12 @@ footer a:hover {
         font-size: 35px;
     }
 }
+
 footer nav .socials a:hover {
     color: #6666FF;
 }
 
-            /* GENESTIONE RESPONSIVE */
+/* GENESTIONE RESPONSIVE */
 
 .menu-button {
     display: none;
@@ -819,10 +834,21 @@ footer nav .socials a:hover {
         flex-wrap: wrap;
     }
 
-    .menu-button { order: 1; }      
-    .logo { order: 2; }  
-    .search-bar { order: 4; }     
-    .wish-cart { order: 3;} 
+    .menu-button {
+        order: 1;
+    }
+
+    .logo {
+        order: 2;
+    }
+
+    .search-bar {
+        order: 4;
+    }
+
+    .wish-cart {
+        order: 3;
+    }
 
 
     /* Mostra il pulsante hamburger menu */
@@ -830,36 +856,37 @@ footer nav .socials a:hover {
         display: inline-block;
     }
 
-    .logo{ 
+    .logo {
         padding: 0 10px;
-       }
-
-    /* Rendi il contenitore della search bar un blocco intero */
-    .search-bar{
-        width: 100%; 
-        display: flex;
-        justify-content: center;
-        margin-top: 10px; 
-        
     }
 
-    .wish-cart{
+    /* Rendi il contenitore della search bar un blocco intero */
+    .search-bar {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+
+    }
+
+    .wish-cart {
         display: inline-block;
     }
 
-    .heart{
-       padding-right: 3px;
+    .heart {
+        padding-right: 3px;
     }
 
-    .cart{
+    .cart {
         padding: 0px;
-     }
+    }
 
-    .search-input{
+    .search-input {
         width: 100%;
     }
 
-    .containerbanner h1,h5 {
+    .containerbanner h1,
+    h5 {
         text-align: center;
     }
 
