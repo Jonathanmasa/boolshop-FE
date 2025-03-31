@@ -704,8 +704,51 @@ footer a:hover {
 
 @media screen and (max-width: 768px) {
 
+    .container-img-sopra-footer {
+        display: none;
 
+    }
 
+    /* .cardcontainer {
+        width: 285px;
+        height: 470px;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    .imgcontainer {
+        width: 100%;
+        height: 200px;
+    }
+
+    .imgcontainer img {
+        height: 100%;
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        object-fit: contain;
+    } */
+
+    /* Modifiche per i bottoni di scorrimento */
+    .evidenza,
+    .promozioni {
+        position: relative;
+        padding-bottom: 60px;
+        /* Spazio per i bottoni */
+    }
+
+    .scroll-button {
+        position: absolute;
+        bottom: 10px;
+    }
+
+    .scroll-button:first-of-type {
+        left: 25%;
+    }
+
+    .scroll-button:last-of-type {
+        right: 25%;
+    }
 
     /* footer */
     footer .container {

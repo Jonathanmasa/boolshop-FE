@@ -12,6 +12,7 @@ export default function ProductList() {
     const [newStartIndex, setNewStartIndex] = useState(0);
 
     const productsRef = useRef(null);
+    const [itemsToShow, setItemsToShow] = useState(5);
 
     // FETCH API
     const fetchProducts = () => {
@@ -32,9 +33,23 @@ export default function ProductList() {
         productsRef.current.scrollIntoView({ behavior: "smooth" });
     };
 
-    // RENDER prodotti in evidenza (da featuredStartIndex, per 5 elementi)
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth <= 768) {
+                setItemsToShow(2);
+            } else {
+                setItemsToShow(5);
+            }
+        };
+
+        handleResize(); // Imposta il valore iniziale
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    // RENDER prodotti in evidenza (da featuredStartIndex, per itemsToShow elementi)
     const renderFeaturedProducts = () => {
-        const slice = featuredProducts.slice(featuredStartIndex, featuredStartIndex + 5);
+        const slice = featuredProducts.slice(featuredStartIndex, featuredStartIndex + itemsToShow);
         return slice.map(product => (
             <div key={product.id}>
                 <ProductCard product={product} />
@@ -42,9 +57,9 @@ export default function ProductList() {
         ));
     };
 
-    // RENDER nuovi arrivi (da newStartIndex, per 5 elementi)
+    // RENDER nuovi arrivi (da newStartIndex, per itemsToShow elementi)
     const renderNewProducts = () => {
-        const slice = newProducts.slice(newStartIndex, newStartIndex + 5);
+        const slice = newProducts.slice(newStartIndex, newStartIndex + itemsToShow);
         return slice.map(product => (
             <div key={product.id}>
                 <ProductCard product={product} />
@@ -60,16 +75,16 @@ export default function ProductList() {
         if (type === 'featured') {
             setFeaturedStartIndex(prev =>
                 direction === 'left'
-                    ? Math.max(0, prev - 5)
-                    : Math.min(prev + 5, maxFeatured - 5)
+                    ? Math.max(0, prev - itemsToShow)
+                    : Math.min(prev + itemsToShow, maxFeatured - itemsToShow)
             );
         }
 
         if (type === 'new') {
             setNewStartIndex(prev =>
                 direction === 'left'
-                    ? Math.max(0, prev - 5)
-                    : Math.min(prev + 5, maxNew - 5)
+                    ? Math.max(0, prev - itemsToShow)
+                    : Math.min(prev + itemsToShow, maxNew - itemsToShow)
             );
         }
     };
