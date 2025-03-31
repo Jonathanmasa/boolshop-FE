@@ -11,7 +11,7 @@ const CartPage = () => {
 
     return (
         <div className="container-fluid d-flex justify-content-center align-items-center min-vh-100 cart-cover">
-            <div className="card p-5 text-center w-75 border-0 card-cart">
+            <div className="card p-5 text-center w-100 border-0 card-cart">
                 <h2 className="mb-4 text-primary">Il tuo carrello</h2>
                 {cart.length === 0 ? (
                     <>
@@ -22,12 +22,12 @@ const CartPage = () => {
                     <>
                         <ul className="list-group list-group-flush text-start">
                             {cart.map(product => (
-                                <li key={product.id} className="list-group-item d-flex justify-content-between align-items-center card-cart">
-                                    <div className="d-flex align-items-center w-100">
-                                        <strong className="me-3 flex-grow-1" style={{ minWidth: '160px' }}>{product.name}</strong>
-                                        <div className="d-flex align-items-center" style={{ minWidth: '200px' }}>
+                                <li key={product.id} className="list-group-item d-flex flex-column flex-md-row justify-content-between align-items-center card-cart">
+                                    <div className="d-flex flex-column flex-md-row align-items-center w-100">
+                                        <strong className="me-3 flex-grow-1 text-center text-md-start" style={{ minWidth: '160px' }}>{product.name}</strong>
+                                        <div className="d-flex align-items-center flex-column flex-sm-row" style={{ minWidth: '200px' }}>
                                             <span className="text-muted me-3" style={{ minWidth: '65px', textAlign: 'left' }}>€{Number(product.price).toFixed(2)}</span>
-                                            <div className="input-group input-group-sm w-auto" style={{ minWidth: '90px', display: 'flex', justifyContent: 'center' }}>
+                                            <div className="input-group input-group-sm w-auto">
                                                 <button className="btn btn-outline-secondary" onClick={() => updateQuantity(product.id, Math.max(1, product.quantity - 1))}>-</button>
                                                 <input
                                                     type="text"
@@ -40,7 +40,7 @@ const CartPage = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <button className="btn btn-danger btn-sm" onClick={() => removeFromCart(product.id)}>
+                                    <button className="btn btn-danger btn-sm mt-2 mt-md-0" onClick={() => removeFromCart(product.id)}>
                                         <FaTrash />
                                     </button>
                                 </li>
