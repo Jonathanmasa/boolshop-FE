@@ -1,10 +1,14 @@
+// Import delle dipendenze necessarie
 import { useCartContext } from '../contexts/CartContext';
 import { Link } from 'react-router-dom';
 // import { FaTrash } from 'react-icons/fa';
 
+// Componente principale per la visualizzazione del carrello
 const CartPage = () => {
+    // Recupero funzioni e stato dal contesto del carrello
     const { cart, removeFromCart, updateQuantity } = useCartContext();
 
+    // Calcolo totali del carrello
     const subtotal = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
     const shipping = subtotal >= 50 ? 0 : 10;
     const total = subtotal + shipping;

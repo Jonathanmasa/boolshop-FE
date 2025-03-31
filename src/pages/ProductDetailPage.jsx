@@ -2,14 +2,19 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
+// Componente principale per la visualizzazione dettagliata di un prodotto
 export default function ProductDetailPage() {
+  // Recupero parametri dall'URL
   const { id, category } = useParams();
 
+  // Inizializzazione stati
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  // Hook per il recupero dati del prodotto
   useEffect(() => {
+    // Funzione asincrona per chiamata API
     const fetchProduct = async () => {
       setLoading(true);
 
@@ -34,16 +39,16 @@ export default function ProductDetailPage() {
     fetchProduct();
   }, [id, category]);
 
+  // Gestione stati di caricamento e errore
   if (loading) return <p>Caricamento...</p>;
   if (error) return <p>{error}</p>;
   if (!product) return <p>Prodotto non disponibile.</p>;
-
-
 
   return (
     <main className="container mt-4 d-flex justify-content-center">
       {/* Sezione per i dettagli del prodotto */}
       <div className="row">
+        {/* Sezione immagine */}
         <div className="col-md-4">
           <img
             src={product.image_url}
@@ -51,6 +56,7 @@ export default function ProductDetailPage() {
             alt={product.name}
           />
         </div>
+        {/* Sezione informazioni prodotto */}
         <div className="col-md-4">
           <h1>{product.name}</h1>
           <p className="text-muted">{product.description}</p>
@@ -60,6 +66,7 @@ export default function ProductDetailPage() {
           {product.details && (
             <div className="product-details mt-4">
               <h5>Dettagli prodotto:</h5>
+              {/* Lista dettagli prodotto con rendering condizionale */}
               <ul className="list-unstyled">
                 {product.details.author && (
                   <li><strong>Autore:</strong> {product.details.author}</li>
@@ -113,8 +120,6 @@ export default function ProductDetailPage() {
           )}
         </div>
       </div>
-
-
     </main>
   );
 }
