@@ -1,5 +1,6 @@
 import { useCartContext } from '../contexts/CartContext';
 import { Link } from 'react-router-dom';
+import { FaTrash } from 'react-icons/fa';
 
 const CartPage = () => {
     const { cart, removeFromCart, updateQuantity } = useCartContext();
@@ -10,7 +11,7 @@ const CartPage = () => {
 
     return (
         <div className="container-fluid d-flex justify-content-center align-items-center min-vh-100 cart-cover">
-            <div className="card p-5  text-center w-75 border-0 card-cart ">
+            <div className="card p-5 text-center w-75 border-0 card-cart">
                 <h2 className="mb-4 text-primary">Il tuo carrello</h2>
                 {cart.length === 0 ? (
                     <>
@@ -19,25 +20,33 @@ const CartPage = () => {
                     </>
                 ) : (
                     <>
-                        <ul className="list-group list-group-flush text-start ">
+                        <ul className="list-group list-group-flush text-start">
                             {cart.map(product => (
                                 <li key={product.id} className="list-group-item d-flex justify-content-between align-items-center card-cart">
-                                    <div className="d-flex flex-column">
-                                        <strong>{product.name}</strong>
-                                        <span className="text-muted">€{Number(product.price).toFixed(2)} x</span>
-                                        <input
-                                            type="number"
-                                            value={product.quantity}
-                                            min="1"
-                                            className="form-control form-control-sm w-auto mt-1"
-                                            onChange={(e) => updateQuantity(product.id, parseInt(e.target.value))}
-                                        />
+                                    <div className="d-flex align-items-center w-100">
+                                        <strong className="me-3 flex-grow-1" style={{ minWidth: '160px' }}>{product.name}</strong>
+                                        <div className="d-flex align-items-center" style={{ minWidth: '200px' }}>
+                                            <span className="text-muted me-3" style={{ minWidth: '65px', textAlign: 'left' }}>€{Number(product.price).toFixed(2)}</span>
+                                            <div className="input-group input-group-sm w-auto" style={{ minWidth: '90px', display: 'flex', justifyContent: 'center' }}>
+                                                <button className="btn btn-outline-secondary" onClick={() => updateQuantity(product.id, Math.max(1, product.quantity - 1))}>-</button>
+                                                <input
+                                                    type="text"
+                                                    className="form-control text-center"
+                                                    value={product.quantity}
+                                                    readOnly
+                                                    style={{ width: '35px' }}
+                                                />
+                                                <button className="btn btn-outline-secondary" onClick={() => updateQuantity(product.id, product.quantity + 1)}>+</button>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <button className="btn btn-danger btn-sm" onClick={() => removeFromCart(product.id)}>Rimuovi</button>
+                                    <button className="btn btn-danger btn-sm" onClick={() => removeFromCart(product.id)}>
+                                        <FaTrash />
+                                    </button>
                                 </li>
                             ))}
                         </ul>
-                        <div className="mt-4 border-top pt-3 text-start ">
+                        <div className="mt-4 border-top pt-3 text-start">
                             <p className="fw-bold fs-5">💰 Subtotale: <span className="text-dark">€{subtotal.toFixed(2)}</span></p>
                             <p className="fw-bold fs-5">🚚 Spedizione: <span className="text-dark">€{shipping.toFixed(2)}</span></p>
                             <h4 className="fw-bold text-success">Totale: €{total.toFixed(2)}</h4>
