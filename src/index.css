@@ -19,6 +19,13 @@ body {
     padding: 24px 64px;
 }
 
+.menu-button {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
 /* ICONE */
 
 .heart {
@@ -567,6 +574,29 @@ main h2 {
     line-height: 1.5;
 }
 
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.value-card {
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.contact-section {
+    text-align: center;
+    background-color: #f5f5f5;
+    padding: 3rem;
+    border-radius: 8px;
+}
+
+
 /* FOOTER */
 footer {
     /* height: 388px; */
@@ -707,4 +737,141 @@ footer a:hover {
         margin: 0 10px;
         font-size: 35px;
     }
+}
+footer nav .socials a:hover {
+    color: #6666FF;
+}
+
+            /* GENESTIONE RESPONSIVE */
+
+.menu-button {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 250px;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    transition: left 0.3s ease-in-out;
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+/* Bottone chiusura sidebar */
+.close-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    align-self: flex-end;
+}
+
+/* Sidebar logo */
+.sidebar-logo img {
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+/* Sidebar navbar */
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidebar-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    transition: color 0.2s ease;
+}
+
+.sidebar-nav a:hover {
+    color: #00CC86;
+}
+
+/* NASCONDERE NAVBAR SU MOBILE */
+@media (max-width: 980px) {
+    .navpages {
+        display: none;
+    }
+
+    .egg {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 24px;
+        flex-wrap: wrap;
+    }
+
+    .menu-button { order: 1; }      
+    .logo { order: 2; }  
+    .search-bar { order: 4; }     
+    .wish-cart { order: 3;} 
+
+
+    /* Mostra il pulsante hamburger menu */
+    .menu-button {
+        display: inline-block;
+    }
+
+    .logo{ 
+        padding: 0 10px;
+       }
+
+    /* Rendi il contenitore della search bar un blocco intero */
+    .search-bar{
+        width: 100%; 
+        display: flex;
+        justify-content: center;
+        margin-top: 10px; 
+        
+    }
+
+    .wish-cart{
+        display: inline-block;
+    }
+
+    .heart{
+       padding-right: 3px;
+    }
+
+    .cart{
+        padding: 0px;
+     }
+
+    .search-input{
+        width: 100%;
+    }
+
+    .containerbanner h1,h5 {
+        text-align: center;
+    }
+
+}
+
+
+footer nav .socials a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+footer nav .socials a:hover {
+    color: #6666FF;
 }
