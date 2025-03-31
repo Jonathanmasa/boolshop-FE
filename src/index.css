@@ -19,6 +19,13 @@ body {
     padding: 24px 64px;
 }
 
+header {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 5;
+}
+
 .menu-button {
     display: none;
     background: none;
