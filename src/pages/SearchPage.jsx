@@ -71,7 +71,7 @@ export default function SearchPage() {
 
     return (
         <div className="container mt-4 search-page">
-            <h1 className="titlepage">Cerca Prodotti</h1>
+            <h1 className="titlesearch">Cerca Prodotti</h1>
 
             {/* Form per UI di filtri */}
             <form onSubmit={handleSearchSubmit} className="mb-4 d-flex gap-3 flex-wrap align-items-end">
