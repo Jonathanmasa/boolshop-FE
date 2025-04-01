@@ -138,14 +138,18 @@ header {
 }
 
 .containerbanner h1 {
-    font-size: 40px;
-    font-weight: 600;
+    font-size: 50px;
+    font-weight: 400;
     margin-bottom: 18px;
+    font-family: "Luckiest Guy", cursive;
+    font-style: normal;
 }
 
 .containerbanner h5 {
-    font-size: 20px;
-    font-weight: 500;
+    font-size: 25px;
+    font-weight: 400;
+    font-family: "Luckiest Guy", cursive;
+    font-style: normal;
 }
 
 .find {
@@ -157,6 +161,7 @@ header {
     cursor: pointer;
     margin-top: 20px;
     font-weight: 500;
+
 }
 
 
@@ -255,11 +260,13 @@ header {
 /* REGOLE GENARALI H2 */
 
 main h2 {
-    font-size: 50px;
+    font-size: 60px;
     font-weight: 600;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     text-align: center;
-    padding-top: 50px;
+    padding-top: 40px;
+    font-family: "Luckiest Guy", cursive;
+    font-style: normal;
 }
 
 
@@ -485,6 +492,14 @@ main h2 {
 .titlepage {
     text-align: center;
     padding-top: 20px;
+
+    font-family: "Luckiest Guy", cursive;
+    font-weight: 400;
+    font-style: normal;
+
+
+    font-size: 70px;
+
 }
 
 /* CART PAGE */
