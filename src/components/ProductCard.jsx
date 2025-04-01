@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
+import { useWishlistContext } from "../contexts/WishlistContext";
+import { useContext } from "react";
 
 
-const ProductCard = ({ product, addToCart, addToWishlist }) => {
+
+const ProductCard = ({ product, addToCart, }) => {
 
   if (!product) {
     return <div className="text-danger">Errore: prodotto non valido</div>;
@@ -14,6 +17,11 @@ const ProductCard = ({ product, addToCart, addToWishlist }) => {
   // Verifica se il prodotto ha un prezzo scontato valido
   const isDiscounted = discounted_price && discounted_price < price;
 
+  const{ addToWishlist, wishlist } = useWishlistContext()
+  // Check if the product is in the wishlist
+  const isInWishlist = wishlist.some((item) => item.id === id);
+
+
   return (
     <>
       <div className="cardcontainer">
@@ -22,7 +30,7 @@ const ProductCard = ({ product, addToCart, addToWishlist }) => {
             <img src={image_url} alt={name} />
           </Link>
           <div className="iconcontainer">
-            <i onClick={() => addToWishlist(product)} id="hearthome" className="fa-regular fa-heart"></i>{/* Icona cuore */}
+            <i onClick={() => addToWishlist(product)} id="hearthome" className={`fa-regular fa-heart ${isInWishlist ? 'active' : ''}`}></i>{/* Icona cuore */}
             <i onClick={() => addToCart(product)} id="carthome" className="fa-solid fa-cart-shopping"></i>{/* Icona carrello */}
           </div >
         </div >

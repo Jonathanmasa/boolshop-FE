@@ -9,6 +9,8 @@ import ProductGrid from '../../components/ProductGrid';
 
 // Importa il contesto del carrello per gestire l'aggiunta e la rimozione dei prodotti dal carrello
 import { useCartContext } from '../../contexts/CartContext';
+// Importa il contesto della wishlist per gestire l'aggiunta e la rimozione dei prodotti dalla wishlist
+import { useWishlistContext } from '../../contexts/WishlistContext';
 
 
 const OnSalePage = () => {
@@ -16,6 +18,9 @@ const OnSalePage = () => {
     const { fetchProducts, products, loading, error } = useProductContext();
     // Estrai le funzioni per aggiungere e rimuovere prodotti dal carrello
     const { addToCart, removeFromCart } = useCartContext();
+
+    const { addToWishlist, removeFromWishlist } = useWishlistContext();
+
 
     // Effettua una chiamata per ottenere i prodotti della categoria "card" quando il componente viene montato
     useEffect(() => {
@@ -59,6 +64,8 @@ const OnSalePage = () => {
                         products={products} // Passa i prodotti al componente ProductGrid
                         addToCart={addToCart} // Passa la funzione per aggiungere prodotti al carrello
                         removeFromCart={removeFromCart} // Passa la funzione per rimuovere prodotti dal carrello
+                        addToWishlist={addToWishlist}
+                        removeToWishlist={removeFromWishlist}
                     />
                 )}
             </div>

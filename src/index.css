@@ -222,11 +222,18 @@ header {
     padding-bottom: 17px;
     color: black;
     font-size: 22px;
+    cursor: pointer;
+    transition: color 0.3s ease;
 }
 
 /* HEART HOVER */
 #hearthome:hover {
     color: #dc0000;
+}
+
+/* Active heart icon */
+#hearthome.active {
+    color: red;
 }
 
 

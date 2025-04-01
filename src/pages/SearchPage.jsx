@@ -7,7 +7,7 @@ import { useWishlistContext } from '../contexts/WishlistContext';
 
 export default function SearchPage() {
     const { addToCart, removeFromCart } = useCartContext();
-    const { addToWishlist, removeToWishlist } = useWishlistContext();
+    const { addToWishlist, removeToWishlist, wishlist } = useWishlistContext();
     const [searchParams] = useSearchParams();
     const navigate = useNavigate();
 
@@ -128,6 +128,7 @@ export default function SearchPage() {
                 products={products}
                 addToCart={addToCart}
                 removeFromCart={removeFromCart}
+                wishlist={wishlist}
                 addToWishlist={addToWishlist}
                 removeToWishlist={removeToWishlist}
             />

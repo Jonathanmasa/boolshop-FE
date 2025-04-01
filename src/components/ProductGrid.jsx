@@ -5,7 +5,7 @@ import { List, Grid3x3 } from "lucide-react";
 
 import { useState } from 'react';
 
-const ProductGrid = ({ products, addToCart, removeFromCart, addToWishlist, removeToWishlist }) => {
+const ProductGrid = ({ products, addToCart, removeFromCart,wishlist, addToWishlist, removeToWishlist }) => {
     console.log("Products ricevuti in ProductGrid:", products);
 
     const [list, setList] = useState(false);
@@ -32,6 +32,7 @@ const ProductGrid = ({ products, addToCart, removeFromCart, addToWishlist, remov
                             product={product}
                             addToCart={addToCart}
                             removeFromCart={removeFromCart}
+                            wishlist={wishlist}
                             addToWishlist={addToWishlist}
                             removeToWishlist={removeToWishlist} />;
                     })
