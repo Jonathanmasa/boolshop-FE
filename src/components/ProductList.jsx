@@ -144,7 +144,7 @@ export default function ProductList() {
 
             {/* Divisore */}
             <div className="divisore">
-                <img src="/divisore2.png" alt="" />
+                <img src="/divisore3.png" alt="" />
             </div>
 
             {/* Ultime novità */}
