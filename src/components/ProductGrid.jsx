@@ -5,7 +5,7 @@ import { List, Grid3x3 } from "lucide-react";
 
 import { useState } from 'react';
 
-const ProductGrid = ({ products, addToCart, removeFromCart,wishlist, addToWishlist, removeToWishlist }) => {
+const ProductGrid = ({ products, addToCart, removeFromCart, wishlist, addToWishlist, removeToWishlist }) => {
     console.log("Products ricevuti in ProductGrid:", products);
 
     const [list, setList] = useState(false);
@@ -13,7 +13,7 @@ const ProductGrid = ({ products, addToCart, removeFromCart,wishlist, addToWishli
 
     return (
         <>
-            <button onClick={() => setList(!list)} className="btn btn-primary">
+            <button onClick={() => setList(!list)} id='griglia' className="btn btn-primary">
                 {list ? <Grid3x3 size={20} /> : <List size={20} />}
             </button>
             <div className={list ? "product-grid-list" : "product-grid"}>

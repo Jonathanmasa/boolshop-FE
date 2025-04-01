@@ -130,7 +130,7 @@ export default function ProductList() {
 
             {/* In evidenza */}
             <nav className="containerevidenza" ref={productsRef}>
-                <h2>In evidenza</h2>
+                <h2>Promozioni</h2>
                 <div className="discount">
 
                     <div className="evidenza">
@@ -149,7 +149,7 @@ export default function ProductList() {
 
             {/* Ultime novità */}
             <nav className="containerpromozioni">
-                <h2>Ultime novità</h2>
+                <h2>Nuovi arrivi</h2>
                 <div className="new">
 
                     <div className="promozioni">
