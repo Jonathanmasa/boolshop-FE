@@ -1,7 +1,7 @@
 // Import delle dipendenze necessarie
 import { useCartContext } from '../contexts/CartContext';
 import { Link } from 'react-router-dom';
-// import { FaTrash } from 'react-icons/fa';
+import { FaTrash } from 'react-icons/fa';
 
 // Componente principale per la visualizzazione del carrello
 const CartPage = () => {
