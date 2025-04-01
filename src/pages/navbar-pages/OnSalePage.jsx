@@ -32,11 +32,32 @@ const OnSalePage = () => {
 
     // Funzione per scorrere alla sezione dei prodotti
     const scrollToProducts = () => {
-        const productSection = document.getElementById('product-section'); // Trova l'elemento con id "product-section"
+        const productSection = document.getElementById('product-section');
+        const header = document.querySelector('header'); // Seleziona l'header
+        const navbar = document.querySelector('.navpages'); // Seleziona la navbar
+
+        console.log('header:', header); // Debug per controllare se è stato selezionato
+        console.log('Navbar:', navbar); // Debug per controllare se è stato selezionato
+
+
         if (productSection) {
-            productSection.scrollIntoView({ behavior: 'smooth' }); // Scorri alla sezione con un'animazione fluida
+            const headerHeight = header ? header.offsetHeight : 0;
+            const navbarHeight = navbar ? navbar.offsetHeight : 0;
+            const offset = headerHeight + navbarHeight - 75;
+
+            console.log('header Height:', headerHeight); // Debug per controllare se è stato selezionato
+            console.log('Navbar Height:', navbarHeight);
+            console.log('Offset:', offset);
+
+            const productPosition = productSection.getBoundingClientRect().top + window.scrollY;
+
+            window.scrollTo({
+                top: productPosition - offset,
+                behavior: 'smooth'
+            });
         }
     };
+
 
     return (
         <div>
