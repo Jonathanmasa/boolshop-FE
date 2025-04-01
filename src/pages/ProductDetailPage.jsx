@@ -62,7 +62,7 @@ export default function ProductDetailPage() {
 
         {/* Sezione informazioni prodotto */}
         <div className="product-info-container">
-          <h1 className="product-title">{product.name}</h1>
+          <h1 className="product-title"><strong>{product.name}</strong></h1>
           <p className="product-description">{product.description}</p>
           {/* <h4 className="product-price">€{Number(product.price).toFixed(2)}</h4> */}
           {/* Mostra prezzi scontati o normali */}
@@ -84,7 +84,7 @@ export default function ProductDetailPage() {
 
           {product.details && (
             <div className="product-details">
-              <h5 className="product-details-title">Dettagli prodotto:</h5>
+              <h5 className="product-details-title"><strong>Dettagli prodotto:</strong></h5>
               <ul className="product-details-list">
                 {product.details.author && (
                   <li className="product-detail-item"><strong>Autore:</strong> {product.details.author}</li>
