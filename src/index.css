@@ -763,7 +763,11 @@ footer a:hover {
 .product-detail-container {
     padding: 40px;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 20px auto;
+    background-color: #F8F8FF;
+    border-radius: 8px;
+
+
 }
 
 .product-detail-wrapper {
