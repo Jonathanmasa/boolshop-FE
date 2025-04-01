@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import { useWishlistContext } from "../contexts/WishlistContext";
-import { useContext } from "react";
+import { useCartContext } from "../contexts/CartContext";
 
+const ProductCard = ({ product }) => {
 
-
-const ProductCard = ({ product, addToCart, }) => {
+  const { addToCart } = useCartContext();
 
   if (!product) {
     return <div className="text-danger">Errore: prodotto non valido</div>;
@@ -17,7 +17,7 @@ const ProductCard = ({ product, addToCart, }) => {
   // Verifica se il prodotto ha un prezzo scontato valido
   const isDiscounted = discounted_price && discounted_price < price;
 
-  const{ addToWishlist, wishlist } = useWishlistContext()
+  const { addToWishlist, wishlist } = useWishlistContext()
   // Check if the product is in the wishlist
   const isInWishlist = wishlist.some((item) => item.id === id);
 
