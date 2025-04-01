@@ -9,6 +9,8 @@ export default function ProductDetailPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+
+
   useEffect(() => {
     const fetchProduct = async () => {
       setLoading(true);
@@ -33,6 +35,18 @@ export default function ProductDetailPage() {
   if (error) return <p>{error}</p>;
   if (!product) return <p>Prodotto non disponibile.</p>;
 
+
+
+  // Verifica se il prodotto ha un prezzo scontato valido
+  const isDiscounted = product.discounted_price && product.discounted_price < product.price;
+
+
+  console.log({
+    price: product.price,
+    discounted_price: product.discounted_price,
+    isDiscounted: isDiscounted
+  });
+
   return (
     <main className="product-detail-container">
       {/* Contenitore principale */}
@@ -50,7 +64,23 @@ export default function ProductDetailPage() {
         <div className="product-info-container">
           <h1 className="product-title">{product.name}</h1>
           <p className="product-description">{product.description}</p>
-          <h4 className="product-price">€{Number(product.price).toFixed(2)}</h4>
+          {/* <h4 className="product-price">€{Number(product.price).toFixed(2)}</h4> */}
+          {/* Mostra prezzi scontati o normali */}
+          {isDiscounted ? (
+            <p>
+              <h4 className="text-muted text-decoration-line-through me-2">
+                €{Number(product.price).toFixed(2)}
+              </h4>
+              <h4 className="text-danger fw-bold">
+                €{Number(product.discounted_price).toFixed(2)}
+              </h4>
+            </p>
+          ) : (
+            <p>€{Number(product.price).toFixed(2)}</p>
+          )}
+
+
+
 
           {product.details && (
             <div className="product-details">
