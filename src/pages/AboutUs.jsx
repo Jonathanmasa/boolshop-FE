@@ -1,4 +1,6 @@
+// Componente per la pagina Chi Siamo
 export default function AboutUs() {
+    // Rendering della pagina con sezioni informative
     return (
         <div className="info-page-container">
             <div className="info-header">

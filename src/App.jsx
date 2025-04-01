@@ -22,6 +22,8 @@ import DefaultLayout from "./layouts/DefaultLayout";
 import HomePage from "./pages/HomePage";
 import CartPage from "./pages/CartPage";
 import CheckoutPage from "./pages/CheckoutPage";
+import SuccesPaymentPage from "./pages/SuccesPaymentPage";
+
 
 import WishlistPage from "./pages/WishlistPage";
 import CardPage from "./pages/navbar-pages/CardPage";
@@ -57,6 +59,7 @@ function App() {
               <Route element={<DefaultLayout />}>
                 <Route path="/cart" element={<CartPage />} />
                 <Route path="/checkout" element={<CheckoutPage />} />
+                <Route path="/success" element={<SuccesPaymentPage />} />
                 <Route index path="/" element={<HomePage />} />
                 {/* navbar-pages */}
                 <Route path="/card" element={<CardPage />} />
