@@ -640,7 +640,8 @@ div#product-section button.btn.btn-primary {
 }
 
 .info-header h1 {
-    font-size: 32px;
+    font-size: 70px;
+    font-weight: 600;
     margin-bottom: 10px;
 }
 
