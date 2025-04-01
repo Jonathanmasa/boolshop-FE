@@ -516,7 +516,7 @@ main h2 {
 
 /* Form group */
 .search-page .form-group {
-    width: 100%;
+    width: 30%;
 }
 
 .search-page .form-group label {
@@ -535,7 +535,9 @@ main h2 {
 
 /* Bottone per la ricerca */
 .search-page .btn {
-    margin-top: 15px;
+    margin-bottom: 5px;
+    background-color: #9797ff !important;
+    border: none !important;
 }
 
 /* Contenitore dei prodotti (qui mettiamo il background) */
@@ -866,6 +868,11 @@ footer a:hover {
 
     .scroll-button:last-of-type {
         right: 25%;
+    }
+
+    /* .search form  */
+    .search-page .form-group {
+        width: 100%;
     }
 
     /* footer */
