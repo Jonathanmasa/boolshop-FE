@@ -322,7 +322,6 @@ main h2 {
 /* CARD PAGE */
 .titlepage:hover {
     color: #9797ff;
-    transform: scale(1.1);
     cursor: pointer;
 }
 
@@ -987,7 +986,7 @@ footer a:hover {
 }
 
 .sidebar-nav a:hover {
-    color: #00CC86;
+    color: #6666FF;
 }
 
 /* NASCONDERE NAVBAR SU MOBILE */
