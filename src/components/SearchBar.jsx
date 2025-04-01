@@ -17,6 +17,15 @@ export default function SearchBar({ search, setSearch }) {
         }
     };
 
+
+    // Gestisci la pressione del tasto Enter
+    const handleKeyDown = (event) => {
+        if (event.key === "Enter") {
+            event.preventDefault(); // previene il comportamento predefinito del submit
+            handleSearch();
+        }
+    };
+
     return (
         <div className="search-bar-container">
             <input
@@ -25,6 +34,7 @@ export default function SearchBar({ search, setSearch }) {
                 className="search-input"
                 value={search}
                 onChange={handleChange}  // Aggiorna lo stato ogni volta che l'utente digita
+                onKeyDown={handleKeyDown}  // Ascolta il tasto Enter
             />
             <button className="search-button" onClick={handleSearch}>
                 <Search size={28} strokeWidth={1} className="text-white hover:text-green-500 cursor-pointer" />
