@@ -33,7 +33,7 @@ const WishlistPage = () => {
                                         </div>
                                     </div>
                                     <div className="d-flex gap-2 mt-2 mt-md-0">
-                                        <button className="btn btn-success btn-sm" onClick={() => addToCart(product.id)}>
+                                        <button className="btn btn-success btn-sm" onClick={() => addToCart(product)}>
                                             <FaShoppingCart /> {/* Icona del carrello */}
                                         </button>
                                         <button className="btn btn-danger btn-sm" onClick={() => removeFromWishlist(product.id)}>
