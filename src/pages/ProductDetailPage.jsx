@@ -45,29 +45,29 @@ export default function ProductDetailPage() {
   if (!product) return <p>Prodotto non disponibile.</p>;
 
   return (
-    <main className="container mt-4 d-flex justify-content-center">
+    <main className="">
       {/* Sezione per i dettagli del prodotto */}
-      <div className="row">
+      <div className="">
         {/* Sezione immagine */}
-        <div className="col-md-4">
+        <div className="">
           <img
             src={product.image_url}
-            className="img-fluid detail-img"
+            className=""
             alt={product.name}
           />
         </div>
         {/* Sezione informazioni prodotto */}
-        <div className="col-md-4">
+        <div className="">
           <h1>{product.name}</h1>
-          <p className="text-muted">{product.description}</p>
-          <h4 className="text-primary fw-bold">€{Number(product.price).toFixed(2)}</h4>
+          <p className="">{product.description}</p>
+          <h4 className="">€{Number(product.price).toFixed(2)}</h4>
 
           {/* Aggiunta dei dettagli del prodotto */}
           {product.details && (
-            <div className="product-details mt-4">
+            <div className="">
               <h5>Dettagli prodotto:</h5>
               {/* Lista dettagli prodotto con rendering condizionale */}
-              <ul className="list-unstyled">
+              <ul className="">
                 {product.details.author && (
                   <li><strong>Autore:</strong> {product.details.author}</li>
                 )}

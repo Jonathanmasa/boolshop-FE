@@ -583,7 +583,7 @@ main h2 {
     flex-direction: column;
 }
 
-.search-page .product-grid-list .cardcontainer .iconcontainer i{
+.search-page .product-grid-list .cardcontainer .iconcontainer i {
     margin-right: 20px;
 }
 
@@ -765,32 +765,12 @@ footer a:hover {
 
     }
 
-    /* .cardcontainer {
-        width: 285px;
-        height: 470px;
-        border-radius: 10px;
-        padding: 10px;
-    }
-
-    .imgcontainer {
-        width: 100%;
-        height: 200px;
-    }
-
-    .imgcontainer img {
-        height: 100%;
-        display: block;
-        margin: 0 auto;
-        max-width: 100%;
-        object-fit: contain;
-    } */
 
     /* Modifiche per i bottoni di scorrimento */
     .evidenza,
     .promozioni {
         position: relative;
         padding-bottom: 60px;
-        /* Spazio per i bottoni */
     }
 
     .scroll-button {
