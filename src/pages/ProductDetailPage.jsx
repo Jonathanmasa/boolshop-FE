@@ -4,26 +4,18 @@ import axios from "axios";
 
 // Componente principale per la visualizzazione dettagliata di un prodotto
 export default function ProductDetailPage() {
-  // Recupero parametri dall'URL
   const { id, category } = useParams();
-
-  // Inizializzazione stati
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // Hook per il recupero dati del prodotto
   useEffect(() => {
-    // Funzione asincrona per chiamata API
     const fetchProduct = async () => {
       setLoading(true);
-
       try {
         const response = await axios.get(`/api/products/${category}/${id}`);
         if (response.status === 200) {
           setProduct(response.data);
-          console.log(response.data);
-
         } else {
           setError("Prodotto non trovato.");
         }
@@ -34,84 +26,80 @@ export default function ProductDetailPage() {
         setLoading(false);
       }
     };
-
-
     fetchProduct();
   }, [id, category]);
 
-  // Gestione stati di caricamento e errore
   if (loading) return <p>Caricamento...</p>;
   if (error) return <p>{error}</p>;
   if (!product) return <p>Prodotto non disponibile.</p>;
 
   return (
-    <main className="">
-      {/* Sezione per i dettagli del prodotto */}
-      <div className="">
+    <main className="product-detail-container">
+      {/* Contenitore principale */}
+      <div className="product-detail-wrapper">
         {/* Sezione immagine */}
-        <div className="">
+        <div className="product-image-container">
           <img
             src={product.image_url}
-            className=""
+            className="product-image"
             alt={product.name}
           />
         </div>
-        {/* Sezione informazioni prodotto */}
-        <div className="">
-          <h1>{product.name}</h1>
-          <p className="">{product.description}</p>
-          <h4 className="">€{Number(product.price).toFixed(2)}</h4>
 
-          {/* Aggiunta dei dettagli del prodotto */}
+        {/* Sezione informazioni prodotto */}
+        <div className="product-info-container">
+          <h1 className="product-title">{product.name}</h1>
+          <p className="product-description">{product.description}</p>
+          <h4 className="product-price">€{Number(product.price).toFixed(2)}</h4>
+
           {product.details && (
-            <div className="">
-              <h5>Dettagli prodotto:</h5>
-              {/* Lista dettagli prodotto con rendering condizionale */}
-              <ul className="">
+            <div className="product-details">
+              <h5 className="product-details-title">Dettagli prodotto:</h5>
+              <ul className="product-details-list">
                 {product.details.author && (
-                  <li><strong>Autore:</strong> {product.details.author}</li>
+                  <li className="product-detail-item"><strong>Autore:</strong> {product.details.author}</li>
                 )}
                 {product.details.edition && (
-                  <li><strong>Edizione:</strong> {product.details.edition}</li>
+                  <li className="product-detail-item"><strong>Edizione:</strong> {product.details.edition}</li>
                 )}
                 {product.details.gradation && (
-                  <li><strong>Gradazione:</strong> {product.details.gradation}</li>
+                  <li className="product-detail-item"><strong>Gradazione:</strong> {product.details.gradation}</li>
                 )}
                 {product.details.rarity && (
-                  <li><strong>Rarità:</strong> {product.details.rarity}</li>
+                  <li className="product-detail-item"><strong>Rarità:</strong> {product.details.rarity}</li>
                 )}
                 {product.details.cover_type && (
-                  <li><strong>Tipo copertina:</strong> {product.details.cover_type}</li>
+                  <li className="product-detail-item"><strong>Tipo copertina:</strong> {product.details.cover_type}</li>
                 )}
                 {product.details.genre && (
-                  <li><strong>Genere:</strong> {product.details.genre}</li>
+                  <li className="product-detail-item"><strong>Genere:</strong> {product.details.genre}</li>
                 )}
                 {product.details.language && (
-                  <li><strong>Lingua:</strong> {product.details.language}</li>
+                  <li className="product-detail-item"><strong>Lingua:</strong> {product.details.language}</li>
                 )}
                 {product.details.publisher && (
-                  <li><strong>Editore:</strong> {product.details.publisher}</li>
+                  <li className="product-detail-item"><strong>Editore:</strong> {product.details.publisher}</li>
                 )}
                 {product.details.series && (
-                  <li><strong>Serie:</strong> {product.details.series}</li>
+                  <li className="product-detail-item"><strong>Serie:</strong> {product.details.series}</li>
                 )}
                 {product.details.character && (
-                  <li><strong>Personaggio:</strong> {product.details.character}</li>
+                  <li className="product-detail-item"><strong>Personaggio:</strong> {product.details.character}</li>
                 )}
                 {product.details.franchise && (
-                  <li><strong>Franchise:</strong> {product.details.franchise}</li>
+                  <li className="product-detail-item"><strong>Franchise:</strong> {product.details.franchise}</li>
                 )}
                 {product.details.height_cm && (
-                  <li><strong>Altezza (cm):</strong> {product.details.height_cm}</li>
+                  <li className="product-detail-item"><strong>Altezza (cm):</strong> {product.details.height_cm}</li>
                 )}
                 {product.details.material && (
-                  <li><strong>Materiale:</strong> {product.details.material}</li>
+                  <li className="product-detail-item"><strong>Materiale:</strong> {product.details.material}</li>
                 )}
                 {product.details.manufacturer && (
-                  <li><strong>Produttore:</strong> {product.details.manufacturer}</li>
+                  <li className="product-detail-item"><strong>Produttore:</strong> {product.details.manufacturer}</li>
                 )}
                 {product.details.limited_edition && (
-                  <li>
+                  <li className="product-detail-item">
                     <strong>Edizione Limitata:</strong> {product.details.limited_edition === 1 ? "SI" : "NO"}
                   </li>
                 )}
