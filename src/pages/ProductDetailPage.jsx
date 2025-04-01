@@ -68,12 +68,12 @@ export default function ProductDetailPage() {
           {/* Mostra prezzi scontati o normali */}
           {isDiscounted ? (
             <p>
-              <h4 className="text-muted text-decoration-line-through me-2">
+              <span className="text-muted text-decoration-line-through me-2">
                 €{Number(product.price).toFixed(2)}
-              </h4>
-              <h4 className="text-danger fw-bold">
+              </span>
+              <span className="text-danger fw-bold">
                 €{Number(product.discounted_price).toFixed(2)}
-              </h4>
+              </span>
             </p>
           ) : (
             <p>€{Number(product.price).toFixed(2)}</p>
