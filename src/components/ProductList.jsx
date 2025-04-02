@@ -61,6 +61,10 @@ export default function ProductList() {
         const handleResize = () => {
             if (window.innerWidth <= 768) {
                 setItemsToShow(2);
+            } else if (window.innerWidth <= 980) {
+                setItemsToShow(3);
+            } else if (window.innerWidth <= 1200) {
+                setItemsToShow(3);
             } else {
                 setItemsToShow(5);
             }
@@ -70,6 +74,8 @@ export default function ProductList() {
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, []);
+
+
 
     // RENDER prodotti in evidenza (da featuredStartIndex, per itemsToShow elementi)
     const renderFeaturedProducts = () => {

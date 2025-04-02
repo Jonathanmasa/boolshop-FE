@@ -1058,26 +1058,6 @@ footer a:hover {
     }
 
 
-    /* Modifiche per i bottoni di scorrimento */
-    .evidenza,
-    .promozioni {
-        position: relative;
-        padding-bottom: 60px;
-    }
-
-    .scroll-button {
-        position: absolute;
-        bottom: 10px;
-    }
-
-    .scroll-button:first-of-type {
-        left: 25%;
-    }
-
-    .scroll-button:last-of-type {
-        right: 25%;
-    }
-
     /* .search form  */
     .search-page .form-group {
         width: 100%;
