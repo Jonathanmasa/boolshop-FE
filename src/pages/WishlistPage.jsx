@@ -25,8 +25,11 @@ const WishlistPage = () => {
                     <>
                         <ul className="list-group list-group-flush text-start">
                             {wishlist.map(product => (
-                                <li key={product.id} className="list-group-item d-flex flex-column flex-md-row justify-content-between align-items-center card-wishlist card-cart">
+                                < li key={product.id} className="list-group-item d-flex flex-column flex-md-row justify-content-between align-items-center card-wishlist card-cart" >
                                     <div className="d-flex flex-column flex-md-row align-items-center w-100">
+                                        <div className="img-container">
+                                            <img src={product.image_url} alt={product.name} />
+                                        </div>
                                         <strong className="me-3 flex-grow-1 text-center text-md-start" style={{ minWidth: '160px' }}>{product.name}</strong>
                                         <div className="d-flex align-items-center flex-column flex-sm-row" style={{ minWidth: '200px' }}>
                                             <span className="text-muted me-3" style={{ minWidth: '65px', textAlign: 'left' }}>€{Number(product.price).toFixed(2)}</span>
@@ -52,7 +55,7 @@ const WishlistPage = () => {
                     </>
                 )}
             </div>
-        </div>
+        </div >
     );
 }
 

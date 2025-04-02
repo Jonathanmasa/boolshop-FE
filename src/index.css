@@ -441,6 +441,17 @@ main h2 {
     height: calc(100vh - 173px);
 }
 
+.wishlist-cover .img-container {
+    width: 100px;
+    height: 100px;
+}
+
+.wishlist-cover .img-container img {
+    display: block;
+    height: 100%;
+    margin: 0 auto;
+}
+
 
 
 
