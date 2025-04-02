@@ -33,7 +33,7 @@ const WishlistPage = () => {
                                         <strong className="me-3 flex-grow-1 text-center text-md-start" style={{ minWidth: '160px' }}>{product.name}</strong>
 
 
-                                        <div className="d-flex align-items-center flex-column flex-sm-row" style={{ minWidth: '200px' }}>
+                                        <div className="d-flex align-items-center flex-column flex-sm-row" >
                                             <span className="text-muted me-3 fw-bold" style={{ minWidth: '65px', textAlign: 'left' }}>€{Number(product.price).toFixed(2)}</span>
 
                                             <div className="d-flex gap-2 mt-2 mt-md-0">
