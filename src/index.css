@@ -1110,7 +1110,20 @@ footer a:hover {
         font-size: 30px;
     }
 
+    .close-button {
+        padding-bottom: 20px;
+    }
 
+
+    main h2 {
+        font-size: 50px;
+
+    }
+
+    .titlesearch {
+
+        font-size: 50px;
+    }
 
 
 }
@@ -1118,6 +1131,17 @@ footer a:hover {
 
 
 @media screen and (max-width: 768px) {
+
+    .titlesearch {
+
+        font-size: 40px;
+    }
+
+
+    main h2 {
+        font-size: 40px;
+
+    }
 
     .product-description {
         font-size: 16px;
