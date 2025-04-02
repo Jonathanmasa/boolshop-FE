@@ -31,18 +31,25 @@ const WishlistPage = () => {
                                             <img src={product.image_url} alt={product.name} />
                                         </div>
                                         <strong className="me-3 flex-grow-1 text-center text-md-start" style={{ minWidth: '160px' }}>{product.name}</strong>
+
+
                                         <div className="d-flex align-items-center flex-column flex-sm-row" style={{ minWidth: '200px' }}>
-                                            <span className="text-muted me-3" style={{ minWidth: '65px', textAlign: 'left' }}>€{Number(product.price).toFixed(2)}</span>
+                                            <span className="text-muted me-3 fw-bold" style={{ minWidth: '65px', textAlign: 'left' }}>€{Number(product.price).toFixed(2)}</span>
+
+                                            <div className="d-flex gap-2 mt-2 mt-md-0">
+                                                <button className="btn btn-success btn-sm" onClick={() => addToCart(product)}>
+                                                    <FaShoppingCart /> {/* Icona del carrello */}
+                                                </button>
+
+
+                                                <button className="btn btn-danger btn-sm" onClick={() => removeFromWishlist(product.id)}>
+                                                    <FaTrash />
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div className="d-flex gap-2 mt-2 mt-md-0">
-                                        <button className="btn btn-success btn-sm" onClick={() => addToCart(product)}>
-                                            <FaShoppingCart /> {/* Icona del carrello */}
-                                        </button>
-                                        <button className="btn btn-danger btn-sm" onClick={() => removeFromWishlist(product.id)}>
-                                            <FaTrash />
-                                        </button>
-                                    </div>
+
+
                                 </li>
                             ))}
                         </ul>

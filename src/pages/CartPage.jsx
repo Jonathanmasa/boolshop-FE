@@ -32,10 +32,13 @@ const CartPage = () => {
                                             <img src={product.image_url} alt={product.name} />
                                         </div>
                                         <strong className="me-3 flex-grow-1 text-center text-md-start" style={{ minWidth: '160px' }}>{product.name}</strong>
+
                                         <div className="d-flex align-items-center flex-column flex-sm-row" style={{ minWidth: '200px' }}>
-                                            <span className="text-muted me-3" style={{ minWidth: '65px', textAlign: 'left' }}>€{Number(product.price).toFixed(2)}</span>
+                                            <span className="text-muted me-3 fw-bold" style={{ minWidth: '65px', textAlign: 'left' }}>€{Number(product.price).toFixed(2)}</span>
+
                                             <div className="input-group input-group-sm w-auto">
-                                                <button className="btn btn-outline-secondary" onClick={() => updateQuantity(product.id, Math.max(1, product.quantity - 1))}>-</button>
+                                                <button className="btn btn-outline-secondary" onClick={() => updateQuantity(product.id, Math.max(1, product.quantity - 1))}>-
+                                                </button>
                                                 <input
                                                     type="text"
                                                     className="form-control text-center"
@@ -43,7 +46,8 @@ const CartPage = () => {
                                                     readOnly
                                                     style={{ width: '35px' }}
                                                 />
-                                                <button className="btn btn-outline-secondary" onClick={() => updateQuantity(product.id, product.quantity + 1)}>+</button>
+                                                <button className="btn btn-outline-secondary" onClick={() => updateQuantity(product.id, product.quantity + 1)}>+
+                                                </button>
                                             </div>
                                         </div>
                                     </div>
