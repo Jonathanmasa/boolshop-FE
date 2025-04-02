@@ -37,7 +37,7 @@ const WishlistPage = () => {
                                             <span className="text-muted me-3 fw-bold" style={{ minWidth: '65px', textAlign: 'left' }}>€{Number(product.price).toFixed(2)}</span>
 
                                             <div className="d-flex gap-2 mt-2 mt-md-0">
-                                                <button className="btn btn-success btn-sm" onClick={() => addToCart(product)}>
+                                                <button className="btn btn-success btn-sm" onClick={() => {addToCart(product); removeFromWishlist(product.id)}}>
                                                     <FaShoppingCart /> {/* Icona del carrello */}
                                                 </button>
 
