@@ -986,6 +986,7 @@ footer a:hover {
     .onsale-banner,
     .notfound-banner,
     .success-banner,
+    .cart-cover,
     .wishlist-banner {
         height: calc(50vh);
         background-size: fill;
