@@ -5,8 +5,8 @@
 
 
 // Import functions from React
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import React, { useState } from 'react';
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import React, { useEffect } from 'react';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -45,6 +45,23 @@ import Faq from "./pages/Faq";
 // import bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+
+
+// Definisci il componente ScrollToTop inline
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [pathname]);
+
+  return null;
+}
+
+
+
+
+
 function App() {
 
 
@@ -55,6 +72,7 @@ function App() {
         <CartProvider>
           <BrowserRouter>
             <ToastContainer />
+            <ScrollToTop />
             <Routes>
               <Route element={<DefaultLayout />}>
                 <Route path="/cart" element={<CartPage />} />
