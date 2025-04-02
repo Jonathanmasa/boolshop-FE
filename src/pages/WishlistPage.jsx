@@ -12,7 +12,7 @@ const WishlistPage = () => {
     const subtotal = wishlist.reduce((acc, item) => acc + item.price * item.quantity, 0);
 
     return (
-        <div className="container-fluid wishlist-banner d-flex justify-content-center align-items-center min-vh-100 wishlist-cover mt-0">
+        <div className="wishlist-banner">
             <div className="card card-cart p-5 text-center w-100 border-0 card-wishlist">
                 <h2 className="mb-4" style={{ color: '#6f42c1' }}>La tua Lista dei Desideri</h2>
 
@@ -37,7 +37,7 @@ const WishlistPage = () => {
                                             <span className="text-muted me-3 fw-bold" style={{ minWidth: '65px', textAlign: 'left' }}>€{Number(product.price).toFixed(2)}</span>
 
                                             <div className="d-flex gap-2 mt-2 mt-md-0">
-                                                <button className="btn btn-success btn-sm" onClick={() => {addToCart(product); removeFromWishlist(product.id)}}>
+                                                <button className="btn btn-success btn-sm" onClick={() => { addToCart(product); removeFromWishlist(product.id) }}>
                                                     <FaShoppingCart /> {/* Icona del carrello */}
                                                 </button>
 

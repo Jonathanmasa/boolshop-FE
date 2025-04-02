@@ -449,10 +449,15 @@ main h2 {
 
 .wishlist-banner {
     background-image: url(../banner6.png);
-    background-size: cover;
+    color: white;
     min-width: 100%;
-    background-position: 50% 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: calc(100vh - 173px);
+    background-position: 50% 100%;
+    background-size: cover;
+    padding: 0 50px;
 }
 
 .wishlist-cover .img-container {
