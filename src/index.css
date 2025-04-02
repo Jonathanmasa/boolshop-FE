@@ -927,10 +927,30 @@ footer a:hover {
     .navpages {
         padding: 29px 40px;
     }
+
+    .container-img-sopra-footer {
+        display: none;
+
+    }
+
+    .containerbanner h1 {
+        font-size: 45px;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .containerbanner h5 {
+        font-size: 24px;
+        text-align: center;
+        padding: 0 20px;
+    }
 }
 
 /*  */
 @media (max-width: 980px) {
+
+
+
     .navpages {
         display: none;
     }
