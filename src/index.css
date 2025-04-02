@@ -962,7 +962,35 @@ footer a:hover {
 /*  */
 @media (max-width: 980px) {
 
+    /* Banner adjustments */
+    .containerbanner,
+    .card-banner,
+    .manga-banner,
+    .figure-banner,
+    .newarrivals-banner,
+    .onsale-banner,
+    .notfound-banner,
+    .success-banner,
+    .wishlist-banner {
+        height: calc(50vh);
+    }
 
+    .find {
+        padding: 5px 18px;
+        margin-top: 18px;
+        font-weight: 400;
+    }
+
+    .titlepage {
+        text-align: center;
+        padding-top: 20px;
+        font-weight: 800;
+        font-size: 40px;
+    }
+
+    .titlepage:hover {
+        display: none;
+    }
 
     .navpages {
         display: none;
@@ -1071,6 +1099,24 @@ footer a:hover {
 
 
 @media screen and (max-width: 768px) {
+
+    .containerbanner h1 {
+        font-size: 31px;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .containerbanner h5 {
+        font-size: 18px;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .find {
+        padding: 4px 16px;
+        margin-top: 16px;
+        font-weight: 300;
+    }
 
     .container-img-sopra-footer {
         display: none;
