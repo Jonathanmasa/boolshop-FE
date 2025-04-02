@@ -973,6 +973,9 @@ footer a:hover {
     .success-banner,
     .wishlist-banner {
         height: calc(50vh);
+        background-size: fill;
+        min-width: 100%;
+        background-position: 50% 0%;
     }
 
     .find {
