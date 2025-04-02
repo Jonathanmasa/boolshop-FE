@@ -1,5 +1,8 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { useCartContext } from "../contexts/CartContext";
+import { useWishlistContext } from "../contexts/WishlistContext";
+
 import axios from "axios";
 
 // Componente principale per la visualizzazione dettagliata di un prodotto
@@ -9,7 +12,8 @@ export default function ProductDetailPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-
+  const { addToCart } = useCartContext();
+  const { addToWishlist } = useWishlistContext();
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -47,6 +51,8 @@ export default function ProductDetailPage() {
     isDiscounted: isDiscounted
   });
 
+
+
   return (
     <main className="product-detail-container">
       {/* Contenitore principale */}
@@ -79,7 +85,8 @@ export default function ProductDetailPage() {
             <p>€{Number(product.price).toFixed(2)}</p>
           )}
 
-
+          <button onClick={() => addToCart(product)}>Aggiungi al carrello</button>
+          <button onClick={() => addToWishlist(product)}>Aggiungi alla wishlist</button>
 
 
           {product.details && (
