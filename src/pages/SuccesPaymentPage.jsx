@@ -6,7 +6,7 @@ export default function ThankYouPage() {
 
         <div className="success-banner">
             <div >
-                <h2 className="succespage" >Pagamento completato</h2>
+                <h2>Pagamento completato</h2>
                 <p >Grazie per il tuo ordine! Riceverai presto una conferma via email.</p>
             </div>
         </div >
