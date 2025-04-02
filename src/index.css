@@ -394,7 +394,7 @@ main h2 {
 .notfound-banner {
     background-image: url(../banner5.png);
     color: white;
-    width: 100%;
+    min-width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -407,12 +407,12 @@ main h2 {
 .success-banner {
     background-image: url(../banner9.png);
     color: white;
-    width: 100%;
+    min-width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     height: calc(100vh - 173px);
-    background-position: 50% 100%;
+    background-position: 50% 90%;
     background-size: cover;
 }
 
