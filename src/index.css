@@ -986,6 +986,8 @@ footer a:hover {
 /*  */
 @media (max-width: 980px) {
 
+
+
     /* Banner adjustments */
     .containerbanner,
     .card-banner,
@@ -1072,15 +1074,7 @@ footer a:hover {
     }
 
     .heart {
-        padding-right: 3px;
-    }
-
-    .cart {
-        padding: 0px;
-    }
-
-    .search-input {
-        width: 100%;
+        padding-right: 5px;
     }
 
     .containerbanner h1 {
@@ -1103,24 +1097,37 @@ footer a:hover {
     }
 
     /* Detail page responsive */
-    .product-detail-wrapper {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
+
 
     .product-image-container {
-        max-width: 100%;
+        width: 80%;
     }
 
-    .product-title {
-        font-size: 32px;
-        text-align: center;
-    }
+
 
     .container-img-sopra-footer {
         display: none;
 
+    }
+
+
+    .product-title {
+        font-size: 30px;
+    }
+
+    .close-button {
+        padding-bottom: 20px;
+    }
+
+
+    main h2 {
+        font-size: 50px;
+
+    }
+
+    .titlesearch {
+
+        font-size: 50px;
     }
 
 
@@ -1129,6 +1136,37 @@ footer a:hover {
 
 
 @media screen and (max-width: 768px) {
+
+    .titlesearch {
+
+        font-size: 40px;
+    }
+
+
+    main h2 {
+        font-size: 40px;
+
+    }
+
+    .product-description {
+        font-size: 16px;
+        line-height: 1.4;
+
+    }
+
+    .product-details-title {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+
+    .product-details-list {
+        font-size: 12px;
+        line-height: 1.2;
+
+
+    }
+
+
 
     .containerbanner h1 {
         font-size: 31px;
@@ -1148,10 +1186,7 @@ footer a:hover {
         font-weight: 300;
     }
 
-    .container-img-sopra-footer {
-        display: none;
 
-    }
 
 
     /* .search form  */
