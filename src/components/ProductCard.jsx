@@ -36,7 +36,7 @@ const ProductCard = ({ product }) => {
         </div >
 
         <div className="textcontainer">
-          <h4>{name}</h4>
+          <h4 className="product-card-title" >{name}</h4>
           <p className="category">{category}</p>
 
           {/* Mostra prezzi scontati o normali */}
