@@ -23,11 +23,25 @@ export const CartProvider = ({ children }) => {
             // Se il prodotto è già nel carrello, incrementiamo la quantità
             newCart = [...cart];
             newCart[existingProductIndex].quantity += 1;
-            toast.info(`Quantità aggiornata per ${product.name}`);
+            toast.info(`Quantità aggiornata per ${product.name}`, {
+                position: "top-right",
+                autoClose: 800,
+                hideProgressBar: true,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+            });
         } else {
             // Altrimenti aggiungiamo il prodotto con quantità 1
             newCart = [...cart, { ...product, quantity: 1 }];
-            toast.success(`${product.name} aggiunto al carrello`);
+            toast.success(`${product.name} aggiunto al carrello`, {
+                position: "top-right",
+                autoClose: 800,
+                hideProgressBar: true,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+            });
         }
         setCart(newCart);
         localStorage.setItem('cart', JSON.stringify(newCart)); // Salva nel localStorage
