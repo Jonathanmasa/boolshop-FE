@@ -10,7 +10,7 @@ export default function NavBar() {
                 Carte
             </NavLink>
             <NavLink to="/figure" className={({ isActive }) => (isActive ? "active" : "")}>
-                Figure
+                Figures
             </NavLink>
             <NavLink to="/manga" className={({ isActive }) => (isActive ? "active" : "")}>
                 Manga

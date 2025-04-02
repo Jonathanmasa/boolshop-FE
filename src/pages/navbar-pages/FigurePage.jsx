@@ -21,7 +21,7 @@ const FigurePage = () => {
     const { addToCart, removeFromCart } = useCartContext();
 
     const { addToWishlist, removeFromWishlist } = useWishlistContext();
-    
+
 
     // Effettua una chiamata per ottenere i prodotti della categoria "card" quando il componente viene montato
     useEffect(() => {
@@ -66,7 +66,7 @@ const FigurePage = () => {
                 <h1
                     className='titlepage' onClick={scrollToProducts} // Al clic, esegui lo scroll alla sezione dei prodotti
                     style={{ cursor: 'pointer' }} // Cambia il cursore per indicare che è cliccabile
-                >Eggrocket Figure</h1>
+                >Eggrocket Figures</h1>
             </div >
 
 
