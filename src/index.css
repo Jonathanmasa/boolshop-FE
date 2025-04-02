@@ -416,6 +416,20 @@ main h2 {
     background-size: cover;
 }
 
+.success-banner h2 {
+    text-align: center;
+    padding-top: 50px;
+    font-weight: 600;
+    font-size: 35px;
+}
+
+.success-banner {
+    text-align: center;
+    padding-top: 10px;
+    font-weight: 400;
+    font-size: 25px;
+}
+
 
 /* PAGINA wishlist */
 
@@ -990,6 +1004,8 @@ footer a:hover {
         font-weight: 800;
         font-size: 40px;
     }
+
+
 
     .titlepage:hover {
         display: none;
