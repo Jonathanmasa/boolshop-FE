@@ -14,7 +14,7 @@ const CartPage = () => {
     const total = subtotal + shipping;
 
     return (
-        <div className="container-fluid d-flex justify-content-center align-items-center min-vh-100 cart-cover">
+        <div className="cart-cover">
             <div className="card p-5 text-center w-100 border-0 card-cart">
                 <h2 className="mb-4 text-primary">Il tuo carrello</h2>
                 {cart.length === 0 ? (

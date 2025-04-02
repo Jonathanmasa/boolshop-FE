@@ -433,18 +433,6 @@ main h2 {
 
 /* PAGINA wishlist */
 
-/* .wishlist-banner {
-    background-image: url(../banner6.png);
-    color: white;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 85vh;
-
-    background-position: 50% 50%;
-    background-size: cover;
-} */
 
 
 .wishlist-banner {
@@ -455,7 +443,7 @@ main h2 {
     align-items: center;
     justify-content: center;
     height: calc(100vh - 173px);
-    background-position: 50% 100%;
+    background-position: 50% 50%;
     background-size: cover;
     padding: 0 50px;
 }
@@ -533,7 +521,15 @@ main h2 {
 /* CART PAGE */
 .cart-cover {
     background-image: url(../cart-cover.png);
+    color: white;
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 173px);
+    background-position: 50% 50%;
     background-size: cover;
+    padding: 0 50px;
 }
 
 .card-cart {
