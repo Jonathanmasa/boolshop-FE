@@ -841,6 +841,7 @@ footer a:hover {
     padding: 40px;
     max-width: 1200px;
     border-radius: 8px;
+    margin: 0 auto;
 }
 
 .product-detail-wrapper {
