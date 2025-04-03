@@ -464,10 +464,10 @@ main h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: calc(100vh - 173px);
+    /* height: calc(100vh - 173px); */
     background-position: 50% 50%;
     background-size: cover;
-    padding: 0 50px;
+    padding: 20px 50px;
 }
 
 .wishlist-cover .img-container {
@@ -548,10 +548,10 @@ main h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: calc(100vh - 173px);
+    /* height: calc(100vh - 173px); */
     background-position: 50% 50%;
     background-size: cover;
-    padding: 0 50px;
+    padding: 20px 50px;
 }
 
 .card-cart {
