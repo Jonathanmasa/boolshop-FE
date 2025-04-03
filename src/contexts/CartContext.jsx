@@ -63,7 +63,14 @@ export const CartProvider = ({ children }) => {
 
         // Mostra la notifica solo se il prodotto è stato trovato
         if (removedProduct) {
-            toast.warn(`${removedProduct.name} rimosso dal carrello`);
+            toast.warn(`${removedProduct.name} rimosso dal carrello`, {
+                position: "bottom-right",
+                autoClose: 800,
+                hideProgressBar: true,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+            });
         }
     };
 
