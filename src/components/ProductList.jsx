@@ -59,7 +59,9 @@ export default function ProductList() {
 
     useEffect(() => {
         const handleResize = () => {
-            if (window.innerWidth <= 768) {
+            if (window.innerWidth <= 490) {
+                setItemsToShow(1);
+            } else if (window.innerWidth <= 768) {
                 setItemsToShow(2);
             } else if (window.innerWidth <= 980) {
                 setItemsToShow(3);
