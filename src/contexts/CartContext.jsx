@@ -24,7 +24,7 @@ export const CartProvider = ({ children }) => {
             newCart = [...cart];
             newCart[existingProductIndex].quantity += 1;
             toast.info(`Quantità aggiornata per ${product.name}`, {
-                position: "top-right",
+                position: "bottom-right",
                 autoClose: 800,
                 hideProgressBar: true,
                 closeOnClick: true,
@@ -35,7 +35,7 @@ export const CartProvider = ({ children }) => {
             // Altrimenti aggiungiamo il prodotto con quantità 1
             newCart = [...cart, { ...product, quantity: 1 }];
             toast.success(`${product.name} aggiunto al carrello`, {
-                position: "top-right",
+                position: "bottom-right",
                 autoClose: 800,
                 hideProgressBar: true,
                 closeOnClick: true,

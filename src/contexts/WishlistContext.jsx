@@ -31,7 +31,7 @@ export const WishlistProvider = ({ children }) => {
 
             // Show toast notification for removal
             toast.error(`${product.name} rimosso dalla wishlist!`, {
-                position: "top-right",
+                position: "bottom-right",
                 autoClose: 800,
                 hideProgressBar: true,
                 closeOnClick: true,
@@ -46,7 +46,7 @@ export const WishlistProvider = ({ children }) => {
 
             // Show toast notification for addition
             toast.success(`${product.name} aggiunto alla wishlist!`, {
-                position: "top-right",
+                position: "bottom-right",
                 autoClose: 800,
                 hideProgressBar: true,
                 closeOnClick: true,
