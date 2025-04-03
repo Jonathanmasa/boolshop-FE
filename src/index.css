@@ -841,7 +841,6 @@ footer a:hover {
 .product-detail-container {
     padding: 40px;
     max-width: 1200px;
-    margin: 20px auto;
     border-radius: 8px;
 }
 
@@ -971,9 +970,7 @@ footer a:hover {
 
 /* Responsive Design */
 @media (max-width: 1200px) {
-    .search-bar-container {
-        width: 400px;
-    }
+
 
     .egg {
         padding: 24px 40px;
@@ -1047,7 +1044,7 @@ footer a:hover {
     }
 
     .egg {
-        padding: 16px 24px;
+        padding: 16px 20px;
         flex-wrap: wrap;
         gap: 15px;
     }
@@ -1155,6 +1152,8 @@ footer a:hover {
 
 @media screen and (max-width: 768px) {
 
+
+
     .titlesearch {
 
         font-size: 40px;
@@ -1184,18 +1183,34 @@ footer a:hover {
 
     }
 
+    .product-detail-wrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .product-image-container {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
+        padding-bottom: 20px;
+    }
+
+    .product-info {
+        width: 100%;
+    }
+
+    .product-detail-wrapper i {
+        margin-right: 10px;
+    }
+
 
 
     .containerbanner h1 {
         font-size: 31px;
-        text-align: center;
-        padding: 0 20px;
     }
 
     .containerbanner h5 {
         font-size: 18px;
-        text-align: center;
-        padding: 0 20px;
     }
 
     .find {
@@ -1262,5 +1277,36 @@ footer a:hover {
     footer nav .socials a {
         margin: 0 10px;
         font-size: 35px;
+    }
+
+
+
+}
+
+@media screen and (max-width: 490px) {
+
+    .product-image-container {
+        max-width: 280px;
+    }
+
+    .product-title {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .containerbanner h1 {
+        font-size: 24px;
+
+    }
+
+    .containerbanner h5 {
+        font-size: 14px;
+
+    }
+
+    .find {
+        padding: 3px 14px;
+        margin-top: 18px;
+        font-weight: 400;
     }
 }
