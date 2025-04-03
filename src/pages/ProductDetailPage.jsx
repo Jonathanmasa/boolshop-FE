@@ -13,7 +13,14 @@ export default function ProductDetailPage() {
   const [error, setError] = useState(null);
 
   const { addToCart } = useCartContext();
-  const { addToWishlist } = useWishlistContext();
+  const { wishlist, addToWishlist } = useWishlistContext();
+
+  const [isInWishlist, setIsInWishlist] = useState(false);
+
+  useEffect(() => {
+    setIsInWishlist(wishlist.some((item) => item.id === id));
+  }, [wishlist, id]); // Ricalcola ogni volta che cambia la wishlist
+
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -85,8 +92,8 @@ export default function ProductDetailPage() {
             <p>€{Number(product.price).toFixed(2)}</p>
           )}
 
-          <button onClick={() => addToCart(product)}>Aggiungi al carrello</button>
-          <button onClick={() => addToWishlist(product)}>Aggiungi alla wishlist</button>
+          <i onClick={() => addToCart(product)} id="carthome" className="fa-solid fa-cart-shopping"></i>
+          <i onClick={() => {addToWishlist(product),setIsInWishlist(!isInWishlist) }} id="hearthome" className={`fa-regular fa-heart ${isInWishlist ? 'active' : ''}`}></i>
 
 
           {product.details && (
