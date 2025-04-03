@@ -9,45 +9,55 @@ import SearchBar from "./SearchBar";
 
 import NavBar from "./NavBar";
 
+import { useCartContext } from '../contexts/CartContext';
 
 const Header = ({ search, setSearch }) => {
 
+    const { cartItemCount } = useCartContext();
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
     return (
         <header>
             <nav className="egg">
 
-                 {/* Hamburger menu per mobile */}
-                 <button className="menu-button" onClick={() => setIsSidebarOpen(true)}>
+                {/* Hamburger menu per mobile */}
+                <button className="menu-button" onClick={() => setIsSidebarOpen(true)}>
                     <Menu size={32} strokeWidth={1.5} />
                 </button>
 
 
                 {/* Logo del sito */}
-                
-                        
+
+
                 <div className="logo">
-                <Link to={"/"}>
-                    <img
-                        src="/Group 57.png"
-                        alt="Eggrocket Logo"
-                        style={{ height: "50px" }}
-                    />
-                </Link>
+                    <Link to={"/"}>
+                        <img
+                            src="/Group 57.png"
+                            alt="Eggrocket Logo"
+                            style={{ height: "50px" }}
+                        />
+                    </Link>
                 </div>
-                
+
                 {/* Search Bar */}
                 <div className="search-bar">
                     <SearchBar search={search} setSearch={setSearch} />
                 </div>
 
-                     {/* Carrello e lista desideri */}
-                     <div className="wish-cart">
-                    
-                    <Link to="/wishlist" className="heart">
+                {/* Carrello e lista desideri */}
+                <div className="wish-cart">
+
+
+
+                    <Link to="/wishlist" className="heart cart-icon-wrapper position-relative">
                         <i className="fa-regular fa-heart"></i>{/* Icona cuore */}
+                        {cartItemCount > 0 && (
+                            <span className="cart-badge">{cartItemCount}</span>
+                        )}
                     </Link>
+
+
+
                     <Link to="/cart" className="cart">
                         <i className="fa-solid fa-cart-shopping"></i>{/* Icona carrello */}
                     </Link>
@@ -59,8 +69,8 @@ const Header = ({ search, setSearch }) => {
                 <NavBar />
             </nav>
 
-             {/* Sidebar per mobile */}
-             <div className={`sidebar ${isSidebarOpen ? "open" : ""}`}>
+            {/* Sidebar per mobile */}
+            <div className={`sidebar ${isSidebarOpen ? "open" : ""}`}>
                 <div className="sidebar-content">
                     {/* Bottone chiusura sidebar */}
                     <button className="close-button" onClick={() => setIsSidebarOpen(false)}>

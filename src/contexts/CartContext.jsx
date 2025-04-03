@@ -9,6 +9,8 @@ const CartContext = createContext();
 export const CartProvider = ({ children }) => {
     const [cart, setCart] = useState([]);
 
+    const cartItemCount = cart.length; // conta i prodotti con ID diversi
+
     // Funzione per recuperare il carrello dal localStorage
     const loadCart = () => {
         const savedCart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -79,7 +81,7 @@ export const CartProvider = ({ children }) => {
     }, []);
 
     return (
-        <CartContext.Provider value={{ cart, addToCart, removeFromCart, updateQuantity, toast }}>
+        <CartContext.Provider value={{ cart, addToCart, removeFromCart, updateQuantity, toast, cartItemCount }}>
             {children}
         </CartContext.Provider>
     );
