@@ -3,6 +3,8 @@ import { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import ProductCard from "../components/ProductCard";
 
+import { FaArrowDown } from 'react-icons/fa';
+
 export default function ProductList() {
     const [featuredProducts, setFeaturedProducts] = useState([]);
     const [newProducts, setNewProducts] = useState([]);
@@ -130,7 +132,8 @@ export default function ProductList() {
                     <h5>Inizia a cercare i prodotti preferiti per la tua collezione</h5>
                     <div>
                         <button className="find" onClick={scrollToProducts}>
-                            Inizia ad esplorare
+                            {/* Inizia ad esplorare */}
+                            <FaArrowDown size={24} />
                         </button>
                     </div>
                 </div>
